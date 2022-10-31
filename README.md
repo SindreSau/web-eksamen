@@ -13,4 +13,4 @@ CSS organisering:
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
 
 
-<img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif" width="80" height="60" />
+<img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif"/>
