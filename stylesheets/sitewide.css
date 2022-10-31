@@ -180,6 +180,7 @@ footer .instagram {
         display: none;
         flex-direction: column;
         height: 100vh;
+        top: 0px;
     }
 
     #navKnapper a {
