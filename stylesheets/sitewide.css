@@ -1,50 +1,84 @@
+/* ----- General ------------ */
+
+:root {
+    background-color: var(--grey);
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/* ----- Ending general ----- */
+
+/* ----- General ------------ */
+
+
+/* ----- Ending general ----- */
+
 /* ----- Navbar ------------ */
 
 /* ----- Ending navbar ----- */
 
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(18, 18, 18);
-    color: rgb(242,208,181);
-}
-main{
-    padding-top: 146px; /* endres etter høyde på nav-bar/header */
-    height: fit-content;
-}
-footer{
-    height: 20vh;
-    background-color: rgb(242,208,181);
-    color: rgb(15, 15, 15);
-    padding: 30px; 
+
+/* ----- Footer ------------ */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--yellow);
 }
 
-html {
-    scroll-padding-top: 146px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.overskriftmeny {
-    color:rgb(201, 157, 101) 
-}
-
-.alignfooter {
+.footer-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
+    padding: 0px 0px 6% 0px;
+    margin: 4% 10%;
 }
 
-@media (width < 600px) {
-    footer {
-        height: fit-content;
-    }
-
-    .alignfooter {
-        flex-direction: column;
-        height: 40vh;
-    }
+.opening-information {
+    flex: 3 1 auto;
 }
+
+footer h4 {
+    /* justeres etter variabel */
+}
+
+.footer-contact {
+    flex: 3 1 auto;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 7px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 1 auto;
+}
+
+footer .tripadvisor {
+    height: 40px;
+}
+
+footer .facebook {
+    height: 45px;
+}
+
+footer .instagram {
+    height: 52px;
+}
+
+.footer-logo {
+    padding-bottom: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- Ending footer ----- */
+
 
 /* ----- Utility variabler ------------ */
 
