@@ -1,0 +1,56 @@
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(18, 18, 18);
+    color: rgb(242,208,181);
+}
+main{
+    padding-top: 146px; /* endres etter høyde på nav-bar/header */
+    height: fit-content;
+}
+footer{
+    height: 20vh;
+    background-color: rgb(242,208,181);
+    color: rgb(15, 15, 15);
+    padding: 30px; 
+}
+
+html {
+    scroll-padding-top: 146px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.overskriftmeny {
+    color:rgb(201, 157, 101) 
+}
+
+/* || Utility variabler */
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --black: #12121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
+}
+
+.alignfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+@media (width < 600px) {
+    footer {
+        height: fit-content;
+    }
+
+    .alignfooter {
+        flex-direction: column;
+        height: 40vh;
+    }
+}
+
+/* Ending utility variabler || */
