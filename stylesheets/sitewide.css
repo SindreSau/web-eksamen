@@ -1,4 +1,6 @@
+/* || Navbar */
 
+/* Ending navbar || */
 
 body {
     margin: 0px;
@@ -26,15 +28,6 @@ html {
     color:rgb(201, 157, 101) 
 }
 
-/* || Utility variabler */
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --black: #12121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
-
 .alignfooter {
     display: flex;
     flex-direction: row;
@@ -51,6 +44,16 @@ html {
         flex-direction: column;
         height: 40vh;
     }
+}
+
+/* || Utility variabler */
+
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --black: #12121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
 }
 
 /* Ending utility variabler || */
