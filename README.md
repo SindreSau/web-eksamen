@@ -14,4 +14,4 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
 
 <p align="center">
   <img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif"/>
-<\p>
+</p>
