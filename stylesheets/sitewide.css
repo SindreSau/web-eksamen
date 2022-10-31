@@ -1,50 +1,84 @@
+/* ----- General ------------ */
+
+:root {
+    background-color: var(--grey);
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/* ----- Ending general ----- */
+
+/* ----- General ------------ */
+
+
+/* ----- Ending general ----- */
+
 /* ----- Navbar ------------ */
 
 /* ----- Ending navbar ----- */
 
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(18, 18, 18);
-    color: rgb(242,208,181);
-}
-main{
-    padding-top: 146px; /* endres etter høyde på nav-bar/header */
-    height: fit-content;
-}
-footer{
-    height: 20vh;
-    background-color: rgb(242,208,181);
-    color: rgb(15, 15, 15);
-    padding: 30px; 
+
+/* ----- Footer ------------ */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--yellow);
 }
 
-html {
-    scroll-padding-top: 146px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.overskriftmeny {
-    color:rgb(201, 157, 101) 
-}
-
-.alignfooter {
+.footer-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
+    padding: 0px 0px 6% 0px;
+    margin: 4% 10%;
 }
 
-@media (width < 600px) {
-    footer {
-        height: fit-content;
-    }
-
-    .alignfooter {
-        flex-direction: column;
-        height: 40vh;
-    }
+.opening-information {
+    flex: 3 1 auto;
 }
+
+footer h4 {
+    /* justeres etter variabel */
+}
+
+.footer-contact {
+    flex: 3 1 auto;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 7px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 1 auto;
+}
+
+footer .tripadvisor {
+    height: 40px;
+}
+
+footer .facebook {
+    height: 45px;
+}
+
+footer .instagram {
+    height: 52px;
+}
+
+.footer-logo {
+    padding-bottom: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- Ending footer ----- */
+
 
 /* ----- Utility variabler ------------ */
 
@@ -57,3 +91,86 @@ html {
 }
 
 /* ----- Ending utility variabler ----- */
+/*----------Dette er css for nav-baren----------*/
+#flytMeny{
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#logo{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 40px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#logo a{
+    text-decoration: none;
+    color: #F3CFB4;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+}
+#navKnapper{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7%;
+    padding-top: 47px;
+    margin-right: 40px;
+
+}
+#navKnapper a{
+    text-decoration: none;
+    color: #F3CFB4;
+    line-height: 23px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Verdana;
+}
+#navKnapper a:hover{
+    color: #DE855E;
+}
+#hamburgerCheckbox{
+    display: none;
+}
+#labelForHamburger{
+    height: 45px;
+    width: 45px;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: none;
+    cursor: pointer;
+    fill: #DE855E;
+    background-color: #222222;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
+#hamburgerCheckbox:checked + #navKnapper{
+    display: flex;
+}
+
+@media (max-width: 750px){
+    #flytMeny{
+        flex-direction: column;
+    }
+    #navKnapper{
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+    }
+    #navKnapper a{
+        top: 0px;
+    }
+    #labelForHamburger{
+        display: block;
+    }
+}
+/*----------Dette er css for nav-baren----------*/
