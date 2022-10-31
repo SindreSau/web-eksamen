@@ -1,5 +1,7 @@
 # web-eksamen
 
+Link til main-versjon av siden:
+https://sindresau.github.io/web-eksamen/
 
 Trello:
 https://trello.com/b/Ik3ajKPR/web-eksamen
