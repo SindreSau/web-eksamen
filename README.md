@@ -12,5 +12,6 @@ https://www.figma.com/file/eLJUHwo92RbWQy8eykIHNA/JAVA.CAF%C3%89?node-id=11%3A94
 CSS organisering:
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
 
-
-<img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif"/>
+<p align="center">
+  <img src="https://media.tenor.com/GfSX-u7VGM4AAAAC/coding.gif"/>
+</p>
