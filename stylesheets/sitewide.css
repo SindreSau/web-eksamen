@@ -1,6 +1,6 @@
-/* || Navbar */
+/* ----- Navbar ------------ */
 
-/* Ending navbar || */
+/* ----- Ending navbar ----- */
 
 body {
     margin: 0px;
@@ -46,7 +46,7 @@ html {
     }
 }
 
-/* || Utility variabler */
+/* ----- Utility variabler ------------ */
 
 :root {
     --orange: #DE855E;
@@ -56,4 +56,4 @@ html {
     --grey: #222222;
 }
 
-/* Ending utility variabler || */
+/* ----- Ending utility variabler ----- */
