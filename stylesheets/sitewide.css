@@ -96,6 +96,7 @@ footer .instagram {
 }
 
 /* ----- Ending utility variabler ----- */
+
 /*----------Dette er css for nav-baren----------*/
 #flytMeny {
     background-color: #121212;
@@ -133,7 +134,6 @@ footer .instagram {
     gap: 7%;
     padding-top: 47px;
     margin-right: 40px;
-
 }
 
 #navKnapper a {
