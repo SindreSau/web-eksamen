@@ -1,0 +1,41 @@
+
+
+body{ 
+    font-family: 'DM Sans', sans-serif;}
+
+h1 {color: var(--yellow)}
+
+
+
+
+
+
+
+
+.alignCatering{
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    gap: 3%
+}
+
+
+.boxmeny{
+    text-align: center;
+    border: 1px solid #F3CFB4;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;     
+}
+
+.boxmeny h1 { color: var(--orange)}
+.boxmeny h2 {color: var(--yellow)}
+.boxmeny h3 {color: var(--yellow)}
+.boxmeny p {color: var(--yellow)}
+
+@media(max-width: 1500px ){
+    .alignCatering {
+        flex-direction: column;
+    }
+}
+
+
