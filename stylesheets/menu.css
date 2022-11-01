@@ -1,6 +1,5 @@
 
 
-
 body{ 
     font-family: 'DM Sans', sans-serif;}
 
@@ -19,7 +18,6 @@ h1 {color: var(--yellow)}
     justify-content: center;
     gap: 3%
 }
-
 
 
 .boxmeny{
