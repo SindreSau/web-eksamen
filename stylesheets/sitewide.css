@@ -131,6 +131,7 @@ footer .instagram {
     gap: 7%;
     padding-top: 47px;
     margin-right: 40px;
+    transition: height 0.5s;
 }
 
 #navKnapper a {
@@ -162,14 +163,19 @@ footer .instagram {
     position: fixed;
     right: 2%;
     top: 2%;
+    z-index: 2;
 }
 
-#hamburgerCheckbox:checked+#navKnapper {
-    display: flex;
+#hamburgerCheckbox:checked+#navKnapper{
     height: 100vh;
     background-color: #121212;
+    font-size: 150%;
     width: 100%;
     z-index: -1;
+    visibility: visible;
+}
+#hamburgerCheckbox:checked+#navKnapper a{
+    display: block;
 }
 
 @media (max-width: 750px) {
@@ -179,16 +185,17 @@ footer .instagram {
 
     #navKnapper {
         position: fixed;
+        height: 0px;
         top: 50%;
         padding: 20%;
         padding-top: 0;
-        display: none;
         flex-direction: column;
         top: 0px;
     }
 
     #navKnapper a {
         top: 0px;
+        display: none;
     }
 
     #labelForHamburger {
