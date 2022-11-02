@@ -111,8 +111,8 @@ footer .instagram {
 
 #logo {
     /*gjelder for den delen av navbaren som inneholder logoen*/
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-left: 40px;
     width: 30%;
     display: flex;
@@ -134,7 +134,7 @@ footer .instagram {
     flex-direction: row;
     justify-content: center;
     gap: 7%;
-    padding-top: 47px;
+    padding-top: 27px;
     padding-bottom: 23px;
     margin-right: 40px;
     transition: height 0.3s;
