@@ -1,16 +1,71 @@
-
+/*--------Generelt for siden meny, Burde legges inn i sitewide--------*/
 
 body{ 
-    font-family: 'DM Sans', sans-serif;}
+    font-family: 'Ubuntu', sans-serif;}
 
 h1 {color: var(--yellow)}
 
+ul {list-style: none;
+color: var(--yellow)}
+
+
+
+/*--------CSS Bilde/Menyvelger topp--------*/
+
+.meny_container{ 
+    display: flex;  
+    flex-direction: row;
+    background-color: var(--dark-grey);
+    justify-content: center;
+}
+
+.menyknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+}
+/*--------CSS Bilde/Menyvelger topp end--------*/
 
 
 
 
+/*--------CSS Kafe meny--------*/
+.alignKafemeny {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+    color: var(--yellow);
+}
+
+.boxKafemeny{
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    flex: 1;
+}
+ .alignKafemeny h1{ color: var(--orange)}
+
+ #kafemeny{ 
+    text-align: center;
+    margin: 100px 0px 30px 0px;
+
+ }
+
+/*--------CSS Kafe meny end--------*/
 
 
+
+
+/*--------CSS Catering meny--------*/
+
+#cateringmeny {
+    text-align: center;
+    margin: 50px 0px 50px 0px;
+}
 
 .alignCatering{
     display: flex;
@@ -19,12 +74,11 @@ h1 {color: var(--yellow)}
     gap: 3%
 }
 
-
-.boxmeny{
+.boxmeny {
     text-align: center;
     border: 1px solid #F3CFB4;
     padding: 20px;
-    margin: 20px 0px 20px 0px;     
+    margin: 20px 0px 20px 0px;
 }
 
 .boxmeny h1 { color: var(--orange)}
@@ -32,10 +86,26 @@ h1 {color: var(--yellow)}
 .boxmeny h3 {color: var(--yellow)}
 .boxmeny p {color: var(--yellow)}
 
+/*--------CSS Catering meny end--------*/
+
+
+
+
+
+/*--------Visning----------------------*/
+
+
 @media(max-width: 1500px ){
     .alignCatering {
         flex-direction: column;
     }
 }
 
+@media(max-width: 1000px ){
+    .alignKafemeny {
+        flex-direction: column;
+    }
+}
+
+/*--------Visning----------------------*/
 
