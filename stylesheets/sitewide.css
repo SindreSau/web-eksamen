@@ -42,11 +42,11 @@ footer {
 .opening-information {
     flex: 3 1 auto;
 }
-
+/*
 footer h4 {
-    /* justeres etter variabel */
+     justeres etter variabel
 }
-
+*/
 .footer-contact {
     flex: 3 1 auto;
 }
@@ -165,6 +165,10 @@ footer .instagram {
 
 #hamburgerCheckbox:checked+#navKnapper {
     display: flex;
+    height: 100vh;
+    background-color: #121212;
+    width: 100%;
+    z-index: -1;
 }
 
 @media (max-width: 750px) {
@@ -173,9 +177,12 @@ footer .instagram {
     }
 
     #navKnapper {
+        position: fixed;
+        top: 50%;
+        padding: 20%;
+        padding-top: 0;
         display: none;
         flex-direction: column;
-        height: 100vh;
         top: 0px;
     }
 
