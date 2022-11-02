@@ -95,7 +95,10 @@ footer .instagram {
 /* ----- Ending utility variabler ----- */
 
 /*----------Dette er css for nav-baren----------*/
+
+
 #flytMeny {
+    /*gjelder for rammen for menyen som er klistret til toppen av siden*/
     background-color: #121212;
     position: fixed;
     top: 0;
@@ -107,6 +110,7 @@ footer .instagram {
 }
 
 #logo {
+    /*gjelder for den delen av navbaren som inneholder logoen*/
     padding-top: 40px;
     padding-bottom: 40px;
     margin-left: 40px;
@@ -124,6 +128,7 @@ footer .instagram {
 }
 
 #navKnapper {
+    /*gjelder for den delen av navbaren som inneholden menyknappene*/
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -135,6 +140,7 @@ footer .instagram {
 }
 
 #navKnapper a {
+    /*gjelder for hver enkelt menyknapp*/
     text-decoration: none;
     color: #F3CFB4;
     line-height: 23px;
@@ -152,6 +158,7 @@ footer .instagram {
 }
 
 #labelForHamburger {
+    /*gjelder for labelen med hamburgermenyen i seg som erstatter checkboxen som ble gjemt*/
     height: 45px;
     width: 45px;
     padding-left: 5px;
@@ -165,20 +172,10 @@ footer .instagram {
     top: 2%;
     z-index: 2;
 }
-
-#hamburgerCheckbox:checked+#navKnapper{
-    height: 100vh;
-    background-color: #121212;
-    font-size: 150%;
-    width: 100%;
-    z-index: -1;
-    visibility: visible;
-}
-#hamburgerCheckbox:checked+#navKnapper a{
-    display: block;
-}
-
-@media (max-width: 750px) {
+@media (max-width: 850px) {
+    /*gjør om siden til mobilversjon ved 850 piksler i bredde.
+    gjemmer navigasjonsmenyen og viser en hamburgermeny
+    */
     #flytMeny {
         flex-direction: column;
     }
@@ -199,6 +196,18 @@ footer .instagram {
     }
 
     #labelForHamburger {
+        display: block;
+    }
+    #hamburgerCheckbox:checked+#navKnapper{
+        /*viser menyknappene i mobilversjon når hamburgermenyern blir trykket og checkboxen blir checked*/
+        height: 100vh;
+        background-color: #121212;
+        font-size: 150%;
+        width: 100%;
+        z-index: -1;
+        visibility: visible;
+    }
+    #hamburgerCheckbox:checked+#navKnapper a{
         display: block;
     }
 }
