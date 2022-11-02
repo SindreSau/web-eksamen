@@ -90,6 +90,8 @@ main hr {
     flex-direction: column;
     margin: 1%;
     width: 50%;
+    font-family: Verdana;
+    color: #F3CFB4;
 }
 .card_bilde{
     height: 50%;
