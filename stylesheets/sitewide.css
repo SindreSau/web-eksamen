@@ -135,8 +135,10 @@ footer .instagram {
     justify-content: center;
     gap: 7%;
     padding-top: 47px;
+    padding-bottom: 23px;
     margin-right: 40px;
-    transition: height 0.5s;
+    transition: height 0.3s;
+    flex-wrap: wrap;
 }
 
 #navKnapper a {
@@ -172,12 +174,15 @@ footer .instagram {
     top: 2%;
     z-index: 2;
 }
-@media (max-width: 850px) {
-    /*gjør om siden til mobilversjon ved 850 piksler i bredde.
+@media (max-width: 650px) {
+    /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
     */
     #flytMeny {
         flex-direction: column;
+    }
+    #logo{
+        width: 60%;
     }
 
     #navKnapper {
