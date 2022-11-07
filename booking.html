@@ -9,6 +9,48 @@
     <title>Booking</title>
 </head>
 <body>
-    
+    section class = "banner">
+            <h2>BOOK DITT EVENT NÅ</h2>
+            <div class = "card-container">
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservasjon</h3>
+                    <form>
+                        <div class = "form-row">
+                            <select name = "days">
+                                <option value = "day-select">Velg dag</option>
+                                <option value = "mandag">Mandag</option>
+                            <option value = "tirsdag">Tirsdag</option>
+                            <option value = "onsdag">Onsdag</option>
+                            <option value = "torsdag">Torsdag</option>
+                            <option value = "fredag">Fredag</option>
+                            <option value = "lørdag">Lørdag</option>
+                            <option value = "søndag">Søndag</option>
+                            </select>
+
+                            <select name = "hours">
+                                <option value = "hour-select">Velg tid</option>
+                                <option value = "12">12:00</option>
+                                <option value = "14">14:00</option>
+                                <option value = "16">16:00</option>
+                                <option value = "18">18:00</option>
+                                <option value = "20">20:00</option>
+                            </select>
+                        </div>
+                        
+                        <div class = "form-row">
+                            <input type = "text" placeholder="Fullt navn">
+                            <input type = "text" placeholder="Telfonnummer">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" placeholder="Hvor mange personer?" min = "1">
+                            <input type = "submit" value = "BOOK EVENT">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section> 
 </body>
 </html>
