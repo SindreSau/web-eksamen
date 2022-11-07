@@ -85,3 +85,19 @@ main hr {
 }
 
 /* ----- Ending utility variabler ----- */
+
+/*-- Knapp for reservasjon ---*/
+.reservereknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
+}
+#knappReservasjon{
+    display: flex;
+    justify-content: center;
+}
+/*-- Slutt knapp for reservasjon ---*/
