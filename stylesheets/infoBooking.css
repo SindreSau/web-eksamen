@@ -1,3 +1,4 @@
+/*-- Knapp for reservasjon ---*/
 .reservereknapp {
     text-align: center;
     border: 1px solid var(--orange);
@@ -11,6 +12,9 @@
     display: flex;
     justify-content: center;
 }
+/*-- Slutt knapp for reservasjon ---*/
+
+/*-- Tekst øvsert på siden ----*/
 h1 {
     color: var(--yellow)
 }
@@ -23,3 +27,4 @@ h1 {
 #bookingInfo p{
     color: var(--yellow);
 }
+/*-- Slutt tekst øvsert på siden ----*/
