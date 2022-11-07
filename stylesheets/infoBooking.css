@@ -6,6 +6,7 @@
     margin: 3vw;
     color: var(--orange);
     width: 250px;
+    cursor: pointer;
 }
 #knappReservasjon{
     display: flex;
@@ -22,4 +23,25 @@ h1 {
 }
 #bookingInfo p{
     color: var(--yellow);
+}
+.banner{
+    position: fixed;
+    z-index: 0;
+    top: 50px;
+    bottom: 575px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+.banner h1{
+    text-align: center;
+    cursor: pointer;
+}
+#checkBooking{
+    display: none;
+}
+
+#checkBooking:checked+.banner{
+    display: flex;
+    background: rgb(18,18,18, 0.75);
 }
