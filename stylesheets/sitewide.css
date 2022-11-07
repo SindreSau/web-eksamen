@@ -117,6 +117,7 @@ footer .instagram {
     width: 30%;
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
 }
 
 #logo a {
@@ -126,7 +127,6 @@ footer .instagram {
     font-size: 32px;
     line-height: 43px;
 }
-
 #navKnapper {
     /*gjelder for den delen av navbaren som inneholden menyknappene*/
     width: 70%;
@@ -137,22 +137,25 @@ footer .instagram {
     padding-top: 27px;
     padding-bottom: 23px;
     margin-right: 40px;
-    transition: height 0.3s;
+    transition: 0.3s;
     flex-wrap: wrap;
 }
 
 #navKnapper a {
     /*gjelder for hver enkelt menyknapp*/
-    text-decoration: none;
     color: #F3CFB4;
     line-height: 23px;
     font-size: 20px;
     font-weight: 700;
     font-family: Verdana;
 }
-
+.denneSiden{
+    text-decoration: underline 4px;
+    text-underline-offset: 3px;
+}
 #navKnapper a:hover {
     color: #DE855E;
+    text-decoration-color: #DE855E;
 }
 
 #hamburgerCheckbox {
@@ -173,6 +176,7 @@ footer .instagram {
     top: 2%;
     z-index: 2;
 }
+
 @media (max-width: 650px) {
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
