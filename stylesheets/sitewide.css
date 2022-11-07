@@ -6,7 +6,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    
+    font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -24,6 +24,56 @@ main {
 /* ----- Navbar ------------ */
 
 /* ----- Ending navbar ----- */
+
+/* -----  Cards ------------ */
+
+.card_container {
+    display: flex;  
+    flex-direction: row;
+    background-color: var(--dark-grey);
+    justify-content: center;
+    align-items: center;
+    margin: 5vw;
+    position: relative
+}
+.card_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1%;
+    width: 50%;
+    font-family: Verdana;
+    color: #F3CFB4;
+}
+.card_bilde{
+    height: 50%;
+    width: 50%;
+    margin: 1%;
+}
+.bilde_cards{
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width:600px) {
+    .card_container{
+        flex-direction: column;
+        margin: 2vw;
+    }
+    .card_bilde{
+        width: 94%;
+        height: 100%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .card_text{
+        width: 90%;
+    }
+    
+}
+
+/* ----- Ending cards ------------ */
 
 
 /* ----- Footer ------------ */
@@ -78,7 +128,9 @@ footer .instagram {
     display: flex;
     justify-content: center;
 }
-
+#reservasjon{
+    text-decoration: underline;
+}
 /* ----- Ending footer ----- */
 
 
