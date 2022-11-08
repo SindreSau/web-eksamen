@@ -87,10 +87,6 @@
         transform: translateX(-50%);
     }
 
-    .hero-section {}
-
-    .slideshow img {}
-
     .gradient-mask {
         position: absolute;
         height: 70vh;
