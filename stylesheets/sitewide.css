@@ -1,7 +1,4 @@
 /* ----- General ------------ */
-:root {
-    background-color: var(--grey);
-}
 
 body {
     background-color: var(--grey);
@@ -162,7 +159,7 @@ footer .instagram {
 :root {
     --orange: #DE855E;
     --yellow: #F3CFB4;
-    --black: #12121212;
+    --darkest-grey: #121212;
     --dark-grey: #1E1E1E;
     --grey: #222222;
 }
@@ -174,7 +171,7 @@ footer .instagram {
 
 #flytMeny {
     /*gjelder for rammen for menyen som er klistret til toppen av siden*/
-    background-color: #121212;
+    background-color: var(--darkest-grey);
     position: fixed;
     top: 0;
     width: 100%;
@@ -197,11 +194,16 @@ footer .instagram {
 
 #logo a {
     text-decoration: none;
-    color: #F3CFB4;
+    color: var(--yellow);
     font-weight: 700;
     font-size: 32px;
     line-height: 43px;
 }
+
+.svg-logo {
+    fill: var(--yellow);
+}
+
 #navKnapper {
     /*gjelder for den delen av navbaren som inneholden menyknappene*/
     width: 70%;
@@ -218,7 +220,7 @@ footer .instagram {
 
 #navKnapper a {
     /*gjelder for hver enkelt menyknapp*/
-    color: #F3CFB4;
+    color: var(--yellow);
     line-height: 23px;
     font-size: 20px;
     font-weight: 700;
@@ -229,8 +231,8 @@ footer .instagram {
     text-underline-offset: 3px;
 }
 #navKnapper a:hover {
-    color: #DE855E;
-    text-decoration-color: #DE855E;
+    color: var(--orange);
+    text-decoration-color: var(--orange);
 }
 
 #hamburgerCheckbox {
@@ -245,7 +247,7 @@ footer .instagram {
     padding-top: 5px;
     display: none;
     cursor: pointer;
-    fill: #DE855E;
+    fill: var(--orange);
     position: fixed;
     right: 2%;
     top: 2%;
@@ -284,7 +286,7 @@ footer .instagram {
     #hamburgerCheckbox:checked+#navKnapper{
         /*viser menyknappene i mobilversjon når hamburgermenyern blir trykket og checkboxen blir checked*/
         height: 100vh;
-        background-color: #121212;
+        background-color: var(--darkest-grey);
         font-size: 150%;
         width: 100%;
         z-index: -1;

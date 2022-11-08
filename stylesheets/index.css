@@ -13,6 +13,13 @@
     margin: 3vw;
     color: var(--orange);
     width: 250px;
+    transition: .3s;
+}
+
+.reservereknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
 }
 
 #knappReservasjon {
@@ -21,16 +28,3 @@
 }
 
 /*-- Slutt knapp for reservasjon ---*/
-
-
-/* ----- Utility variabler ------------ */
-
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --black: #12121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
-
-/* ----- Ending utility variabler ----- */
