@@ -1,7 +1,4 @@
 /* ----- General ------------ */
-:root {
-    background-color: var(--grey);
-}
 
 body {
     background-color: var(--grey);
@@ -10,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 html { scroll-behavior: smooth;}
@@ -20,15 +18,41 @@ a {
 }
 
 main {
-    margin: 120px 8%;
+    margin: 100px 8%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    opacity: .15;
+    background-color: var(--yellow);
 }
 
 /* ----- Ending general ----- */
 
 
-/* ----- Navbar ------------ */
-
-/* ----- Ending navbar ----- */
+/* ----- Knapp ------------ */
+.reservereknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
+    transition: .3s;
+}
+.reservereknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
+    box-shadow: 3px 5px 15px var(--darkest-grey);
+}
+#knappReservasjon{
+    display: flex;
+    justify-content: center;
+}
+/* ----- Ending knapp ----- */
 
 /* -----  Cards ------------ */
 
@@ -38,7 +62,8 @@ main {
     background-color: var(--dark-grey);
     justify-content: center;
     align-items: center;
-    margin: 5vw;
+    /* margin: 5vw; */
+    margin: 120px 0;
     position: relative
 }
 .card_text{
@@ -85,7 +110,7 @@ main {
 
 footer {
     bottom: 0;
-    width: 100vw;
+    width: auto;
     background-color: var(--yellow);
     font-family: 'Ubuntu', sans-serif;
 }
@@ -107,6 +132,7 @@ footer h4 {
 */
 .footer-contact {
     flex: 3 1 auto;
+    transition: ease-in-out .3s;
 }
 
 .social-media {
@@ -120,14 +146,18 @@ footer h4 {
 
 footer .tripadvisor {
     height: 40px;
+    transition: .3s;
 }
-
 footer .facebook {
     height: 45px;
+    transition: .3s;
 }
-
 footer .instagram {
     height: 52px;
+    transition: .3s;
+}
+.tripadvisor:hover, .facebook:hover, .instagram:hover {
+    scale: 105%;
 }
 
 .footer-logo {
@@ -162,7 +192,7 @@ footer .instagram {
 :root {
     --orange: #DE855E;
     --yellow: #F3CFB4;
-    --black: #12121212;
+    --darkest-grey: #121212;
     --dark-grey: #1E1E1E;
     --grey: #222222;
 }
@@ -174,7 +204,7 @@ footer .instagram {
 
 #flytMeny {
     /*gjelder for rammen for menyen som er klistret til toppen av siden*/
-    background-color: #121212;
+    background-color: var(--darkest-grey);
     position: fixed;
     top: 0;
     width: 100%;
@@ -202,6 +232,12 @@ footer .instagram {
     font-size: 32px;
     line-height: 43px;
 }
+
+.svg-logo {
+    filter: invert(78%) sepia(3%) saturate(5423%) hue-rotate(322deg) brightness(118%) contrast(91%);
+    height: 28px;
+}
+
 #navKnapper {
     /*gjelder for den delen av navbaren som inneholden menyknappene*/
     width: 70%;
@@ -218,19 +254,21 @@ footer .instagram {
 
 #navKnapper a {
     /*gjelder for hver enkelt menyknapp*/
-    color: #F3CFB4;
+    color: var(--yellow);
     line-height: 23px;
     font-size: 20px;
     font-weight: 700;
     font-family: Verdana;
 }
-.denneSiden{
+
+.denneSiden {
     text-decoration: underline 4px;
     text-underline-offset: 3px;
 }
+
 #navKnapper a:hover {
-    color: #DE855E;
-    text-decoration-color: #DE855E;
+    color: var(--orange);
+    text-decoration-color: var(--orange);
 }
 
 #hamburgerCheckbox {
@@ -245,21 +283,23 @@ footer .instagram {
     padding-top: 5px;
     display: none;
     cursor: pointer;
-    fill: #DE855E;
+    fill: var(--orange);
     position: fixed;
     right: 2%;
     top: 2%;
     z-index: 2;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
     */
     #flytMeny {
         flex-direction: column;
     }
-    #logo{
+
+    #logo {
         width: 60%;
     }
 
@@ -281,16 +321,18 @@ footer .instagram {
     #labelForHamburger {
         display: block;
     }
-    #hamburgerCheckbox:checked+#navKnapper{
+
+    #hamburgerCheckbox:checked+#navKnapper {
         /*viser menyknappene i mobilversjon når hamburgermenyern blir trykket og checkboxen blir checked*/
         height: 100vh;
-        background-color: #121212;
+        background-color: var(--darkest-grey);
         font-size: 150%;
         width: 100%;
         z-index: -1;
         visibility: visible;
     }
-    #hamburgerCheckbox:checked+#navKnapper a{
+
+    #hamburgerCheckbox:checked+#navKnapper a {
         display: block;
     }
 }
