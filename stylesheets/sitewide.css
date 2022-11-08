@@ -1,4 +1,7 @@
 /* ----- General ------------ */
+:root {
+    background-color: var(--grey);
+}
 
 body {
     background-color: var(--grey);
@@ -8,6 +11,8 @@ body {
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
 }
+
+html { scroll-behavior: smooth;}
 
 a {
     text-decoration: inherit;
@@ -82,12 +87,14 @@ footer {
     bottom: 0;
     width: 100vw;
     background-color: var(--yellow);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .footer-row {
     display: flex;
     padding: 0px 0px 6% 0px;
     margin: 4% 10%;
+    gap: 5%;
 }
 
 .opening-information {
@@ -130,6 +137,22 @@ footer .instagram {
 }
 #reservasjon{
     text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .footer-row {
+            flex-direction: column;
+        }
+
+    footer div {
+        padding: 3vh 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media {
+        gap: 20%;
+    }
 }
 /* ----- Ending footer ----- */
 
