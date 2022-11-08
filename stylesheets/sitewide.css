@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
+    /* overflow-x: hidden; */
 }
 
 html { scroll-behavior: smooth;}
@@ -101,7 +102,7 @@ main {
 
 footer {
     bottom: 0;
-    width: 100vw;
+    width: auto;
     background-color: var(--yellow);
     font-family: 'Ubuntu', sans-serif;
 }
@@ -281,7 +282,7 @@ footer .instagram {
     z-index: 2;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
