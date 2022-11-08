@@ -18,7 +18,14 @@ a {
 }
 
 main {
-    margin: 120px 8%;
+    margin: 100px 8%;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    opacity: .15;
+    background-color: var(--yellow);
 }
 
 /* ----- Ending general ----- */
@@ -55,7 +62,8 @@ main {
     background-color: var(--dark-grey);
     justify-content: center;
     align-items: center;
-    margin: 5vw;
+    /* margin: 5vw; */
+    margin: 120px 0;
     position: relative
 }
 .card_text{

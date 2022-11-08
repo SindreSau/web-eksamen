@@ -33,6 +33,13 @@ h1::before {
     margin: 3vw;
     color: var(--orange);
     scroll-behavior: smooth;
+    transition: .3s;
+}
+.menyknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
+    box-shadow: 3px 5px 15px var(--darkest-grey);
 }
 /*--------CSS Bilde/Menyvelger topp end--------*/
 
