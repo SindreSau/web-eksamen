@@ -34,13 +34,13 @@ main {
     width: 250px;
     transition: .3s;
 }
-
 .reservereknapp:hover {
     background-color: var(--orange);
     color: var(--yellow);
     scale: 105%;
+    box-shadow: 3px 5px 15px var(--darkest-grey);
 }
-#knappReservasjon {
+#knappReservasjon{
     display: flex;
     justify-content: center;
 }
@@ -123,6 +123,7 @@ footer h4 {
 */
 .footer-contact {
     flex: 3 1 auto;
+    transition: ease-in-out .3s;
 }
 
 .social-media {
@@ -136,14 +137,18 @@ footer h4 {
 
 footer .tripadvisor {
     height: 40px;
+    transition: .3s;
 }
-
 footer .facebook {
     height: 45px;
+    transition: .3s;
 }
-
 footer .instagram {
     height: 52px;
+    transition: .3s;
+}
+.tripadvisor:hover, .facebook:hover, .instagram:hover {
+    scale: 105%;
 }
 
 .footer-logo {
@@ -213,14 +218,15 @@ footer .instagram {
 
 #logo a {
     text-decoration: none;
-    color: var(--yellow);
+    color: #F3CFB4;
     font-weight: 700;
     font-size: 32px;
     line-height: 43px;
 }
 
 .svg-logo {
-    fill: var(--yellow);
+    filter: invert(78%) sepia(3%) saturate(5423%) hue-rotate(322deg) brightness(118%) contrast(91%);
+    height: 28px;
 }
 
 #navKnapper {
@@ -245,10 +251,12 @@ footer .instagram {
     font-weight: 700;
     font-family: Verdana;
 }
-.denneSiden{
+
+.denneSiden {
     text-decoration: underline 4px;
     text-underline-offset: 3px;
 }
+
 #navKnapper a:hover {
     color: var(--orange);
     text-decoration-color: var(--orange);
@@ -274,13 +282,15 @@ footer .instagram {
 }
 
 @media (max-width: 650px) {
+
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
     */
     #flytMeny {
         flex-direction: column;
     }
-    #logo{
+
+    #logo {
         width: 60%;
     }
 
@@ -302,7 +312,8 @@ footer .instagram {
     #labelForHamburger {
         display: block;
     }
-    #hamburgerCheckbox:checked+#navKnapper{
+
+    #hamburgerCheckbox:checked+#navKnapper {
         /*viser menyknappene i mobilversjon når hamburgermenyern blir trykket og checkboxen blir checked*/
         height: 100vh;
         background-color: var(--darkest-grey);
@@ -311,7 +322,8 @@ footer .instagram {
         z-index: -1;
         visibility: visible;
     }
-    #hamburgerCheckbox:checked+#navKnapper a{
+
+    #hamburgerCheckbox:checked+#navKnapper a {
         display: block;
     }
 }

@@ -1,5 +1,53 @@
-
 /* ---------- start bilde-slideshow ----------  */
+.hero {}
 
+.slideshow-container {
+    position: relative;
+    padding-top: 7vh;
+    margin-left: -40px;
+    width: calc(100vw + 40px);
+    max-width: 1900px;
+    height: 70vh;
+    /* max-height: 694px; */
+    overflow: hidden;
+}
+
+.slideshow {
+    position: relative;
+}
+
+
+.slideshow img {
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.img-1 {
+    z-index: 0;
+    /* opacity: 50%; */
+}
+
+.img-2 {
+    z-index: -1;
+    /* opacity: 50%; */
+}
+
+.img-3 {
+    z-index: -2;
+    /* opacity: 50%; */
+}
+
+.img-4 {
+    z-index: -3;
+    /* opacity: 50%; */
+}
+
+@media (max-width: 1340px) {
+    .slideshow-container {
+        max-height: 60vw;
+    }
+}
 
 /* ---------- slutt bilde-slideshow ----------  */
