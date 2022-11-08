@@ -1,77 +1,26 @@
-.padded {
-    margin-left: 50px;
-    margin-right: 50px;
-}
 
 /* ---------- start bilde-slideshow ----------  */
-#slideshow {
-    animation: fade 32s cubic-bezier(1, 0, 0, 1) infinite;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 45vh;
-}
 
-@media (width < 600px) {
-    .container-slideshow {
-        height: 35vh;
-    }
-}
-@media (width > 1600px) {
-    .container-slideshow {
-        height: 55vh;
-    }
-}
 
-@keyframes fade {
-    0% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    10% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    18% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    25% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    35% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    43% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    50% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    60% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    68% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    75% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    85% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    93% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    100% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-}
 /* ---------- slutt bilde-slideshow ----------  */
 
-.centertext {
+/*-- Knapp for reservasjon ---*/
+.reservereknapp {
     text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
 }
 
-#menyinfo-overskrift {
-    padding-top: 15px;
-    padding-bottom: 30px;
+#knappReservasjon {
+    display: flex;
+    justify-content: center;
 }
 
-.menyinfo-divider {
-    padding-bottom: 15px;
-}
-
-.rett-divider {
-    padding: 40px;
-}
-
-main hr {
-    position: relative;
-    z-index: -1;
-    border: 1px solid rgb(242,208,181);
-    border-radius: 4px;
-    opacity: 10%;
-    margin-left: 6vw;
-    margin-right: 6vw;
-    overflow: hidden;
-}
-
-.italic{
-    font-style: italic;
-}
-
+/*-- Slutt knapp for reservasjon ---*/
 
 
 /* ----- Utility variabler ------------ */
@@ -85,19 +34,3 @@ main hr {
 }
 
 /* ----- Ending utility variabler ----- */
-
-/*-- Knapp for reservasjon ---*/
-.reservereknapp {
-    text-align: center;
-    border: 1px solid var(--orange);
-    padding: 20px;
-    display: block;
-    margin: 3vw;
-    color: var(--orange);
-    width: 250px;
-}
-#knappReservasjon{
-    display: flex;
-    justify-content: center;
-}
-/*-- Slutt knapp for reservasjon ---*/
