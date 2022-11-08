@@ -23,9 +23,28 @@ main {
 /* ----- Ending general ----- */
 
 
-/* ----- Navbar ------------ */
+/* ----- Knapp ------------ */
+.reservereknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
+    transition: .3s;
+}
 
-/* ----- Ending navbar ----- */
+.reservereknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
+}
+#knappReservasjon {
+    display: flex;
+    justify-content: center;
+}
+/* ----- Ending knapp ----- */
 
 /* -----  Cards ------------ */
 
