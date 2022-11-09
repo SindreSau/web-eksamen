@@ -47,6 +47,7 @@ i{
     scroll-behavior: smooth;
     transition: .3s;
 }
+
 .menyknapp:hover {
     background-color: var(--orange);
     color: var(--yellow);
@@ -54,8 +55,6 @@ i{
     box-shadow: 3px 5px 15px var(--darkest-grey);
 }
 /*--------CSS Bilde/Menyvelger topp end--------*/
-
-
 
 
 /*--------CSS Kafe meny--------*/
@@ -67,23 +66,23 @@ i{
     color: var(--yellow);
 }
 
-.boxKafemeny{
+.boxKafemeny {
     text-align: center;
     padding: 20px;
     margin: 20px 0px 20px 0px;
     flex: 1;
 }
- .alignKafemeny h1{ color: var(--orange)}
+
+ .alignKafemeny h1 {
+    color: var(--orange)
+}
 
  #kafemeny{ 
     text-align: center;
     margin: 100px 0px 30px 0px;
-
  }
 
 /*--------CSS Kafe meny end--------*/
-
-
 
 
 /*--------CSS meny--------*/
@@ -93,7 +92,7 @@ i{
     margin: 50px 0px 50px 0px;
 }
 
-.alignCatering{
+.alignCatering {
     display: flex;
     flex-direction: row;  
     justify-content: center;
@@ -115,25 +114,27 @@ i{
     color: var(--yellow);
     padding: 50px 20px 20px 20px;}
 
-.boxmeny h3 {color: var(--yellow)}
-.boxmeny p {color: var(--yellow)}
+.boxmeny h3 {
+    color: var(--yellow)
+}
+
+.boxmeny p {
+    color: var(--yellow)
+}
 
 /*--------CSS Catering meny end--------*/
-
-
-
 
 
 /*--------Visning----------------------*/
 
 
-@media(max-width: 1250px ){
+@media(max-width: 1250px) {
     .alignCatering {
         flex-direction: column;
     }
 }
 
-@media(max-width: 1000px ){
+@media(max-width: 1000px) {
     .alignKafemeny {
         flex-direction: column;
     }
