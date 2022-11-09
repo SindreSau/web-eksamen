@@ -1,6 +1,5 @@
-
 /*-- Knapp for reservasjon ---*/
-.reservereknapp {
+/* .reservereknapp {
     text-align: center;
     border: 1px solid var(--orange);
     padding: 20px;
@@ -13,21 +12,23 @@
 #knappReservasjon{
     display: flex;
     justify-content: center;
-}
+} */
 /*-- Slutt knapp for reservasjon ---*/
 
 
 /*-- Tekst øvsert på siden ----*/
 h1 {
-    color: var(--yellow)
+    color: var(--orange)
 }
 
 #bookingInfo{
+    padding-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #bookingInfo p{
+    padding-top: 10px;
     color: var(--yellow);
 }
 
