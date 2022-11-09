@@ -1,5 +1,4 @@
 /* ----- General ------------ */
-
 body {
     background-color: var(--grey);
     padding: 0;
@@ -21,7 +20,8 @@ h1,
 h2,
 h3,
 h4,
-p, a {
+p,
+a {
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -36,6 +36,10 @@ hr {
     background-color: var(--yellow);
 }
 
+h1,
+h2 {
+    text-transform: uppercase;
+}
 
 /* ----- Ending general ----- */
 
@@ -52,24 +56,21 @@ hr {
     cursor: pointer;
     transition: .3s;
 }
+
 .reservereknapp:hover {
     background-color: var(--orange);
     color: var(--yellow);
     scale: 105%;
     box-shadow: 3px 5px 15px var(--darkest-grey);
 }
-#knappReservasjon{
+
+#knappReservasjon {
     display: flex;
     justify-content: center;
 }
+
 /* ----- Ending knapp ----- */
 
-h1, 
-h2 {
-    text-transform: uppercase;
-}
-
-/* ----- Ending general ----- */
 
 /*----------Dette er css for nav-baren----------*/
 #flytMeny {
@@ -161,25 +162,25 @@ h2 {
 }
 
 @media (max-width: 1310px) {
-    #logo{
+    #logo {
         width: 10%;
     }
+
     #navKnapper {
         width: 90%;
+    }
 }
-}
+
 @media (max-width: 1170px) {
-    #logo{
+    #logo {
         width: 15%;
     }
+
     #navKnapper {
         width: 85%;
         gap: 1%
+    }
 }
-}
-
-
-
 
 @media (max-width: 900px) {
 
@@ -228,8 +229,8 @@ h2 {
         display: block;
     }
 }
-
 /*----------Dette er css for nav-baren----------*/
+
 
 /* -----  Cards ------------ */
 .card_container {
@@ -287,8 +288,8 @@ h2 {
     }
 
 }
-
 /* ----- Ending cards ------------ */
+
 
 /* ----- Knapp ------------ */
 .reservereknapp {
@@ -313,8 +314,8 @@ h2 {
     display: flex;
     justify-content: center;
 }
-
 /* ----- Ending knapp ----- */
+
 
 /* ----- Footer ------------ */
 footer {
@@ -392,6 +393,7 @@ footer .instagram {
 
 /* ----- Ending footer ----- */
 
+
 /* ----- Utility variabler ------------ */
 :root {
     --orange: #DE855E;
@@ -400,5 +402,4 @@ footer .instagram {
     --dark-grey: #1E1E1E;
     --grey: #222222;
 }
-
 /* ----- Ending utility variabler ----- */
