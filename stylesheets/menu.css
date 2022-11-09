@@ -13,16 +13,6 @@ ul {
     color: var(--yellow)
 }
 
-h1::before { 
-
-    display: block;
-    content: "";
-    margin-top: -150px;
-    height: 150px;
-    visibility: hidden;
-    pointer-events: none;
-}
-
 i {
     color: var(--yellow)
 }
