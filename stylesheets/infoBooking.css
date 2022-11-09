@@ -48,7 +48,10 @@ h1 {
 #checkBooking{
     display: none;
 }
-
+.popupContent{
+    position: relative;
+    z-index: 2;
+}
 #checkBooking:checked+.banner{
     display: flex;
     background: rgb(18,18,18, 0.75);

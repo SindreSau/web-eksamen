@@ -6,7 +6,7 @@ body{
 h1 {color: var(--yellow)}
 
 ul {list-style: none;
-color: var(--yellow)}
+    color: var(--yellow)}
 
 h1::before { 
     display: block;
@@ -15,6 +15,8 @@ h1::before {
     height: 150px;
     visibility: hidden;
 }
+
+i{ color: var(--yellow)}
 
 /*--------CSS Bilde/Menyvelger topp--------*/
 
@@ -74,7 +76,7 @@ h1::before {
 
 
 
-/*--------CSS Catering meny--------*/
+/*--------CSS meny--------*/
 
 #cateringmeny {
     text-align: center;
@@ -95,8 +97,14 @@ h1::before {
     margin: 20px 0px 20px 0px;
 }
 
-.boxmeny h1 { color: var(--orange)}
-.boxmeny h2 {color: var(--yellow)}
+.boxmeny h1 { 
+    color: var(--orange);
+    padding: 30px;}
+
+.boxmeny h2 {
+    color: var(--yellow);
+    padding: 20px;}
+    
 .boxmeny h3 {color: var(--yellow)}
 .boxmeny p {color: var(--yellow)}
 
