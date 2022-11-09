@@ -99,8 +99,8 @@
         z-index: 1;
     }
 }
-
 /* ---------- slutt bilde-slideshow ----------  */
+
 
 /* ---------- Greeting ----------  */
 .greeting {
@@ -110,10 +110,10 @@
 
 .greeting h2 {
     padding-bottom: 30px;
+    color: var(--orange);
 }
 
 .greeting p {
     padding-bottom: 100px;
 }
-
 /* ---------- slutt Greeting ----------  */
