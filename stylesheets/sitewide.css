@@ -138,11 +138,14 @@ h2 {
 .denneSiden {
     text-decoration: underline 5px;
     text-underline-offset: 7px;
+    -webkit-text-decoration-line:  underline;
+    -webkit-text-decoration-color: var(--yellow);
 }
 
 #navKnapper a:hover {
     color: var(--orange);
     text-decoration-color: var(--orange);
+    -webkit-text-decoration-color: var(--orange);
 }
 
 #hamburgerCheckbox {
@@ -233,6 +236,7 @@ h2 {
     }
 }
 
+
 /*----------Dette er css for nav-baren----------*/
 
 /* -----  Cards ------------ */
@@ -255,6 +259,10 @@ h2 {
     margin: 5%;
     width: 50%;
     color: var(--yellow);
+}
+
+.card_text h2 {
+    color: var(--orange);
 }
 
 .card_bilde {
@@ -287,6 +295,7 @@ h2 {
 
 }
 
+
 /* ----- Ending cards ------------ */
 
 /* ----- Knapp ------------ */
@@ -312,6 +321,7 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
 
 /* ----- Ending knapp ----- */
 
@@ -388,17 +398,23 @@ footer .instagram {
 
 @media (max-width: 850px) {
     .footer-row {
-        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: start;
+        max-width: fit-content;
     }
 
     footer div {
         padding: 3vh 0;
         align-items: center;
-        text-align: center;
     }
 
     .social-media {
-        gap: 20%;
+        justify-content: flex-start;
+        gap: 13%;
+        padding-bottom: 30%;
     }
 }
 
@@ -412,6 +428,7 @@ footer .instagram {
     --dark-grey: #1E1E1E;
     --grey: #222222;
 }
+
 
 /* ----- Ending utility variabler ----- */
 
