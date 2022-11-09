@@ -36,6 +36,14 @@ hr {
     background-color: var(--yellow);
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
 /* ----- Ending general ----- */
 
 /*----------Dette er css for nav-baren----------*/
