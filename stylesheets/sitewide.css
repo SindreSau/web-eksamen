@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
     overscroll-behavior-y: none;
-    overscroll-behavior-x: none;
     /* overflow-x: hidden; */
 }
 
@@ -43,7 +42,7 @@ hr {
     color: var(--orange);
     width: 250px;
     transition: .3s;
-    z-index: -1;
+    z-index: 1;
 }
 .reservereknapp:hover {
     background-color: var(--orange);
@@ -330,6 +329,7 @@ footer .instagram {
     }
 
     #navKnapper {
+        width: 100%;
         position: fixed;
         height: 0px;
         top: 50%;
@@ -337,6 +337,7 @@ footer .instagram {
         padding-top: 0;
         flex-direction: column;
         top: 0px;
+        gap: 7%;
     }
 
     #navKnapper a {
@@ -353,7 +354,6 @@ footer .instagram {
         height: 100vh;
         background-color: var(--darkest-grey);
         font-size: 150%;
-        width: 100%;
         z-index: -1;
         visibility: visible;
     }
