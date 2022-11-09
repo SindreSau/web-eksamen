@@ -409,6 +409,7 @@ footer .instagram {
     }
 
     .social-media {
+        justify-content: flex-start;
         gap: 13%;
         padding-bottom: 30%;
     }
