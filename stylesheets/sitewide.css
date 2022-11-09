@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
+    overscroll-behavior-y: none;
     /* overflow-x: hidden; */
 }
 
@@ -41,6 +42,7 @@ hr {
     color: var(--orange);
     width: 250px;
     transition: .3s;
+    z-index: 1;
 }
 .reservereknapp:hover {
     background-color: var(--orange);
@@ -51,6 +53,8 @@ hr {
 #knappReservasjon{
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 0;
 }
 /* ----- Ending knapp ----- */
 
@@ -219,7 +223,7 @@ footer .instagram {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 40px;
-    width: 30%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
@@ -240,7 +244,7 @@ footer .instagram {
 
 #navKnapper {
     /*gjelder for den delen av navbaren som inneholden menyknappene*/
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -290,7 +294,28 @@ footer .instagram {
     z-index: 2;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1310px) {
+    #logo{
+        width: 10%;
+    }
+    #navKnapper {
+        width: 90%;
+}
+}
+@media (max-width: 1170px) {
+    #logo{
+        width: 15%;
+    }
+    #navKnapper {
+        width: 85%;
+        gap: 1%
+}
+}
+
+
+
+
+@media (max-width: 900px) {
 
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
@@ -304,6 +329,7 @@ footer .instagram {
     }
 
     #navKnapper {
+        width: 100%;
         position: fixed;
         height: 0px;
         top: 50%;
@@ -311,6 +337,7 @@ footer .instagram {
         padding-top: 0;
         flex-direction: column;
         top: 0px;
+        gap: 7%;
     }
 
     #navKnapper a {
@@ -327,7 +354,6 @@ footer .instagram {
         height: 100vh;
         background-color: var(--darkest-grey);
         font-size: 150%;
-        width: 100%;
         z-index: -1;
         visibility: visible;
     }
