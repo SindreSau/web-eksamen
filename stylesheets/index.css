@@ -110,6 +110,7 @@
 
 .greeting h2 {
     padding-bottom: 30px;
+    color: var(--orange);
 }
 
 .greeting p {
