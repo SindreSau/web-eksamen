@@ -138,11 +138,14 @@ h2 {
 .denneSiden {
     text-decoration: underline 5px;
     text-underline-offset: 7px;
+    -webkit-text-decoration-line:  underline;
+    -webkit-text-decoration-color: var(--yellow);
 }
 
 #navKnapper a:hover {
     color: var(--orange);
     text-decoration-color: var(--orange);
+    -webkit-text-decoration-color: var(--orange);
 }
 
 #hamburgerCheckbox {
