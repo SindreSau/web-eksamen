@@ -293,6 +293,9 @@ footer {
     background-color: var(--yellow);
 }
 
+footer h4 {
+}
+
 .footer-row {
     display: flex;
     padding: 0px 0px 6% 0px;
