@@ -1,3 +1,4 @@
+/* ----- booking popup box ----- */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -20,7 +21,6 @@
     display: flex;
     grid-template-columns: 420px 420px;
 }
-
 .banner h2{
     padding-bottom: 40px;
     margin-bottom: 20px;
@@ -28,7 +28,7 @@
 .popup-content{
     background: #DE855E;
     height: 330px;
-    z-index: 2;
+    z-index: 0;
 }
 .popup-content h3{
     text-align: center;
@@ -69,3 +69,4 @@ form input[type = submit]:hover{
     background-color: #DE855E;
     opacity: 0.8;
 }
+/* ----- Ending booking popup box ----- */
