@@ -6,15 +6,23 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Ubuntu', sans-serif;
-    /* overflow-x: hidden; */
 }
 
-html { scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: inherit;
     color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p, a {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 main {
@@ -28,13 +36,6 @@ hr {
     background-color: var(--yellow);
 }
 
-h1 {
-    text-transform: uppercase;
-}
-
-h2 {
-    text-transform: uppercase;
-}
 
 /* ----- Ending general ----- */
 
@@ -48,6 +49,7 @@ h2 {
     margin: 3vw;
     color: var(--orange);
     width: 250px;
+    cursor: pointer;
     transition: .3s;
 }
 .reservereknapp:hover {
@@ -62,154 +64,18 @@ h2 {
 }
 /* ----- Ending knapp ----- */
 
-/* -----  Cards ------------ */
-
-.card_container {
-    display: flex;  
-    flex-direction: row;
-    background-color: var(--dark-grey);
-    justify-content: center;
-    align-items: center;
-    /* margin: 5vw; */
-    margin: 120px 0;
-    position: relative
-}
-.card_text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 1%;
-    width: 50%;
-    font-family: Verdana;
-    color: #F3CFB4;
-}
-.card_bilde{
-    height: 50%;
-    width: 50%;
-    margin: 1%;
-}
-.bilde_cards{
-    height: 100%;
-    width: 100%;
+h1 {
+    text-transform: uppercase;
 }
 
-@media (max-width:600px) {
-    .card_container{
-        flex-direction: column;
-        margin: 2vw;
-    }
-    .card_bilde{
-        width: 94%;
-        height: 100%;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    .card_text{
-        width: 90%;
-    }
-    
+
+h2 {
+    text-transform: uppercase;
 }
 
-/* ----- Ending cards ------------ */
-
-
-/* ----- Footer ------------ */
-
-footer {
-    bottom: 0;
-    width: auto;
-    background-color: var(--yellow);
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.footer-row {
-    display: flex;
-    padding: 0px 0px 6% 0px;
-    margin: 4% 10%;
-    gap: 5%;
-}
-
-.opening-information {
-    flex: 3 1 auto;
-}
-/*
-footer h4 {
-     justeres etter variabel
-}
-*/
-.footer-contact {
-    flex: 3 1 auto;
-    transition: ease-in-out .3s;
-}
-
-.social-media {
-    display: flex;
-    margin-top: 7px;
-    height: fit-content;
-    align-items: center;
-    justify-content: space-around;
-    flex: 1 1 auto;
-}
-
-footer .tripadvisor {
-    height: 40px;
-    transition: .3s;
-}
-footer .facebook {
-    height: 45px;
-    transition: .3s;
-}
-footer .instagram {
-    height: 52px;
-    transition: .3s;
-}
-.tripadvisor:hover, .facebook:hover, .instagram:hover {
-    scale: 105%;
-}
-
-.footer-logo {
-    padding-bottom: 8%;
-    display: flex;
-    justify-content: center;
-}
-#reservasjon{
-    text-decoration: underline;
-}
-
-@media (max-width: 850px) {
-    .footer-row {
-            flex-direction: column;
-        }
-
-    footer div {
-        padding: 3vh 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .social-media {
-        gap: 20%;
-    }
-}
-/* ----- Ending footer ----- */
-
-
-/* ----- Utility variabler ------------ */
-
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --darkest-grey: #121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
-
-/* ----- Ending utility variabler ----- */
+/* ----- Ending general ----- */
 
 /*----------Dette er css for nav-baren----------*/
-
-
 #flytMeny {
     /*gjelder for rammen for menyen som er klistret til toppen av siden*/
     background-color: var(--darkest-grey);
@@ -227,7 +93,7 @@ footer .instagram {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 40px;
-    width: 30%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
@@ -248,7 +114,7 @@ footer .instagram {
 
 #navKnapper {
     /*gjelder for den delen av navbaren som inneholden menyknappene*/
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -270,8 +136,8 @@ footer .instagram {
 }
 
 .denneSiden {
-    text-decoration: underline 4px;
-    text-underline-offset: 3px;
+    text-decoration: underline 5px;
+    text-underline-offset: 7px;
 }
 
 #navKnapper a:hover {
@@ -298,7 +164,28 @@ footer .instagram {
     z-index: 2;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1310px) {
+    #logo{
+        width: 10%;
+    }
+    #navKnapper {
+        width: 90%;
+}
+}
+@media (max-width: 1170px) {
+    #logo{
+        width: 15%;
+    }
+    #navKnapper {
+        width: 85%;
+        gap: 1%
+}
+}
+
+
+
+
+@media (max-width: 900px) {
 
     /*gjør om siden til mobilversjon ved 650 piksler i bredde.
     gjemmer navigasjonsmenyen og viser en hamburgermeny
@@ -312,6 +199,7 @@ footer .instagram {
     }
 
     #navKnapper {
+        width: 100%;
         position: fixed;
         height: 0px;
         top: 50%;
@@ -319,6 +207,7 @@ footer .instagram {
         padding-top: 0;
         flex-direction: column;
         top: 0px;
+        gap: 7%;
     }
 
     #navKnapper a {
@@ -335,7 +224,6 @@ footer .instagram {
         height: 100vh;
         background-color: var(--darkest-grey);
         font-size: 150%;
-        width: 100%;
         z-index: -1;
         visibility: visible;
     }
@@ -346,3 +234,259 @@ footer .instagram {
 }
 
 /*----------Dette er css for nav-baren----------*/
+
+/* -----  Cards ------------ */
+.card_container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-grey);
+    justify-content: center;
+    align-items: center;
+    /* margin: 5vw; */
+    margin: 120px 0;
+    position: relative
+}
+
+.card_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5%;
+    width: 50%;
+    color: var(--yellow);
+}
+
+.card_bilde {
+    height: 50%;
+    width: 50%;
+    margin: 1%;
+}
+
+.bilde_cards {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width:600px) {
+    .card_container {
+        flex-direction: column;
+        margin: 2vw;
+    }
+
+    .card_bilde {
+        width: 94%;
+        height: 100%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .card_text {
+        width: 90%;
+    }
+
+}
+
+/* ----- Ending cards ------------ */
+
+/* ----- Knapp ------------ */
+.reservereknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
+    transition: .3s;
+}
+
+.reservereknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
+    box-shadow: 3px 5px 15px var(--darkest-grey);
+}
+
+#knappReservasjon {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- Ending knapp ----- */
+
+/* ----- Footer ------------ */
+footer {
+    bottom: 0;
+    width: auto;
+    background-color: var(--yellow);
+}
+
+footer h4 {
+}
+
+.footer-row {
+    display: flex;
+    padding: 0px 0px 6% 0px;
+    margin: 4% 10%;
+    gap: 5%;
+}
+
+.opening-information {
+    flex: 3 1 auto;
+}
+
+/*
+footer h4 {
+     justeres etter variabel
+}
+*/
+.footer-contact {
+    flex: 3 1 auto;
+    transition: ease-in-out .3s;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 7px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 1 auto;
+}
+
+footer .tripadvisor {
+    height: 40px;
+    transition: .3s;
+}
+
+footer .facebook {
+    height: 45px;
+    transition: .3s;
+}
+
+footer .instagram {
+    height: 52px;
+    transition: .3s;
+}
+
+.tripadvisor:hover,
+.facebook:hover,
+.instagram:hover {
+    scale: 105%;
+}
+
+.footer-logo {
+    padding-bottom: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+#reservasjon {
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .footer-row {
+        flex-direction: column;
+    }
+
+    footer div {
+        padding: 3vh 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media {
+        gap: 20%;
+    }
+}
+
+/* ----- Ending footer ----- */
+
+/* ----- Utility variabler ------------ */
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --darkest-grey: #121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
+}
+
+/* ----- Ending utility variabler ----- */
+
+/* ----- booking popup box ----- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* body{
+    font-family: Arial, Helvetica, sans-serif;
+} */
+.banner{
+    min-height: 100vh;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #DE855E;
+    padding-bottom: 20px;
+}
+.popup-container{
+    display: flex;
+    grid-template-columns: 420px 420px;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.popup-content{
+    background: #DE855E;
+    height: 330px;
+    z-index: 0;
+}
+.popup-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #DE855E;
+}
+form input[type = submit]{
+    color: white;
+    background: #121212;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    color: white;
+    background-color: #DE855E;
+    opacity: 0.8;
+}
+.labelForCheckBooking h1{
+    color: #F3CFB4;
+}
+/* ----- Ending booking popup box ----- */

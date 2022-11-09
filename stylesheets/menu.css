@@ -1,6 +1,4 @@
 /*--------Generelt for siden meny, Burde legges inn i sitewide--------*/
-
-
 h1 {
     color: var(--yellow);
     padding: 30px;
@@ -16,6 +14,7 @@ ul {
 }
 
 h1::before { 
+
     display: block;
     content: "";
     margin-top: -150px;
@@ -24,14 +23,14 @@ h1::before {
     pointer-events: none;
 }
 
-i{ 
+i {
     color: var(--yellow)
 }
 
-/*--------CSS Bilde/Menyvelger topp--------*/
 
-.meny_container{ 
-    display: flex;  
+/*--------CSS Bilde/Menyvelger topp--------*/
+.meny_container {
+    display: flex;
     flex-direction: row;
     background-color: var(--dark-grey);
     justify-content: center;
@@ -77,16 +76,18 @@ i{
     color: var(--orange)
 }
 
- #kafemeny{ 
+.alignKafemeny h1 {
+    color: var(--orange)
+}
+
+#kafemeny {
     text-align: center;
     margin: 100px 0px 30px 0px;
  }
-
 /*--------CSS Kafe meny end--------*/
 
 
 /*--------CSS meny--------*/
-
 #cateringmeny {
     text-align: center;
     margin: 50px 0px 50px 0px;
@@ -94,7 +95,7 @@ i{
 
 .alignCatering {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     justify-content: center;
     gap: 3%
 }
@@ -106,13 +107,14 @@ i{
     margin: 20px 0px 20px 0px;
 }
 
-.boxmeny h1 { 
+.boxmeny h1 {
     color: var(--orange);
 }
 
 .boxmeny h2 {
     color: var(--yellow);
-    padding: 50px 20px 20px 20px;}
+    padding: 50px 20px 20px 20px;
+}
 
 .boxmeny h3 {
     color: var(--yellow)
@@ -126,8 +128,6 @@ i{
 
 
 /*--------Visning----------------------*/
-
-
 @media(max-width: 1250px) {
     .alignCatering {
         flex-direction: column;
@@ -139,6 +139,4 @@ i{
         flex-direction: column;
     }
 }
-
-/*--------Visning----------------------*/
-
+/*--------Visning end-------------------*/
