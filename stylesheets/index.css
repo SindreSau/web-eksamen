@@ -1,36 +1,119 @@
-
 /* ---------- start bilde-slideshow ----------  */
+.hero-section {
+    margin-top: 83px;
+}
 
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: relative;
+    display: contents;
+
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: fade 26s ease-in-out infinite;
+}
+
+.slideshow img:nth-of-type(1) {
+    animation-delay: 19.5s;
+}
+
+.slideshow img:nth-of-type(2) {
+    animation-delay: 13s;
+}
+
+.slideshow img:nth-of-type(3) {
+    animation-delay: 6.5s;
+}
+
+.slideshow img:nth-of-type(4) {
+    animation-delay: 0s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .slideshow {
+        display: contents;
+    }
+
+    .slideshow-container {
+        height: 60vw;
+    }
+}
+
+@media (max-width: 768px) and (min-width:701px) {
+    .hero-section {
+        margin-top: 96px;
+    }
+}
+
+@media (min-width: 2561px) {
+    .slideshow-container {
+        height: 70vh;
+        max-width: 2800px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gradient-mask {
+        position: absolute;
+        height: 70vh;
+        width: 100%;
+        background-image: linear-gradient(to right,
+                #222222 1%,
+                rgba(255, 0, 0, 0) 12%,
+                rgba(255, 0, 0, 0) 88%,
+                #222222 99%);
+        z-index: 1;
+    }
+}
 
 /* ---------- slutt bilde-slideshow ----------  */
 
-/*-- Knapp for reservasjon ---*/
-.reservereknapp {
+/* ---------- Greeting ----------  */
+.greeting {
     text-align: center;
-    border: 1px solid var(--orange);
-    padding: 20px;
-    display: block;
-    margin: 3vw;
-    color: var(--orange);
-    width: 250px;
+    color: var(--yellow);
 }
 
-#knappReservasjon {
-    display: flex;
-    justify-content: center;
+.greeting h2 {
+    padding-bottom: 30px;
 }
 
-/*-- Slutt knapp for reservasjon ---*/
-
-
-/* ----- Utility variabler ------------ */
-
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --black: #12121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
+.greeting p {
+    padding-bottom: 100px;
 }
 
-/* ----- Ending utility variabler ----- */
+/* ---------- slutt Greeting ----------  */

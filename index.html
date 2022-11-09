@@ -19,15 +19,15 @@
 </head>
 
 <body>
-      <header id="flytMeny">
+    <header id="flytMeny">
         <div id="logo">
-            <a href="">Java Café</a>
-            <label id="labelForHamburger"for="hamburgerCheckbox">
+            <a href="index.html"><img class="svg-logo" src="Assets/JAVA-CAFÉ-logo1.svg" alt=""></a>
+            <label id="labelForHamburger" for="hamburgerCheckbox">
                 <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect width="100" height="20"></rect>
                     <rect y="30" width="100" height="20"></rect>
                     <rect y="60" width="100" height="20"></rect>
-                  </svg>
+                </svg>
             </label>
         </div>
         <input type="checkbox" id="hamburgerCheckbox">
@@ -40,7 +40,23 @@
         </div>
     </header>
 
+    <div class="hero-section">
+        <div class="slideshow-container">
+            <ul class="slideshow">
+                <img class="img-1" src="Assets/cafe_2.jpeg" alt="">
+                <img class="img-2" src="Assets/party_1.jpeg" alt="">
+                <img class="img-3" src="Assets/cafe_1.jpeg" alt="">
+                <img class="img-4" src="Assets/wedding_1.jpeg" alt="">
+                <div class="gradient-mask"></div>
+            </ul>
+        </div>
+    </div>
     <main>
+        <div class="greeting">
+            <h2>OM JAVA CAFÉ</h2>
+            <p>Java.café er et brasserie med en av Oslos beste beliggenheter. Rettene lages av våre dyktige kokker og er basert på spennende og sesongbaserte råvarer. Ved grupper på over 7 personer, ta kontakt på post@javacafe.no</p>
+        </div>
+        <hr class="greeting-line">
         <div class="card_container">
             <div class="card_bilde">
                 <img class="bilde_cards" src="Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg" alt="">
@@ -53,7 +69,6 @@
                 </p>
             </div>
         </div>
-
         <div class="card_container">
             <div class="card_text">
                 <h2>Arrangement</h2>
@@ -64,62 +79,62 @@
                 </p>
             </div>
             <div class="card_bilde">
-                <img class="bilde_cards" src="Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg" alt="">
+                <img class="bilde_cards" src="Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
             </div>
         </div>
 
-
-<!---Dette er bookingboksen som ligger skjult helt til du trykker på at du skal booke. -->
+        <!---Dette er bookingboksen som ligger skjult helt til du trykker på at du skal booke. -->
         <input type="checkbox" id="checkBooking">
-        <section class = "banner">
+        <section class="banner">
             <h2>BOOK DITT EVENT NÅ</h2>
-            <div class = "card-container">
-                </div>
-
-                <div class = "card-content">
-                    <h3>Reservasjon</h3>
-                    <form>
-                        <div class = "form-row">
-                            <select name = "days">
-                                <option value = "day-select">Velg dag</option>
-                                <option value = "mandag">Mandag</option>
-                            <option value = "tirsdag">Tirsdag</option>
-                            <option value = "onsdag">Onsdag</option>
-                            <option value = "torsdag">Torsdag</option>
-                            <option value = "fredag">Fredag</option>
-                            <option value = "lørdag">Lørdag</option>
-                            <option value = "søndag">Søndag</option>
-                            </select>
-
-                            <select name = "hours">
-                                <option value = "hour-select">Velg tid</option>
-                                <option value = "12">12:00</option>
-                                <option value = "14">14:00</option>
-                                <option value = "16">16:00</option>
-                                <option value = "18">18:00</option>
-                                <option value = "20">20:00</option>
-                            </select>
-                        </div>
-                        
-                        <div class = "form-row">
-                            <input type = "text" placeholder="Fullt navn">
-                            <input type = "text" placeholder="Telfonnummer">
-                        </div>
-
-                        <div class = "form-row">
-                            <input type = "number" placeholder="Hvor mange personer?" min = "1">
-                            <input type = "submit" value = "BOOK EVENT">
-                        </div>
-                    </form>
-                    <label class="labelForCheckBooking"for="checkBooking"><h1>Lukk</h1></label>
-                </div>
+            <div class="popup-container">
             </div>
-        </section> 
-        
 
-        <div id="knappReservasjon">
-            <a href="booking.html" class="reservereknapp">Klikk her for booking</a>
-        </div>   
+            <div class="popup-content">
+                <h3>Reservasjon</h3>
+                <form>
+                    <div class="form-row">
+                        <select name="days">
+                            <option value="day-select">Velg dag</option>
+                            <option value="mandag">Mandag</option>
+                            <option value="tirsdag">Tirsdag</option>
+                            <option value="onsdag">Onsdag</option>
+                            <option value="torsdag">Torsdag</option>
+                            <option value="fredag">Fredag</option>
+                            <option value="lørdag">Lørdag</option>
+                            <option value="søndag">Søndag</option>
+                        </select>
+
+                        <select name="hours">
+                            <option value="hour-select">Velg tid</option>
+                            <option value="12">12:00</option>
+                            <option value="14">14:00</option>
+                            <option value="16">16:00</option>
+                            <option value="18">18:00</option>
+                            <option value="20">20:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Fullt navn">
+                        <input type="text" placeholder="Telfonnummer">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="number" placeholder="Hvor mange personer?" min="1">
+                        <input type="submit" value="BOOK EVENT">
+                    </div>
+                </form>
+                <label class="labelForCheckBooking" for="checkBooking">
+                    <h1>Lukk</h1>
+                </label>
+            </div>
+            </div>
+        </section>
+
+        <div id="knappReservasjon">   
+            <label class="labelForCheckBooking" for="checkBooking"><a class="reservereknapp">Klikk her for booking</a></label>
+        </div>
 
     </main>
 
@@ -130,7 +145,7 @@
                 <p>Mandag - fredag: 0900 - 2230</p>
                 <p>Lørdag: Lørdag: 1300 - 0100</p>
                 <p>Søndag: Stengt</p>
-                <br><label class="labelForCheckBooking"for="checkBooking"><a style="cursor: pointer;"id="reservasjon">Book et event her</a></label>
+                <br><label class="labelForCheckBooking" for="checkBooking"><a style="cursor: pointer;" id="reservasjon">Book et event her</a></label>
             </div>
             <div class="footer-contact">
                 <p><strong>Epost:</strong> <a href=""><u>kontakt@javacafe.no</u></a></p>
