@@ -1,19 +1,56 @@
 /* ----- General ------------ */
-html {
-
-}
+html {}
 
 body {
-
+    background-color: var(--background);
 }
 
 @font-face {
-    font-family: "Tron-font";
-    src: url(Fonts.Tr2n);
+    font-family: 'Tr2n';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Tr2n'), url('Tr2n.woff') format('woff');
 }
 
 h1 {
-    
+    font-family: "Tr2n";
+    font-size: 4rem;
+    color: var(--mega-accent);
+}
+
+h2 {
+    font-family: 'Days One', sans-serif;
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Exo 2', sans-serif;
+    color: var(--primary);
+    font-size: 1rem;
 }
 
 /* ----- Ending general ----- */
+
+
+/* ----- Variabler ------------ */
+    :root {
+        --primary: #FFFFFF;
+        --accent: #FFFFFF;
+        --mega-accent: #FFFFFF;
+        --background: #121212;
+        --card-background: #FFFFFF;
+    }
+/* ----- Ending variabler ----- */
+
+
+/* ----- Navbar ------------ */
+
+/* ----- Ending navbar ----- */
