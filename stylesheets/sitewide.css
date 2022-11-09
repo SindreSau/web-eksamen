@@ -41,8 +41,8 @@ hr {
     margin: 3vw;
     color: var(--orange);
     width: 250px;
+    cursor: pointer;
     transition: .3s;
-    z-index: 1;
 }
 .reservereknapp:hover {
     background-color: var(--orange);
@@ -53,8 +53,6 @@ hr {
 #knappReservasjon{
     display: flex;
     justify-content: center;
-    position: relative;
-    z-index: 0;
 }
 /* ----- Ending knapp ----- */
 
