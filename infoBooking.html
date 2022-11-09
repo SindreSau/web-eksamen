@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/sitewide.css">
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <link rel="stylesheet" href="stylesheets/menu.css">
     <link rel="stylesheet" href="stylesheets/booking.css">
     <link rel="stylesheet" href="stylesheets/infoBooking.css">
     <link rel="icon" href="Assets/kaffeikon.ico">
@@ -15,10 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <!------Google font end-->
-    
-    <title>Meny</title>
+    <title>Booking</title>
 </head>
-
 <body>
     <header id="flytMeny">
         <div id="logo">
@@ -34,120 +30,58 @@
         <input type="checkbox" id="hamburgerCheckbox">
         <div id="navKnapper">
             <a href="index.html">Home</a>
-            <a href="infoBooking.html">Booking</a>
-            <a class="denneSiden" href="menu.html">Menu</a>
+            <a class="denneSiden" href="infoBooking.html">Booking</a>
+            <a href="menu.html">Menu</a>
             <a href="accessibility.html">Accessibility</a>
             <a href="technology.html">Technology and society</a>
         </div>
     </header>
 
     <main>
-
-        <div class="meny_container">
+        <div id="bookingInfo">
+            <h1>Book eventer hos oss!</h1>
+            <p>Vi tilbyr......</p>
+        </div>
+        <div class="card_container">
             <div class="card_bilde">
-                <img class="bilde_cards" src="Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg" alt="">
-                <a href="#kafemeny" class="menyknapp">Trykk her for Kafé meny!</a>
+                <img class="bilde_cards" src="Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg" alt="">
+            </div>
+            <div class="card_text">
+                <h2>Bryllup</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium culpa ratione alias atque sit non omnis harum, consequatur eveniet maiores incidunt ut, sed dolore nobis suscipit, dicta saepe nulla!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur fugit eligendi ex asperiores impedit at dignissimos debitis doloribus, ducimus magnam reprehenderit optio! Reprehenderit, iste! Totam porro deserunt magnam repellendus.
+                </p>
+            </div>
+        </div>
+
+        <div class="card_container">
+            <div class="card_text">
+                <h2>Julebord</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium culpa ratione alias atque sit non omnis harum, consequatur eveniet maiores incidunt ut, sed dolore nobis suscipit, dicta saepe nulla!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos pariatur unde corporis aliquid voluptatibus omnis, qui architecto, corrupti culpa aut incidunt vero sequi eius id fugit totam ratione repellat voluptatum.
+                </p>
             </div>
             <div class="card_bilde">
-                <img class="bilde_cards"  src="Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"  alt="">
-                <a href="#cateringmeny" class="menyknapp"> Trykk her for Catering meny!</a>
+                <img class="bilde_cards" src="Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg" alt="">
             </div>
         </div>
 
-        <h1 id="kafemeny">Kafé meny</h1>
-        <hr>
-        <div class="alignKafemeny">
-            <div class="boxKafemeny"> 
-                <h1>Drikke</h1>
-                <hr>
-                <h2>Varm drikke</h2>
-                    <ul>
-                        <li>Cafe au lait  45,-</li>
-                        <li>Cappucino  45,-</li>
-                        <li>Americano  45,-</li>
-                        <li>Espresso   45,-</li>
-                    </ul>
-
-                <h2>Kald drikke</h2>
-                    <ul>
-                        <li>Juice  45,-</li>
-                        <li>Smoothie  45,-</li>
-                        <li>Mineralvann  45,-</li>
-                    </ul>
+        <div class="card_container">
+            <div class="card_bilde">
+                <img class="bilde_cards" src="Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg" alt="">
             </div>
-
-            <div class="boxKafemeny"> 
-                <h1>Bakst</h1>
-                <hr>
-                <h2>Småsulten</h2>
-                    <ul>
-                        <li>Baguett med mozzarella og tomat</li>
-                        <li>Avokadotoast  45,-</li>
-                        <li>  45,-</li>
-                    </ul>
-
-                <h2>Noe søtt til kaffen</h2>
-                    <ul>
-                        <li>Brownie  45,-</li>
-                        <li>Kanelsnurr  45,-</li>
-                        <li>Skolebolle  45,-</li>
-                    </ul>
-            </div>
-
-        </div>
-
-        <h1 id="cateringmeny">Catering meny</h1>
-        <div class="alignCatering">
-            
-            <div class="boxmeny">
-                <h1>Bryllupsmeny</h1>
-                    <hr>
-                    <h2> Forrett</h2>
-                    <h3>Sopprisotto</h3>
-                        <i> Forrest mushroom risotto <br> [Melk/laktose, Nøtter] <br> 225,- </i>
-
-                    <h2> Hovedrett</h2>
-                    <h3>Gravet ørret med urtekrem og marinerte høstgrønnsaker</h3>
-                        <i> Cured sea trout with herb cream and marinated vegetables <br> [Sennep, Egg, Fisk/skalldyr, Melk/laktose] <br> 289,- </i>
-                        
-                    <h2>Desert</h2>
-                    <h3>Ostekake med bringebær, marengs og sitrontimian </h3>
-                        <i> Cheesecake with raspberries, meringue and lamon thyme <br> [Gluten, Egg, Nøtter, Melk/laktose] <br> 165,- </i>
-            </div>
-
-            <div class="boxmeny">
-                <h1>Julebordmeny</h2>
-                    <hr>
-                    <h2> Forrett</h2>
-                    <h3>Tartar av okse fra østlandet, klassiske tilbehør </h3>
-                        <i> Classic beef tartar from Østlandet <br> [Gluten, Sennep, Egg] <br> 205,- </i> 
-
-                    <h2> Hovedrett</h2>
-                    <h3>Dåhjort med grønnkål, tyttebør og pommes croquette</h3>
-                        <i> Falow deer with cabbage, lingonberries and pommes croquette <br> [Gluten, Egg, Melk/laktose] <br> 305,- </i>
-                        
-                    <h2>Desert</h1>
-                    <h3>Dagens utvalg av ost </h3>
-                        <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
-            </div>
-
-            <div class="boxmeny">
-                <h1>Generell meny</h1>
-                    <hr>
-                    <h2>Forrett</h2>
-                    <h3>Ovnsbakt Kamskjell med sjalottløk og morkler</h3>
-                    <i> Baked scallop with shallots and morels <br> [Fisk/skalldyr] <br> 245,- </i>   
-
-                    <h2> Hovedrett</h2>
-                    <h3>Uer fra Ålesund med mais, berru nosette og bacon</h3>
-                        <i> Red-fish from Ålesund with sweetcorn, beurre noisette and bacon <br> [Gluten, Egg, Fisk/skalldyr] <br> 309,- </i>
-                        
-                    <h2>Desert</h2>
-                    <h3>Dagens utvalg av ost </h3>
-                        <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
+            <div class="card_text">
+                <h2>Catering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium culpa ratione alias atque sit non omnis harum, consequatur eveniet maiores incidunt ut, sed dolore nobis suscipit, dicta saepe nulla!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur fugit eligendi ex asperiores impedit at dignissimos debitis doloribus, ducimus magnam reprehenderit optio! Reprehenderit, iste! Totam porro deserunt magnam repellendus.
+                </p>
             </div>
         </div>
-
+        <div id="knappReservasjon">
+            <label class="labelForCheckBooking"for="checkBooking">
+            <a class="reservereknapp">Book et event</a>
+            </label>
+        </div>
         <input type="checkbox" id="checkBooking">
 
         <section class = "banner">
@@ -182,7 +116,7 @@
                         
                         <div class = "form-row">
                             <input type = "text" placeholder="Fullt navn">
-                            <input type = "text" placeholder="Telfonnummer">
+                            <input type = "tel" placeholder="Telfonnummer">
                         </div>
 
                         <div class = "form-row">
@@ -194,6 +128,7 @@
                 </div>
             </div>
         </section> 
+
     </main>
 
     <footer>
@@ -222,5 +157,4 @@
         </div>
     </footer>
 </body>
-
 </html>

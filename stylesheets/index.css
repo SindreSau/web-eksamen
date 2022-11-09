@@ -1,136 +1,119 @@
-.padded {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
 /* ---------- start bilde-slideshow ----------  */
-#slideshow {
-    animation: fade 32s cubic-bezier(1, 0, 0, 1) infinite;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 45vh;
+.hero-section {
+    margin-top: 83px;
 }
 
-@media (width < 600px) {
-    .container-slideshow {
-        height: 35vh;
-    }
-}
-@media (width > 1600px) {
-    .container-slideshow {
-        height: 55vh;
-    }
-}
-
-@keyframes fade {
-    0% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    10% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    18% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-    25% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    35% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    43% {background-image: url(../Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg);}
-    50% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    60% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    68% {background-image: url(../Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg);}
-    75% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    85% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    93% {background-image: url(../Assets/rr-abrot-pNIgH0y3upM-unsplash.jpeg);}
-    100% {background-image: url(../Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg);}
-}
-/* ---------- slutt bilde-slideshow ----------  */
-
-.centertext {
-    text-align: center;
-}
-
-#menyinfo-overskrift {
-    padding-top: 15px;
-    padding-bottom: 30px;
-}
-
-.menyinfo-divider {
-    padding-bottom: 15px;
-}
-
-.rett-divider {
-    padding: 40px;
-}
-
-main hr {
+.slideshow-container {
     position: relative;
-    z-index: -1;
-    border: 1px solid rgb(242,208,181);
-    border-radius: 4px;
-    opacity: 10%;
-    margin-left: 6vw;
-    margin-right: 6vw;
+    width: 100%;
+    height: 60vh;
     overflow: hidden;
 }
 
-.italic{
-    font-style: italic;
+.slideshow {
+    position: relative;
+    display: contents;
+
 }
 
-/* -----  Cards ------------ */
-
-.card_container {
-    display: flex;  
-    flex-direction: row;
-    background-color: var(--dark-grey);
-    justify-content: center;
-    align-items: center;
-    margin: 5vw;
-    position: relative
-}
-.card_text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 1%;
-    width: 50%;
-    font-family: Verdana;
-    color: #F3CFB4;
-}
-.card_bilde{
-    height: 50%;
-    width: 50%;
-    margin: 1%;
-}
-.bilde_cards{
-    height: 100%;
+.slideshow img {
+    position: absolute;
     width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: fade 26s ease-in-out infinite;
 }
 
-@media (max-width:600px) {
-    .card_container{
-        flex-direction: column;
-        margin: 2vw;
-    }
-    .card_bilde{
-        width: 94%;
-        height: 100%;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    .card_text{
-        width: 90%;
-    }
-    
+.slideshow img:nth-of-type(1) {
+    animation-delay: 19.5s;
 }
 
-/* ----- Ending cards ------------ */
-
-
-/* ----- Utility variabler ------------ */
-
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --black: #12121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
+.slideshow img:nth-of-type(2) {
+    animation-delay: 13s;
 }
 
-/* ----- Ending utility variabler ----- */
+.slideshow img:nth-of-type(3) {
+    animation-delay: 6.5s;
+}
+
+.slideshow img:nth-of-type(4) {
+    animation-delay: 0s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .slideshow {
+        display: contents;
+    }
+
+    .slideshow-container {
+        height: 60vw;
+    }
+}
+
+@media (max-width: 768px) and (min-width:701px) {
+    .hero-section {
+        margin-top: 96px;
+    }
+}
+
+@media (min-width: 2561px) {
+    .slideshow-container {
+        height: 70vh;
+        max-width: 2800px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gradient-mask {
+        position: absolute;
+        height: 70vh;
+        width: 100%;
+        background-image: linear-gradient(to right,
+                #222222 1%,
+                rgba(255, 0, 0, 0) 12%,
+                rgba(255, 0, 0, 0) 88%,
+                #222222 99%);
+        z-index: 1;
+    }
+}
+
+/* ---------- slutt bilde-slideshow ----------  */
+
+/* ---------- Greeting ----------  */
+.greeting {
+    text-align: center;
+    color: var(--yellow);
+}
+
+.greeting h2 {
+    padding-bottom: 30px;
+}
+
+.greeting p {
+    padding-bottom: 100px;
+}
+
+/* ---------- slutt Greeting ----------  */

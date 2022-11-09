@@ -7,58 +7,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/sitewide.css">
     <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/booking.css">
+    <link rel="stylesheet" href="stylesheets/infoBooking.css">
     <link rel="icon" href="Assets/kaffeikon.ico">
+    <!------Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!------Google font end-->
     <title>Hjem</title>
 </head>
 
 <body>
-      <header id="flytMeny">
+    <header id="flytMeny">
         <div id="logo">
-            <a href="">Java Café</a>
-            <label id="labelForHamburger"for="hamburgerCheckbox">
+            <a href="index.html"><img class="svg-logo" src="Assets/JAVA-CAFÉ-logo1.svg" alt=""></a>
+            <label id="labelForHamburger" for="hamburgerCheckbox">
                 <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect width="100" height="20"></rect>
                     <rect y="30" width="100" height="20"></rect>
                     <rect y="60" width="100" height="20"></rect>
-                  </svg>
+                </svg>
             </label>
         </div>
         <input type="checkbox" id="hamburgerCheckbox">
         <div id="navKnapper">
             <a class="denneSiden" href="index.html">Home</a>
-            <a href="booking.html">Booking</a>
+            <a href="infoBooking.html">Booking</a>
             <a href="menu.html">Menu</a>
             <a href="accessibility.html">Accessibility</a>
             <a href="technology.html">Technology and society</a>
         </div>
     </header>
 
+    <div class="hero-section">
+        <div class="slideshow-container">
+            <ul class="slideshow">
+                <img class="img-1" src="Assets/cafe_2.jpeg" alt="">
+                <img class="img-2" src="Assets/party_1.jpeg" alt="">
+                <img class="img-3" src="Assets/cafe_1.jpeg" alt="">
+                <img class="img-4" src="Assets/wedding_1.jpeg" alt="">
+                <div class="gradient-mask"></div>
+            </ul>
+        </div>
+    </div>
     <main>
-
+        <div class="greeting">
+            <h2>OM JAVA CAFÉ</h2>
+            <p>Java.café er et brasserie med en av Oslos beste beliggenheter. Rettene lages av våre dyktige kokker og er basert på spennende og sesongbaserte råvarer. Ved grupper på over 7 personer, ta kontakt på post@javacafe.no</p>
+        </div>
+        <hr class="greeting-line">
         <div class="card_container">
             <div class="card_bilde">
                 <img class="bilde_cards" src="Assets/daan-evers-tKN1WXrzQ3s-unsplash.jpeg" alt="">
             </div>
             <div class="card_text">
-                <h2>Text</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium culpa ratione alias atque sit non omnis harum, consequatur eveniet maiores incidunt ut, sed dolore nobis suscipit, dicta saepe nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur fugit eligendi ex asperiores impedit at dignissimos debitis doloribus, ducimus magnam reprehenderit optio! Reprehenderit, iste! Totam porro deserunt magnam repellendus.
+                <h2>Mat</h2>
+                <p>Menyen vår er basert på moderne skandinavisk mat, og vi strekker oss langt for å bruke lokale og kortreiste varer.
+                    Under lunsjen er det fokus på smørbrød og enklere retter, og på kveldstid serveres det rause porsjoner med deilige retter som vår klassiske oksetartar, østers fra Lerøy og villkveite.
+                    Vi ønsker alltid å gi våre gjester et godt måltid i hyggelige lokaler, uansett anledning.
                 </p>
             </div>
         </div>
-
         <div class="card_container">
             <div class="card_text">
-                <h2>Text</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium culpa ratione alias atque sit non omnis harum, consequatur eveniet maiores incidunt ut, sed dolore nobis suscipit, dicta saepe nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos pariatur unde corporis aliquid voluptatibus omnis, qui architecto, corrupti culpa aut incidunt vero sequi eius id fugit totam ratione repellat voluptatum.
+                <h2>Arrangement</h2>
+                <p>Ønsker du å arrangere et hyggelig event eller julebord for kollegaer, venner eller familie?
+                    Vi hjelper deg gjerne med å organisere ditt event, både for små og store grupper.
+                    Vår Cafe har lukkede rom for private selskaper.
+                    Ta kontakt med oss, så får du et tilbud på hva vi kan tilby.
                 </p>
             </div>
             <div class="card_bilde">
-                <img class="bilde_cards" src="Assets/clem-onojeghuo-zlABb6Gke24-unsplash.jpeg" alt="">
+                <img class="bilde_cards" src="Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
             </div>
         </div>
-        
+
+        <!---Dette er bookingboksen som ligger skjult helt til du trykker på at du skal booke. -->
+        <input type="checkbox" id="checkBooking">
+        <section class="banner">
+            <h2>BOOK DITT EVENT NÅ</h2>
+            <div class="popup-container">
+            </div>
+
+            <div class="popup-content">
+                <h3>Reservasjon</h3>
+                <form>
+                    <div class="form-row">
+                        <select name="days">
+                            <option value="day-select">Velg dag</option>
+                            <option value="mandag">Mandag</option>
+                            <option value="tirsdag">Tirsdag</option>
+                            <option value="onsdag">Onsdag</option>
+                            <option value="torsdag">Torsdag</option>
+                            <option value="fredag">Fredag</option>
+                            <option value="lørdag">Lørdag</option>
+                            <option value="søndag">Søndag</option>
+                        </select>
+
+                        <select name="hours">
+                            <option value="hour-select">Velg tid</option>
+                            <option value="12">12:00</option>
+                            <option value="14">14:00</option>
+                            <option value="16">16:00</option>
+                            <option value="18">18:00</option>
+                            <option value="20">20:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Fullt navn">
+                        <input type="text" placeholder="Telfonnummer">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="number" placeholder="Hvor mange personer?" min="1">
+                        <input type="submit" value="BOOK EVENT">
+                    </div>
+                </form>
+                <label class="labelForCheckBooking" for="checkBooking">
+                    <h1>Lukk</h1>
+                </label>
+            </div>
+            </div>
+        </section>
+
+        <div id="knappReservasjon">
+            <a href="booking.html" class="reservereknapp">Klikk her for booking</a>
+
+        </div>
+
     </main>
 
     <footer>
@@ -68,6 +146,7 @@
                 <p>Mandag - fredag: 0900 - 2230</p>
                 <p>Lørdag: Lørdag: 1300 - 0100</p>
                 <p>Søndag: Stengt</p>
+                <br><label class="labelForCheckBooking" for="checkBooking"><a style="cursor: pointer;" id="reservasjon">Book et event her</a></label>
             </div>
             <div class="footer-contact">
                 <p><strong>Epost:</strong> <a href=""><u>kontakt@javacafe.no</u></a></p>
