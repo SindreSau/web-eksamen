@@ -15,11 +15,11 @@ ul {
     color: var(--yellow)
 }
 
-h1::after { 
+h1::before { 
     display: block;
     content: "";
-    margin-top: -285px;
-    height: 285px;
+    margin-top: -150px;
+    height: 150px;
     visibility: hidden;
     pointer-events: none;
 }
