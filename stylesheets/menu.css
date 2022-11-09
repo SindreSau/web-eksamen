@@ -1,19 +1,27 @@
 /*--------Generelt for siden meny, Burde legges inn i sitewide--------*/
 
-body{ 
-    font-family: 'Ubuntu', sans-serif;}
 
-h1 {color: var(--yellow)}
+h1 {
+    color: var(--yellow);
+    
+}
 
-ul {list-style: none;
-    color: var(--yellow)}
+h2 {
+    padding: 20px;
+}
 
-h1::before { 
+ul {
+    list-style: none;
+    color: var(--yellow)
+}
+
+h1::after { 
     display: block;
     content: "";
-    margin-top: -150px;
-    height: 150px;
+    margin-top: -285px;
+    height: 285px;
     visibility: hidden;
+    pointer-events: none;
 }
 
 i{ color: var(--yellow)}
@@ -99,12 +107,12 @@ i{ color: var(--yellow)}
 
 .boxmeny h1 { 
     color: var(--orange);
-    padding: 30px;}
+}
 
 .boxmeny h2 {
     color: var(--yellow);
-    padding: 20px;}
-    
+    padding: 50px 20px 20px 20px;}
+
 .boxmeny h3 {color: var(--yellow)}
 .boxmeny p {color: var(--yellow)}
 
