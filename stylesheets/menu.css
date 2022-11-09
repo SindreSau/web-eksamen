@@ -13,11 +13,12 @@ ul {
     color: var(--yellow)
 }
 
-h1::after {
+h1::before { 
+
     display: block;
     content: "";
-    margin-top: -285px;
-    height: 285px;
+    margin-top: -150px;
+    height: 150px;
     visibility: hidden;
     pointer-events: none;
 }
@@ -52,7 +53,6 @@ i {
     scale: 105%;
     box-shadow: 3px 5px 15px var(--darkest-grey);
 }
-
 /*--------CSS Bilde/Menyvelger topp end--------*/
 
 
@@ -72,6 +72,10 @@ i {
     flex: 1;
 }
 
+ .alignKafemeny h1 {
+    color: var(--orange)
+}
+
 .alignKafemeny h1 {
     color: var(--orange)
 }
@@ -79,9 +83,7 @@ i {
 #kafemeny {
     text-align: center;
     margin: 100px 0px 30px 0px;
-
-}
-
+ }
 /*--------CSS Kafe meny end--------*/
 
 
@@ -137,4 +139,4 @@ i {
         flex-direction: column;
     }
 }
-/*--------Visning----------------------*/
+/*--------Visning end-------------------*/
