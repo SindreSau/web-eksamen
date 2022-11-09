@@ -338,11 +338,9 @@ footer {
 
 .social-media {
     display: flex;
-    margin-top: 7px;
     height: fit-content;
     align-items: center;
-    justify-content: space-around;
-    flex: 1 1 auto;
+    gap: 5%;
 }
 
 footer .tripadvisor {
@@ -351,12 +349,12 @@ footer .tripadvisor {
 }
 
 footer .facebook {
-    height: 45px;
+    height: 48px;
     transition: .3s;
 }
 
 footer .instagram {
-    height: 52px;
+    height: 54px;
     transition: .3s;
 }
 
