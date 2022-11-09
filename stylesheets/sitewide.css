@@ -36,7 +36,36 @@ hr {
     background-color: var(--yellow);
 }
 
-h1, h2 {
+
+/* ----- Ending general ----- */
+
+
+/* ----- Knapp ------------ */
+.reservereknapp {
+    text-align: center;
+    border: 1px solid var(--orange);
+    padding: 20px;
+    display: block;
+    margin: 3vw;
+    color: var(--orange);
+    width: 250px;
+    cursor: pointer;
+    transition: .3s;
+}
+.reservereknapp:hover {
+    background-color: var(--orange);
+    color: var(--yellow);
+    scale: 105%;
+    box-shadow: 3px 5px 15px var(--darkest-grey);
+}
+#knappReservasjon{
+    display: flex;
+    justify-content: center;
+}
+/* ----- Ending knapp ----- */
+
+h1, 
+h2 {
     text-transform: uppercase;
 }
 
