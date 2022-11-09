@@ -229,6 +229,7 @@ h2 {
         display: block;
     }
 }
+
 /*----------Dette er css for nav-baren----------*/
 
 
@@ -288,6 +289,7 @@ h2 {
     }
 
 }
+
 /* ----- Ending cards ------------ */
 
 
@@ -314,6 +316,7 @@ h2 {
     display: flex;
     justify-content: center;
 }
+
 /* ----- Ending knapp ----- */
 
 
@@ -377,17 +380,22 @@ footer .instagram {
 
 @media (max-width: 850px) {
     .footer-row {
-        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: start;
+        max-width: fit-content;
     }
 
     footer div {
         padding: 3vh 0;
         align-items: center;
-        text-align: center;
     }
 
     .social-media {
-        gap: 20%;
+        gap: 13%;
+        padding-bottom: 30%;
     }
 }
 
@@ -402,4 +410,5 @@ footer .instagram {
     --dark-grey: #1E1E1E;
     --grey: #222222;
 }
+
 /* ----- Ending utility variabler ----- */
