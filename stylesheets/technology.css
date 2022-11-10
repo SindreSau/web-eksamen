@@ -37,16 +37,29 @@ p {
     font-size: 1rem;
 }
 
+.box{
+    font-family: sans-serif;
+    color: rgb(121, 145, 255);
+    text-align: center;
+    padding: 20px;
+    margin: 100px;
+    border-radius: 30px;
+    box-shadow: -14px -14px 30px 0 #fff, 14px 14px 30px 0 #d1d9e6;
+    cursor:help;
+}
+.box:hover{
+    box-shadow: inset -14px -14px 30px 0 #fff, inset 14px 14px 30px 0 #d1d9e6;
+}
 /* ----- Ending general ----- */
 
 
 /* ----- Variabler ------------ */
     :root {
-        --primary: #FFFFFF;
-        --accent: #FFFFFF;
-        --mega-accent: #FFFFFF;
-        --background: #121212;
-        --card-background: #FFFFFF;
+        --primary: #000000;
+        --accent: #000000;
+        --mega-accent: #000000;
+        --background: #ecf0f3;
+        --card-background: #000000;
     }
 /* ----- Ending variabler ----- */
 
