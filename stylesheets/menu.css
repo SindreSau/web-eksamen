@@ -78,7 +78,7 @@ i {
 /*--------CSS Kafe meny end--------*/
 
 
-/*--------CSS meny--------*/
+/*--------CSS catering meny--------*/
 #cateringmeny {
     text-align: center;
     margin: 50px 0px 50px 0px;
@@ -119,7 +119,7 @@ i {
 /*--------CSS Catering meny end--------*/
 
 
-/*--------Visning----------------------*/
+/*--------Visning på mindre skjærm----------------------*/
 @media(max-width: 1250px) {
     .alignCatering {
         flex-direction: column;
@@ -131,4 +131,4 @@ i {
         flex-direction: column;
     }
 }
-/*--------Visning end-------------------*/
+/*--------Visning på mindre skjærm end-------------------*/
