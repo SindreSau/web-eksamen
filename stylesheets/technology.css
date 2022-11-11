@@ -3,67 +3,77 @@ html {}
 
 body {
     background-color: var(--background);
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: 'Tr2n';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Tr2n'), url('Tr2n.woff') format('woff');
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-h1 {
-    font-family: "Tr2n";
-    font-size: 4rem;
-    color: var(--mega-accent);
+nav {
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
 }
-
-h2 {
-    font-family: 'Days One', sans-serif;
-    color: var(--accent);
-    font-size: 2rem;
-}
-
-h3 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    color: var(--accent);
-    font-size: 1.5rem;
-}
-
-p {
-    font-family: 'Exo 2', sans-serif;
-    color: var(--primary);
-    font-size: 1rem;
-}
-
-.box{
-    font-family: sans-serif;
-    color: rgb(121, 145, 255);
-    text-align: center;
-    padding: 20px;
-    margin: 100px;
-    border-radius: 30px;
-    box-shadow: -14px -14px 30px 0 #fff, 14px 14px 30px 0 #d1d9e6;
-    cursor:help;
-}
-.box:hover{
-    box-shadow: inset -14px -14px 30px 0 #fff, inset 14px 14px 30px 0 #d1d9e6;
-}
-/* ----- Ending general ----- */
-
-
-/* ----- Variabler ------------ */
-    :root {
-        --primary: #000000;
-        --accent: #000000;
-        --mega-accent: #000000;
-        --background: #ecf0f3;
-        --card-background: #000000;
-    }
-/* ----- Ending variabler ----- */
 
 
 /* ----- Navbar ------------ */
+.nav-wrapper {
+    display: flex;
+    margin: 0 4vw;
+}
+
+.tech-logo {
+    width: 45%;
+    /* border: 1px solid green; */
+}
+
+.tech-logo h1 {
+    white-space: nowrap;
+}
+
+.tech-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
 
 /* ----- Ending navbar ----- */
+
+/* ----- Main ------------ */
+
+.main-wrapper {
+    height: 200vh;
+}
+
+.hero-section {
+    top: 0;
+    height: 50vh;
+}
+
+.hero-section img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* ----- Ending main ----- */
+
+
+/* ----- Variabler ------------ */
+:root {
+    --primary: #000000;
+    --accent: #000000;
+    --mega-accent: #000000;
+    --background: #a3d7ff;
+    --card-background: #000000;
+}
+
+/* ----- Ending variabler ----- */
