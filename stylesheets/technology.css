@@ -15,7 +15,6 @@ a {
 
 nav {
     position: fixed;
-    height: 8vh;
     width: 100vw;
 }
 
@@ -33,6 +32,7 @@ nav {
 
 .tech-logo h1 {
     white-space: nowrap;
+    color: var(--accent);
 }
 
 .tech-nav {
@@ -43,25 +43,32 @@ nav {
     /* border: 1px solid blue; */
 }
 
+.tech-nav :nth-child(5) {
+    background-color: var(--accent);
+    border-radius: 20px;
+}
+
 /* ----- Ending navbar ----- */
 
 /* ----- Main ------------ */
 
 .main-wrapper {
     height: 200vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-section {
-    top: 0;
-    height: 50vh;
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
 }
 
 .hero-section img {
-    width: 100%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
+    width: 100%;
+    z-index: -5;
 }
 
 /* ----- Ending main ----- */
@@ -70,9 +77,9 @@ nav {
 /* ----- Variabler ------------ */
 :root {
     --primary: #000000;
-    --accent: #000000;
+    --accent: #e30000;
     --mega-accent: #000000;
-    --background: #a3d7ff;
+    --background: #202020;
     --card-background: #000000;
 }
 
