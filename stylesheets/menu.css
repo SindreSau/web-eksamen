@@ -1,4 +1,4 @@
-/*--------Generelt for siden meny, Burde legges inn i sitewide--------*/
+/*--------Generelt for siden meny--------*/
 h1 {
     color: var(--yellow);
     padding: 30px;
@@ -13,19 +13,10 @@ ul {
     color: var(--yellow)
 }
 
-h1::before { 
-
-    display: block;
-    content: "";
-    margin-top: -150px;
-    height: 150px;
-    visibility: hidden;
-    pointer-events: none;
-}
-
 i {
     color: var(--yellow)
 }
+/*--------Generelt for siden meny end--------*/
 
 
 /*--------CSS Bilde/Menyvelger topp--------*/
@@ -83,14 +74,16 @@ i {
 #kafemeny {
     text-align: center;
     margin: 100px 0px 30px 0px;
+    scroll-margin-top: 90px;
  }
 /*--------CSS Kafe meny end--------*/
 
 
-/*--------CSS meny--------*/
+/*--------CSS catering meny--------*/
 #cateringmeny {
     text-align: center;
     margin: 50px 0px 50px 0px;
+    scroll-margin-top: 90px;
 }
 
 .alignCatering {
@@ -127,7 +120,7 @@ i {
 /*--------CSS Catering meny end--------*/
 
 
-/*--------Visning----------------------*/
+/*--------Visning på mindre skjerm----------------------*/
 @media(max-width: 1250px) {
     .alignCatering {
         flex-direction: column;
@@ -139,4 +132,4 @@ i {
         flex-direction: column;
     }
 }
-/*--------Visning end-------------------*/
+/*--------Visning på mindre skjerm end-------------------*/
