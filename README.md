@@ -3,6 +3,9 @@
 Link til main-versjon av siden:
 https://sindresau.github.io/web-eksamen/
 
+Link til Accessibility
+https://docs.google.com/document/d/1omLX5O-vbAorDqzhNurNItlksQAIq-2fksqJR80RSq4/edit?usp=sharing
+
 Trello:
 https://trello.com/b/Ik3ajKPR/web-eksamen
 
