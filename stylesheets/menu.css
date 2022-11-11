@@ -1,4 +1,4 @@
-/*--------Generelt for siden meny, Burde legges inn i sitewide--------*/
+/*--------Generelt for siden meny--------*/
 h1 {
     color: var(--yellow);
     padding: 30px;
@@ -16,6 +16,7 @@ ul {
 i {
     color: var(--yellow)
 }
+/*--------Generelt for siden meny end--------*/
 
 
 /*--------CSS Bilde/Menyvelger topp--------*/
@@ -119,7 +120,7 @@ i {
 /*--------CSS Catering meny end--------*/
 
 
-/*--------Visning på mindre skjærm----------------------*/
+/*--------Visning på mindre skjerm----------------------*/
 @media(max-width: 1250px) {
     .alignCatering {
         flex-direction: column;
@@ -131,4 +132,4 @@ i {
         flex-direction: column;
     }
 }
-/*--------Visning på mindre skjærm end-------------------*/
+/*--------Visning på mindre skjerm end-------------------*/
