@@ -1,11 +1,14 @@
 /* ----- General ------------ */
-html {}
+html {
+    scroll-snap-type: y mandatory;
+}
 
 body {
     background-color: var(--background);
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 a {
@@ -13,74 +16,246 @@ a {
     color: inherit;
 }
 
-nav {
-    position: fixed;
+header {
     width: 100vw;
+    z-index: 999;
 }
 
+h2 {
+    color: var(--accent);
+}
+
+p {
+    color: var(--primary);
+    font-size: 1vw;
+}
+
+@font-face {
+    font-family: Despairs;
+    src: url(/Fonts/Despairs-X3Wxo.ttf);
+}
+
+@font-face {
+    font-family: Anurati;
+    src: url(/Fonts/Anurati-Regular.otf);
+}
+
+@font-face {
+    font-family: Ghostlike;
+    src: url(/Fonts/GhostlikeDemoRegular.ttf);
+}
 
 /* ----- Navbar ------------ */
 .nav-wrapper {
     display: flex;
     margin: 0 4vw;
+    color: var(--primary);
+    scroll-snap-align: start;
 }
 
 .tech-logo {
-    width: 45%;
+    width: 50%;
     /* border: 1px solid green; */
 }
 
-.tech-logo h1 {
-    white-space: nowrap;
+.tech-logo {
+    font-size: 1.8rem;
+    font-family: Despairs;
+    align-self: center;
     color: var(--accent);
 }
 
 .tech-nav {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    list-style: none;
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 80%;
     align-items: center;
-    /* border: 1px solid blue; */
+    justify-content: space-between;
+    letter-spacing: 3px;
+    gap: 2vw;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.tech-nav li {
+    transition: .3s;
 }
 
 .tech-nav :nth-child(5) {
     background-color: var(--accent);
+    padding: 8px 2vw;
     border-radius: 20px;
+}
+
+.tech-nav :not(:last-child):hover {
+    color: var(--accent);
+    scale: 105%;
+}
+
+.tech-nav :nth-child(5):hover {
+    scale: 105%;
 }
 
 /* ----- Ending navbar ----- */
 
+
 /* ----- Main ------------ */
 
-.main-wrapper {
-    height: 200vh;
-    display: flex;
-    flex-direction: column;
-}
+/* ----- Hero ------------ */
 
 .hero-section {
     position: relative;
-    width: 100vw;
-    height: 80vh;
-    overflow: hidden;
+    height: 100vh;
 }
 
-.hero-section img {
+.hero-img-left {
     position: absolute;
-    width: 100%;
-    z-index: -5;
+    height: 65vw;
+    top: 45vh;
+    transform: translateY(-50%);
+    right: 20vw;
+    z-index: 0;
+    opacity: .7;
 }
+
+.hero-img-right {
+    position: absolute;
+    height: 65vw;
+    top: 45vh;
+    transform: translateY(-50%);
+    left: 20vw;
+    z-index: 0;
+    opacity: .7;
+}
+
+/* Glød bakgrunn */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 7vh;
+    border-radius: 30%;
+    filter: blur(150px);
+    z-index: -2;
+    background-color: var(--accent);
+    opacity: .8;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 32%;
+    text-transform: uppercase;
+    font-family: Ghostlike;
+    letter-spacing: 10px;
+    margin-left: 40vw;
+    transform: translateX(-50%);
+    width: 50vw;
+    padding: 4vw;
+    /* background: linear-gradient(to top right,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.05)); */
+    box-shadow: 0 0 85px rgba(208, 248, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.hero-section h1 {
+    word-spacing: 5%;
+    color: var(--mega-accent);
+    line-height: 8px;
+}
+
+.top-smaller-text {
+    font-size: 1vw;
+}
+
+.bottom-larger-text {
+    font-size: 1.5vw;
+}
+
+/* ----- Ending hero ----- */
+
+/* ----- Main text ------------ */
+.text-section-wrapper {
+    height: 75vh;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2vw 4vw;
+    gap: 3vw;
+}
+
+.text-card {
+    padding: 3vw;
+    border-radius: 25px;
+    height: 30vw;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all .4s;
+    backdrop-filter: blur(10px);
+}
+
+.text-card:hover {
+    scale: 120%;
+    z-index: 5;
+    transform: translateY(-8%);
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+}
+
+.text-card h2 {
+    color: #7bbdff;
+    font-size: 1.5vw;
+}
+
+.text-background-image {
+    position: absolute;
+    width: 100vw;
+    max-height: 100vh;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .3;
+}
+
+/* ----- Ending main text ----- */
 
 /* ----- Ending main ----- */
 
 
+/* ----- Footer ------------ */
+footer {
+    height: 15vh;
+    background: linear-gradient(to top,
+            #121212,
+            #181818);
+    scroll-snap-align: end;
+}
+
+/* ----- Ending footer ----- */
+
+/* ----- Media queries ------------ */
+@media (max-width: 880px) {}
+
+/* ----- Ending media queries ----- */
+
 /* ----- Variabler ------------ */
 :root {
-    --primary: #000000;
-    --accent: #e30000;
-    --mega-accent: #000000;
-    --background: #202020;
-    --card-background: #000000;
+    --primary: #ffffff;
+    --accent: #0080ff;
+    --mega-accent: #f0fbff;
+    --background: #121212;
+    --card-background: #222222;
 }
 
 /* ----- Ending variabler ----- */
