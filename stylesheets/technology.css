@@ -23,17 +23,13 @@ header {
     z-index: 999;
 }
 
-section {
-    padding-top: 80px;
-}
-
 h2 {
     color: var(--accent);
 }
 
 p {
     color: var(--primary);
-    font-size: 1vw;
+    font-size: var(--fs-primary);
 }
 
 @font-face {
@@ -51,7 +47,9 @@ p {
     src: url(/Fonts/GhostlikeDemoOutline.ttf);
 }
 
-/* ----- Navbar ------------ */
+
+
+/* ----- Header ------------ */
 .nav-wrapper {
     display: flex;
     margin: 0 4vw;
@@ -61,10 +59,6 @@ p {
 
 .tech-logo {
     width: 50%;
-    /* border: 1px solid green; */
-}
-
-.tech-logo {
     font-size: 1.8rem;
     font-family: Despairs;
     align-self: center;
@@ -90,7 +84,7 @@ p {
 }
 
 .tech-nav :nth-child(5) {
-    background-color: #0080ffd0;
+    background-color: var(--accent);
     padding: 8px 2vw;
     border-radius: 20px;
     color: white;
@@ -103,110 +97,77 @@ p {
 
 .tech-nav :nth-child(5):hover {
     scale: 105%;
-    background-color: var(--accent);
+    background-color: var(--accent-hover);
 }
 
-/* ----- Ending navbar ----- */
+/* ----- Ending header ----- */
+
 
 
 /* ----- Main ------------ */
 /* ----- Hero ------------ */
 .hero-section {
     position: relative;
-    height: 85vh;
+    top: 0;
+    height: 100vh;
 }
 
 .hero-image-wrapper {
     height: inherit;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image-wrapper img {
+    height: 85vh;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.hero-text-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .8;
 }
-
-.hero-images {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 5vw;
-}
-
-.hero-img-left {
-    height: 45vw;
-    transform: scaleX(-1);
-}
-
-.hero-img-right {
-    height: 45vw;
-}
-
-.img-drop-shadow {
-    background-color: rgba(0, 0, 40, 0.4);
-    border-radius: 30%;
-    height: 10vw;
-    width: 98vw;
-    filter: blur(40px);
-    position: absolute;
-    top: 48vw;
-}
-
-/* Glød bakgrunn */
-/* .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 40vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50vw;
-    height: 7vh;
-    border-radius: 30%;
-    filter: blur(150px);
-    z-index: -2;
-    background-color: var(--accent);
-    opacity: .8;
-} */
 
 .hero-text {
     text-transform: uppercase;
     font-family: Ghostlike;
     letter-spacing: 10px;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    position: absolute;
-    top: 25vw;
-    transform: translateY(-50%);
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    padding: 3vw 5vw;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 100px rgb(0, 0, 0, .3);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: .3s;
-    z-index: 1;
-
-    word-spacing: 5%;
-    color: var(--mega-accent);
-    text-shadow: 0 0 50px rgba(255, 100, 180, .8);
+    color: var(--title);
     line-height: 8px;
+
+    padding: 3vw 8vw;
+
+    background-color: var(--hero-card);
+    box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    transition: .3s;
 }
 
 .hero-text:hover {
-    background-color: rgba(48, 48, 48, 0.5);
-    color: rgb(255, 150, 225);
+    background-color: var(--hero-card-hover);
+    scale: 110%;
+    color: var(--title-hover);
+    text-shadow: 0 0 10px rgba(159, 140, 255, 0.4);
+    box-shadow: 10px 20px 60px rgb(0, 0, 0, .4);
 }
 
 .top-smaller-text {
-    font-size: 2vw;
+    font-size: calc(var(--fs-big-title)/1.8);
 }
 
 .bottom-larger-text {
-    font-size: 3vw;
+    font-size: var(--fs-big-title);
 }
 
 
@@ -214,11 +175,11 @@ p {
 
 /* ----- Main text ------------ */
 .text-section-wrapper {
-    height: 75vh;
+    height: 100vh;
     position: relative;
     display: inline-flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     padding: 2vw 4vw;
     gap: 3vw;
 }
@@ -226,29 +187,30 @@ p {
 .text-card {
     padding: 3vw;
     border-radius: 25px;
-    height: 30vw;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.05);
-    transition: all .4s;
-    backdrop-filter: blur(10px);
+    background-color: var(--card-background);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.276);
+    transition: .3s;
 }
 
 .text-card:hover {
-    scale: 130%;
-    z-index: 5;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
+    scale: 115%;
+    z-index: 2;
+    background-color: var(--card-background-hover);
+    backdrop-filter: blur(5px);
 }
 
 .card-1:hover {
-    transform: translateX(15vw) translateY(-5vw);
+    transform: translateX(10vw) /* translateY(-5vw) */;
 }
+
 .card-2:hover {
-    transform: translateX(-15vw) translateY(-5vw);
+    transform: translateX(-10vw) /* translateY(-5vw) */;
 }
 
 .text-card h2 {
-    color: #7bbdff;
+    color: var(--card-header);
     font-size: 1.5vw;
 }
 
@@ -259,7 +221,7 @@ p {
     left: 0;
     bottom: 0;
     z-index: -1;
-    opacity: .3;
+    opacity: .6;
 }
 
 /* ----- Ending main text ----- */
@@ -278,7 +240,7 @@ information you lead us to.  */
 
 /* ----- Footer ------------ */
 footer {
-    height: 15vh;
+    height: 0;
     background-color: rgba(255, 85, 113, 0.1);
     scroll-snap-align: end;
 }
@@ -292,11 +254,21 @@ footer {
 
 /* ----- Variabler ------------ */
 :root {
+    /* --background: #121212; */
     --primary: #000000;
-    --accent: #0080ff;
-    --mega-accent: #6f134d;
-    --background: #121212;
-    --card-background: #222222;
+    --accent: #aa65ff;
+    --accent-hover: #7c13fc;
+    --title: #a2adff;
+    --title-hover: #99a5ff;
+    --hero-card: #22222273;
+    --hero-card-hover: #22222290;
+    --card-background: #ffffff53;
+    --card-background-hover: #ffffffcb;
+    --card-header: #7f16ff;
+
+
+    --fs-big-title: 3.5rem;
+    --fs-primary: 1rem;
 }
 
 /* ----- Ending variabler ----- */
