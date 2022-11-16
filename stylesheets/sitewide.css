@@ -26,6 +26,10 @@ a {
     font-family: 'Ubuntu', sans-serif;
 }
 
+p{
+    line-height: 1.5;
+}
+
 main {
     margin: 100px 8%;
 }
