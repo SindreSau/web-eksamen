@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -32,14 +37,16 @@ p {
     font-size: var(--fs-primary);
 }
 
+/* Logo font */
 @font-face {
     font-family: Despairs;
     src: url(/Fonts/Despairs-X3Wxo.ttf);
 }
 
+/* Title font */
 @font-face {
-    font-family: Anurati;
-    src: url(/Fonts/Anurati-Regular.otf);
+    font-family: OriginTech;
+    src: url(/Fonts/OriginTech_personal_use.ttf);
 }
 
 @font-face {
@@ -103,8 +110,6 @@ p {
 /* ----- Ending header ----- */
 
 
-
-/* ----- Main ------------ */
 /* ----- Hero ------------ */
 .hero-section {
     position: relative;
@@ -125,6 +130,13 @@ p {
     height: 85vh;
     opacity: .8;
     overflow: hidden;
+    opacity: 0;
+
+    /* Redigert kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+    animation: fadeInAnimation ease 2.5s;
+    animation-delay: .1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .hero-text-container {
@@ -139,7 +151,7 @@ p {
 
 .hero-text {
     text-transform: uppercase;
-    font-family: Ghostlike;
+    font-family: OriginTech;
     letter-spacing: 10px;
     text-align: center;
     color: var(--title);
@@ -151,7 +163,26 @@ p {
     box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    opacity: 0;
+
     transition: .3s;
+
+    /* Redigert kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+    animation: fadeInAnimation ease 2s;
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .hero-text:hover {
@@ -170,6 +201,55 @@ p {
     font-size: var(--fs-big-title);
 }
 
+.svg-scrolldown {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 90%;
+    opacity: 0;
+
+    animation: fadeInAnimation 2s ease 3s 1 forwards;
+}
+
+.svg-scrolldown-left {
+    left: 2%;
+}
+
+.svg-scrolldown-right {
+    right: 2%;
+}
+
+.scrolldown-top {
+    animation: move-down 3.5s ease-in-out 3.0s infinite;
+}
+
+.scrolldown-bottom {
+    animation: move-down 3.5s ease-in-out 3.6s infinite;
+}
+
+@keyframes move-down {
+    0% {
+        opacity: .8;
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    80% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    90% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: .8;
+    }
+}
 
 /* ----- Ending hero ----- */
 
@@ -177,11 +257,13 @@ p {
 .text-section-wrapper {
     height: 100vh;
     position: relative;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 2vw 4vw;
     gap: 3vw;
+
+    scroll-snap-align: start;
 }
 
 .text-card {
@@ -202,11 +284,13 @@ p {
 }
 
 .card-1:hover {
-    transform: translateX(10vw) /* translateY(-5vw) */;
+    transform: translateX(10vw);
+    box-shadow: -50px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-2:hover {
-    transform: translateX(-10vw) /* translateY(-5vw) */;
+    transform: translateX(-10vw);
+    box-shadow: 50px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .text-card h2 {
@@ -218,10 +302,10 @@ p {
     position: absolute;
     width: 100vw;
     max-height: 100vh;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
     opacity: .6;
+    filter: blur(3px);
+    left: 0;
+    z-index: -1;
 }
 
 /* ----- Ending main text ----- */
@@ -233,9 +317,22 @@ relevant information. We shall not grade you on how relevant the information you
 but we expect several links, and we expect it to be easy to understand before clicking what 
 information you lead us to.  */
 
-/* ----- Ending link cards ----- */
+.links-section-wrapper {
+    height: 100vh;
+    position: relative;
+}
 
-/* ----- Ending main ----- */
+.text-background-image-2 {
+    position: absolute;
+    width: 100vw;
+    max-height: 100vh;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .5;
+}
+
+/* ----- Ending link cards ----- */
 
 
 /* ----- Footer ------------ */
@@ -258,10 +355,11 @@ footer {
     --primary: #000000;
     --accent: #aa65ff;
     --accent-hover: #7c13fc;
-    --title: #a2adff;
-    --title-hover: #99a5ff;
+    --title: #c6cdff;
+    --title-hover: #c7ceff;
     --hero-card: #22222273;
     --hero-card-hover: #22222290;
+    --scrolldown-stroke: rgba(73, 5, 103, 0.365);
     --card-background: #ffffff53;
     --card-background-hover: #ffffffcb;
     --card-header: #7f16ff;
