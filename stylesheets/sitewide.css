@@ -572,3 +572,10 @@ form input[type=submit]:hover {
 }
 
 /* ----- Ending booking popup box ----- */
+
+/*--- Kilder ---*/
+
+#kilder p{
+    padding-bottom: 3%;
+}
+/*---Slutt kilder ---*/
