@@ -10,6 +10,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 }
 
 a {
@@ -24,6 +25,10 @@ h4,
 p,
 a {
     font-family: 'Ubuntu', sans-serif;
+}
+
+p{
+    line-height: 1.5;
 }
 
 main {
@@ -41,6 +46,23 @@ hr {
     height: 370px;
 }
 
+/* Redigert kode fra: https: //www.freecodecamp.org/news/how-to-add-skip-to-main-content-links-to-a-website/ */
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 2em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+}
+
+/* Redigert kode fra: https: //www.freecodecamp.org/news/how-to-add-skip-to-main-content-links-to-a-website/ */
+.skip-to-main-content-link:focus {
+    height: 83px;
+    left: 0%;
+    opacity: 1;
+}
 
 /* ----- Ending general ----- */
 
@@ -244,6 +266,10 @@ h2 {
 
     #hamburgerCheckbox:checked+#navKnapper a {
         display: block;
+    }
+    #hamburgerCheckbox:checked+#labelForHamburger{
+        transform: rotate(90deg);
+        background-color: #eee;
     }
 }
 
@@ -466,7 +492,7 @@ footer .instagram {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #DE855E;
+    color: var(--orange);
     padding-bottom: 20px;
 }
 
@@ -500,9 +526,19 @@ footer .instagram {
     margin: 0 auto;
 }
 
+.form-row input::placeholder{
+    color: gray;
+}
+.form-row input:focus::placeholder{
+    color: black;
+}
+.form-row input:focus{
+    color: black;
+}
 form select,
 form input {
     display: block;
+    color: black;
     width: 100%;
     margin: 15px 12px;
     padding: 5px;
@@ -515,10 +551,11 @@ form input {
 }
 
 form input[type=text],
+form input[type=tel],
 form input[type=number],
 form input::placeholder,
 select {
-    color: #DE855E;
+    color: gray;
 }
 
 form input[type=submit] {
@@ -530,13 +567,13 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
-    color: white;
-    background-color: #DE855E;
+    color: black;
+    background-color: #F3CFB4;
     opacity: 0.8;
 }
 
 .labelForCheckBooking h1 {
-    color: #F3CFB4;
+    color: black;
 }
 
 /* ----- Ending booking popup box ----- */

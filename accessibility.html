@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/sitewide.css">
     <link rel="stylesheet" href="stylesheets/index.css">
-    <link rel="stylesheet" href="stylesheets/booking.css">
     <link rel="stylesheet" href="stylesheets/infoBooking.css">
     <link rel="icon" href="Assets/kaffeikon.ico">
     <!------Google font-->
@@ -20,6 +19,7 @@
 
 <body>
     <header id="flytMeny">
+        <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
         <div id="logo">
             <a href="index.html"><img class="png-logo" src="Assets/cafe-logo-header.png" alt=""></a>
             <label id="labelForHamburger" for="hamburgerCheckbox">
@@ -39,23 +39,79 @@
             <a href="technology.html">Technology and society</a>
         </div>
     </header>
-    <main>
-
+    
+    <main id="main">
         <div class="card_container">
             <div class="card_text">
                 <h1>Overskrift</h1><br>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore velit dolorem officiis odit sequi harum. Reiciendis velit aut ab illum. Ipsum quam reiciendis consectetur. Est facere voluptatum cum dolore.
-
+                    Vi kjørte nettsiden vår gjennom Wave <a href="https://wave.webaim.org/">(https://wave.webaim.org/)</a> testverktøyet og fikk opp feil og mangler på siden vår. Feilene våres bestod for det meste av manglende alt tekst på mange av bildene, tomme elementer som inneholdt display: none; elementer som brukes i mobilversjon og varsel om at flere elementer linket til samme siden.
+                </p>
+                <br>
+                <img style="width: 100%;" src="Screenshots/WaveTest.png" alt="Bilde av Wave testen"><br>
+                <img style="width: 100%;" src="Screenshots/altTekst.png" alt="Bilde av alt tekst tilbakemelding"><br>
+                <img style="width: 100%;" src="Screenshots/flereLinker.png" alt="Bilde av tilbakemelding på flere linker"><br>
+                <br>
+                <p>
+                    For å fikse feilene, la vi inn alt tekster for alle bildene som beskrev hva som skulle vises dersom bildene ikke skulle laste inn. Tomme elementer gjorde vi ikke noen endringer på, siden det var meningen å skjule enkelte elementer som vises når man går til mobilversjon eller når man åpner booking boksen. Vi fjernet ikke noe med at flere elementer som for eksempel logoen og navigasjonsknappen “Hjem” siden begge linket til index.html, siden dette var et bevisst valg med tanke på navigasjon på siden.
+                </p>
+                <br>
+                <p>
+                    Der det står empty form labels og multiple form labels er fordi vi ikke bruker noe javascript på siden vår og heller bruker checkbokser for å sjekke om noe er trykket. Vi skuler checkboksene og bruker en label en for en for=”checkbox” for å sjekke av checkboksene våres. Dette kan man se når man åpner hamburgermenyen og bookingboksen.
+                </p>
+                <br>
+                <p>
+                    Vi fant ut at nettsiden vår hadde en blanding av engelske ord og norske ord, og endret siden vår til å kun bruke norsk. Vi endret derfor også lang=”en” til lang=”nb” , siden nettsiden ikke er på engelsk, men på norsk bokmål.
+                </p>
+                <img style="width: 100%;" src="Screenshots/lang.png" alt="Bilde av tilbakemelding på flere linker">
+                <br>
+                <p>
+                    Vi hadde problemer med logoen som originalt var en svg fil, fordi den ikke ville vises når vi hadde siden på github pages. Vi endret derfor logoen til en png og problemet løste seg. Ulempen med denne løsningen er at logoen ikke scaler like bra som en svg logo ville gjort, men siden logoen er forholdsvis liten på siden, vil det ikke kunne synes med mindre man ser i html filen. 
+                </p>
+                <br>
+                <p>
+                    Noe css funker forskjellig på ulike nettlesere, og dette var noe vi prøvde å ta høyde til. For eksempel funker text-decoration: underline; forskjellig på chrome og safari. derfor måtte vi skrive det på to måter slik at nettsiden ser og oppfører seg likt på de ulike nettleserne.
+                </p>
+                <br>
+                <img style="width: 100%;" src="Screenshots/ulikBrowser.png" alt="Bilde av koden for ulike browsere">
+                <br>
+                <p>
+                    For å sjekke om nettsiden fulgte krav om universell utforming, så vi på uutylsynet <a href="https://www.uutilsynet.no/wcag-standarden/nettsteder/711">(https://www.uutilsynet.no/wcag-standarden/nettsteder/711)</a>. Vi fant at nettsiden fortsatt følger
                 </p>
             </div>
+        </div>
+
+        <div class="card_container">
+                <div class="card_text">
+                    <h1 id="kilder">Kilder</h1><br>
+                    <h3>Home:</h3>
+                    <p>Slideshow:</p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>Cards:</p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <br>
+                    <h3>Booking:</h3>
+                    <p>Cards:</p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <br>
+                    <h3>Menu:</h3>
+                    <p>Cards:</p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                    <br>
+                    <h3>Accessibility:</h3>
+                    <a href="https://wave.webaim.org/">(https://wave.webaim.org/)</a>
+                    <a href="https://www.uutilsynet.no/wcag-standarden/nettsteder/711">(https://www.uutilsynet.no/wcag-standarden/nettsteder/711)</a>
+                    <br>
+                    <h3>Technology and society:</h3>
+                    <p>hallo - <a href="123.com">123.com</a></p>
+                </div>
         </div>
 
         <!---Dette er bookingboksen som ligger skjult helt til du trykker på at du skal booke. -->
@@ -123,6 +179,7 @@
                 <p> <strong>Telefon:</strong> <a href=""><u>23 50 23 00 </u></a></p>
                 <p>Løkkegata 8</p>
                 <p>0151 Oslo</p>
+                <br><a href="accessibility.html#kilder" id="kilderLink">Kilder</a>
             </div>
             <div class="social-media">
                 <a href="https://www.tripadvisor.com/"><img src="Assets/tripadvisor.svg" alt="" class="tripadvisor"></a>

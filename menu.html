@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="stylesheets/sitewide.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="stylesheets/menu.css">
-    <link rel="stylesheet" href="stylesheets/booking.css">
     <link rel="stylesheet" href="stylesheets/infoBooking.css">
     <link rel="icon" href="Assets/kaffeikon.ico">
     <!------Google font-->
@@ -15,20 +15,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!------Google font end-->
-    
+
     <title>Meny</title>
 </head>
 
 <body>
     <header id="flytMeny">
+        <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
         <div id="logo">
             <a href="index.html"><img class="png-logo" src="Assets/cafe-logo-header.png" alt=""></a>
-            <label id="labelForHamburger"for="hamburgerCheckbox">
+            <label id="labelForHamburger" for="hamburgerCheckbox">
                 <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect width="100" height="20"></rect>
                     <rect y="30" width="100" height="20"></rect>
                     <rect y="60" width="100" height="20"></rect>
-                  </svg>
+                </svg>
             </label>
         </div>
         <input type="checkbox" id="hamburgerCheckbox">
@@ -41,15 +42,14 @@
         </div>
     </header>
 
-    <main>
-
+    <main id="main">
         <div class="meny_container">
             <div class="card_bilde">
                 <img class="bilde_cards" src="Assets/nathan-dumlao-6VhPY27jdps-unsplash.jpeg" alt="">
                 <a href="#kafemeny" class="menyknapp">Trykk her for Kafé meny!</a>
             </div>
             <div class="card_bilde">
-                <img class="bilde_cards"  src="Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg"  alt="">
+                <img class="bilde_cards" src="Assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                 <a href="#cateringmeny" class="menyknapp"> Trykk her for Catering meny!</a>
             </div>
         </div>
@@ -57,62 +57,62 @@
         <h1 id="kafemeny">Kafé meny</h1>
         <hr>
         <div class="alignKafemeny">
-            <div class="boxKafemeny"> 
+            <div class="boxKafemeny">
                 <h1>Drikke</h1>
                 <hr>
                 <h2>Varm drikke</h2>
-                    <ul>
-                        <li>Cafe au lait  45,-</li>
-                        <li>Cappucino  45,-</li>
-                        <li>Americano  45,-</li>
-                        <li>Espresso   45,-</li>
-                    </ul>
+                <ul>
+                    <li>Cafe au lait 45,-</li>
+                    <li>Cappucino 45,-</li>
+                    <li>Americano 45,-</li>
+                    <li>Espresso 45,-</li>
+                </ul>
 
                 <h2>Kald drikke</h2>
-                    <ul>
-                        <li>Juice  45,-</li>
-                        <li>Smoothie  45,-</li>
-                        <li>Mineralvann  45,-</li>
-                    </ul>
+                <ul>
+                    <li>Juice 45,-</li>
+                    <li>Smoothie 45,-</li>
+                    <li>Mineralvann 45,-</li>
+                </ul>
             </div>
 
-            <div class="boxKafemeny"> 
+            <div class="boxKafemeny">
                 <h1>Bakst</h1>
                 <hr>
                 <h2>Småsulten</h2>
-                    <ul>
-                        <li>Baguett med mozzarella og tomat 45,-</li>
-                        <li>Hjemmelaget rundstykke med brunost 45,-</li>
-                        <li>Avokadotoast 45,-</li>
-                    </ul>
+                <ul>
+                    <li>Baguett med mozzarella og tomat 45,-</li>
+                    <li>Hjemmelaget rundstykke med brunost 45,-</li>
+                    <li>Avokadotoast 45,-</li>
+                </ul>
 
                 <h2>Noe søtt til kaffen</h2>
-                    <ul>
-                        <li>Brownie  45,-</li>
-                        <li>Kanelsnurr  45,-</li>
-                        <li>Skolebolle  45,-</li>
-                    </ul>
+                <ul>
+                    <li>Brownie 45,-</li>
+                    <li>Kanelsnurr 45,-</li>
+                    <li>Skolebolle 45,-</li>
+                </ul>
             </div>
 
         </div>
 
         <h1 id="cateringmeny">Catering meny</h1>
         <div class="alignCatering">
-            
+
             <div class="boxmeny">
                 <h1>Bryllupsmeny</h1>
-                    <hr>
-                    <h2> Forrett</h2>
-                    <h3>Sopprisotto</h3>
-                        <i> Forrest mushroom risotto <br> [Melk/laktose, Nøtter] <br> 225,- </i>
+                <hr>
+                <h2> Forrett</h2>
+                <h3>Sopprisotto</h3>
+                <i> Forrest mushroom risotto <br> [Melk/laktose, Nøtter] <br> 225,- </i>
 
-                    <h2> Hovedrett</h2>
-                    <h3>Gravet ørret med urtekrem og marinerte høstgrønnsaker</h3>
-                        <i> Cured sea trout with herb cream and marinated vegetables <br> [Sennep, Egg, Fisk/skalldyr, Melk/laktose] <br> 289,- </i>
-                        
-                    <h2>Desert</h2>
-                    <h3>Ostekake med bringebær, marengs og sitrontimian </h3>
-                        <i> Cheesecake with raspberries, meringue and lamon thyme <br> [Gluten, Egg, Nøtter, Melk/laktose] <br> 165,- </i>
+                <h2> Hovedrett</h2>
+                <h3>Gravet ørret med urtekrem og marinerte høstgrønnsaker</h3>
+                <i> Cured sea trout with herb cream and marinated vegetables <br> [Sennep, Egg, Fisk/skalldyr, Melk/laktose] <br> 289,- </i>
+
+                <h2>Desert</h2>
+                <h3>Ostekake med bringebær, marengs og sitrontimian </h3>
+                <i> Cheesecake with raspberries, meringue and lamon thyme <br> [Gluten, Egg, Nøtter, Melk/laktose] <br> 165,- </i>
             </div>
 
             <div class="boxmeny">
@@ -120,80 +120,83 @@
                     <hr>
                     <h2> Forrett</h2>
                     <h3>Tartar av okse fra østlandet, klassiske tilbehør </h3>
-                        <i> Classic beef tartar from Østlandet <br> [Gluten, Sennep, Egg] <br> 205,- </i> 
+                    <i> Classic beef tartar from Østlandet <br> [Gluten, Sennep, Egg] <br> 205,- </i>
 
                     <h2> Hovedrett</h2>
                     <h3>Dåhjort med grønnkål, tyttebør og pommes croquette</h3>
-                        <i> Falow deer with cabbage, lingonberries and pommes croquette <br> [Gluten, Egg, Melk/laktose] <br> 305,- </i>
-                        
-                    <h2>Desert</h1>
-                    <h3>Dagens utvalg av ost </h3>
-                        <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
+                    <i> Falow deer with cabbage, lingonberries and pommes croquette <br> [Gluten, Egg, Melk/laktose] <br> 305,- </i>
+
+                    <h2>Desert
+                </h1>
+                <h3>Dagens utvalg av ost </h3>
+                <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
             </div>
 
             <div class="boxmeny">
                 <h1>Generell meny</h1>
-                    <hr>
-                    <h2>Forrett</h2>
-                    <h3>Ovnsbakt Kamskjell med sjalottløk og morkler</h3>
-                    <i> Baked scallop with shallots and morels <br> [Fisk/skalldyr] <br> 245,- </i>   
+                <hr>
+                <h2>Forrett</h2>
+                <h3>Ovnsbakt Kamskjell med sjalottløk og morkler</h3>
+                <i> Baked scallop with shallots and morels <br> [Fisk/skalldyr] <br> 245,- </i>
 
-                    <h2> Hovedrett</h2>
-                    <h3>Uer fra Ålesund med mais, berru nosette og bacon</h3>
-                        <i> Red-fish from Ålesund with sweetcorn, beurre noisette and bacon <br> [Gluten, Egg, Fisk/skalldyr] <br> 309,- </i>
-                        
-                    <h2>Desert</h2>
-                    <h3>Dagens utvalg av ost </h3>
-                        <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
+                <h2> Hovedrett</h2>
+                <h3>Uer fra Ålesund med mais, berru nosette og bacon</h3>
+                <i> Red-fish from Ålesund with sweetcorn, beurre noisette and bacon <br> [Gluten, Egg, Fisk/skalldyr] <br> 309,- </i>
+
+                <h2>Desert</h2>
+                <h3>Dagens utvalg av ost </h3>
+                <i> Todays selection of cheese <br> [Gluten, Egg, Nøtter, Melk/laktose, Soya]<br> 165,- </i>
             </div>
         </div>
 
         <input type="checkbox" id="checkBooking">
 
-        <section class = "banner">
+        <section class="banner">
             <h2>BOOK DITT EVENT NÅ</h2>
-            <div class = "popup-container">
-                </div>
-
-                <div class = "popup-content">
-                    <h3>Reservasjon</h3>
-                    <form>
-                        <div class = "form-row">
-                            <select name = "days">
-                                <option value = "day-select">Velg dag</option>
-                                <option value = "mandag">Mandag</option>
-                            <option value = "tirsdag">Tirsdag</option>
-                            <option value = "onsdag">Onsdag</option>
-                            <option value = "torsdag">Torsdag</option>
-                            <option value = "fredag">Fredag</option>
-                            <option value = "lørdag">Lørdag</option>
-                            <option value = "søndag">Søndag</option>
-                            </select>
-
-                            <select name = "hours">
-                                <option value = "hour-select">Velg tid</option>
-                                <option value = "12">12:00</option>
-                                <option value = "14">14:00</option>
-                                <option value = "16">16:00</option>
-                                <option value = "18">18:00</option>
-                                <option value = "20">20:00</option>
-                            </select>
-                        </div>
-                        
-                        <div class = "form-row">
-                            <input type = "text" placeholder="Fullt navn">
-                            <input type = "text" placeholder="Telfonnummer">
-                        </div>
-
-                        <div class = "form-row">
-                            <input type = "number" placeholder="Hvor mange personer?" min = "1">
-                            <input type = "submit" value = "BOOK EVENT">
-                        </div>
-                    </form>
-                    <label class="labelForCheckBooking"for="checkBooking"><h1>Lukk</h1></label>
-                </div>
+            <div class="popup-container">
             </div>
-        </section> 
+
+            <div class="popup-content">
+                <h3>Reservasjon</h3>
+                <form>
+                    <div class="form-row">
+                        <select name="days">
+                            <option value="day-select">Velg dag</option>
+                            <option value="mandag">Mandag</option>
+                            <option value="tirsdag">Tirsdag</option>
+                            <option value="onsdag">Onsdag</option>
+                            <option value="torsdag">Torsdag</option>
+                            <option value="fredag">Fredag</option>
+                            <option value="lørdag">Lørdag</option>
+                            <option value="søndag">Søndag</option>
+                        </select>
+
+                        <select name="hours">
+                            <option value="hour-select">Velg tid</option>
+                            <option value="12">12:00</option>
+                            <option value="14">14:00</option>
+                            <option value="16">16:00</option>
+                            <option value="18">18:00</option>
+                            <option value="20">20:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Fullt navn">
+                        <input type="text" placeholder="Telfonnummer">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="number" placeholder="Hvor mange personer?" min="1">
+                        <input type="submit" value="BOOK EVENT">
+                    </div>
+                </form>
+                <label class="labelForCheckBooking" for="checkBooking">
+                    <h1>Lukk</h1>
+                </label>
+            </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -203,13 +206,14 @@
                 <p>Mandag - fredag: 0900 - 2230</p>
                 <p>Lørdag: 1300 - 0100</p>
                 <p>Søndag: Stengt</p>
-                <br><label class="labelForCheckBooking"for="checkBooking"><a style="cursor: pointer;"id="reservasjon">Book et event her</a></label>
+                <br><label class="labelForCheckBooking" for="checkBooking"><a style="cursor: pointer;" id="reservasjon">Book et event her</a></label>
             </div>
             <div class="footer-contact">
                 <p><strong>Epost:</strong> <a href=""><u>kontakt@javacafe.no</u></a></p>
                 <p> <strong>Telefon:</strong> <a href=""><u>23 50 23 00 </u></a></p>
                 <p>Løkkegata 8</p>
                 <p>0151 Oslo</p>
+                <br><a href="accessibility.html#kilder" id="kilderLink">Kilder</a>
             </div>
             <div class="social-media">
                 <a href="https://www.tripadvisor.com/"><img src="Assets/tripadvisor.svg" alt="" class="tripadvisor"></a>
