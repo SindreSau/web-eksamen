@@ -494,7 +494,7 @@ footer .instagram {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #DE855E;
+    color: black;
     padding-bottom: 20px;
 }
 
@@ -526,11 +526,18 @@ footer .instagram {
     display: flex;
     width: 90%;
     margin: 0 auto;
+    color: black;
 }
-
+.form-row input::placeholder{
+    color: black;
+}
+.form-row input:focus{
+    color: #000;
+}
 form select,
 form input {
     display: block;
+    color: black;
     width: 100%;
     margin: 15px 12px;
     padding: 5px;
@@ -541,12 +548,9 @@ form input {
     border-bottom: 1px solid #eee;
     font-weight: 300;
 }
-
-form input[type=text],
-form input[type=number],
 form input::placeholder,
 select {
-    color: #DE855E;
+    color: black;
 }
 
 form input[type=submit] {
