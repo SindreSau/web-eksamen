@@ -48,7 +48,10 @@
                     Vi kjørte nettsiden vår gjennom Wave <a href="https://wave.webaim.org/">(https://wave.webaim.org/)</a> testverktøyet og fikk opp feil og mangler på siden vår. Feilene våres bestod for det meste av manglende alt tekst på mange av bildene, tomme elementer som inneholdt display: none; elementer som brukes i mobilversjon og varsel om at flere elementer linket til samme siden.
                 </p>
                 <br>
-                <img src="WaveTest.png" alt="Bilde av Wave testen">
+                <img style="width: 100%;" src="Screenshots/WaveTest.png" alt="Bilde av Wave testen"><br>
+                <img style="width: 100%;" src="Screenshots/altTekst.png" alt="Bilde av alt tekst tilbakemelding"><br>
+                <img style="width: 100%;" src="Screenshots/flereLinker.png" alt="Bilde av tilbakemelding på flere linker"><br>
+                <br>
                 <p>
                     For å fikse feilene, la vi inn alt tekster for alle bildene som beskrev hva som skulle vises dersom bildene ikke skulle laste inn. Tomme elementer gjorde vi ikke noen endringer på, siden det var meningen å skjule enkelte elementer som vises når man går til mobilversjon eller når man åpner booking boksen. Vi fjernet ikke noe med at flere elementer som for eksempel logoen og navigasjonsknappen “Hjem” siden begge linket til index.html, siden dette var et bevisst valg med tanke på navigasjon på siden.
                 </p>
@@ -60,10 +63,17 @@
                 <p>
                     Vi fant ut at nettsiden vår hadde en blanding av engelske ord og norske ord, og endret siden vår til å kun bruke norsk. Vi endret derfor også lang=”en” til lang=”nb” , siden nettsiden ikke er på engelsk, men på norsk bokmål.
                 </p>
+                <img style="width: 100%;" src="Screenshots/lang.png" alt="Bilde av tilbakemelding på flere linker">
                 <br>
                 <p>
                     Vi hadde problemer med logoen som originalt var en svg fil, fordi den ikke ville vises når vi hadde siden på github pages. Vi endret derfor logoen til en png og problemet løste seg. Ulempen med denne løsningen er at logoen ikke scaler like bra som en svg logo ville gjort, men siden logoen er forholdsvis liten på siden, vil det ikke kunne synes med mindre man ser i html filen. 
                 </p>
+                <br>
+                <p>
+                    Noe css funker forskjellig på ulike nettlesere, og dette var noe vi prøvde å ta høyde til. For eksempel funker text-decoration: underline; forskjellig på chrome og safari. derfor måtte vi skrive det på to måter slik at nettsiden ser og oppfører seg likt på de ulike nettleserne.
+                </p>
+                <br>
+                <img style="width: 100%;" src="Screenshots/ulikBrowser.png" alt="Bilde av koden for ulike browsere">
                 <br>
                 <p>
                     For å sjekke om nettsiden fulgte krav om universell utforming, så vi på uutylsynet <a href="https://www.uutilsynet.no/wcag-standarden/nettsteder/711">(https://www.uutilsynet.no/wcag-standarden/nettsteder/711)</a>. Vi fant at nettsiden fortsatt følger
