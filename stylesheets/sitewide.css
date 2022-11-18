@@ -461,10 +461,6 @@ footer .instagram {
     }
 }
 
-#kilderLink{
-    text-decoration: underline;
-}
-
 /* ----- Ending footer ----- */
 
 /* ----- Utility variabler ------------ */
@@ -528,8 +524,8 @@ footer .instagram {
     display: flex;
     width: 90%;
     margin: 0 auto;
-    color: black;
 }
+
 .form-row input::placeholder{
     color: gray;
 }
@@ -555,10 +551,11 @@ form input {
 }
 
 form input[type=text],
+form input[type=tel],
 form input[type=number],
 form input::placeholder,
 select {
-    color: lightgray;
+    color: gray;
 }
 
 form input[type=submit] {
@@ -570,13 +567,13 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
-    color: white;
-    background-color: #DE855E;
+    color: black;
+    background-color: #F3CFB4;
     opacity: 0.8;
 }
 
 .labelForCheckBooking h1 {
-    color: #F3CFB4;
+    color: black;
 }
 
 /* ----- Ending booking popup box ----- */
