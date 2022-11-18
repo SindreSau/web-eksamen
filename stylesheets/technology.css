@@ -5,6 +5,12 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (max-width: 1100px) {
+    html {
+        scroll-snap-type: none;
+    }
+}
+
 @-moz-document url-prefix() {
     html {
         scroll-snap-type: none;
@@ -14,7 +20,7 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(119, 180, 255, 0.2), rgba(41, 27, 113, 0.3));
+    background: linear-gradient(rgba(209, 230, 255, 0.2), rgba(67, 44, 178, 0.4));
     background-attachment: fixed;
     padding: 0;
     margin: 0;
@@ -116,6 +122,10 @@ p {
     background-color: var(--accent-hover);
 }
 
+@media (max-width: 1100px) {
+    /* hamburger */
+}
+
 /* ----- Ending header ----- */
 
 
@@ -161,6 +171,7 @@ p {
 .hero-text {
     text-transform: uppercase;
     font-family: OriginTech;
+    font-size: 6vw;
     letter-spacing: 10px;
     text-align: center;
     color: var(--title);
@@ -260,6 +271,22 @@ p {
     }
 }
 
+@media (max-width: 965px) {
+    .hero-image-wrapper img {
+        height: 50vh;
+    }
+
+    .hero-text-container {
+        align-items: flex-start;
+        padding-top: 30%;
+    }
+
+    .hero-text {
+        letter-spacing: 1vw;
+    }
+
+}
+
 /* ----- Ending hero ----- */
 
 /* ----- Main text ------------ */
@@ -271,7 +298,7 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 15vh 8vw;
+    padding: 12vh 8vw;
     max-width: 1400px;
     gap: 4vw;
 
@@ -280,12 +307,16 @@ p {
 
 .main-text {
     border: 1px solid var(--accent);
-    padding: 5%;
+    padding: 3vh 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(10px);
     flex: 1;
+}
+
+.main-text h2 {
+    margin: 2% 0;
 }
 
 .read-more-button {
@@ -301,6 +332,20 @@ p {
     scale: 105%;
 }
 
+@media (max-width: 1300px) {
+    .text-section-wrapper {
+        padding: 12vh 2vw;
+        gap: 2vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .text-section-wrapper {
+        flex-direction: column;
+    }
+
+}
+
 /* ----- Ending main text ----- */
 
 /* ----- Link cards ----------- */
@@ -313,6 +358,8 @@ information you lead us to.  */
 .links-section-wrapper {
     height: 100vh;
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .text-background-image-2 {
@@ -337,11 +384,6 @@ footer {
 
 /* ----- Ending footer ----- */
 
-/* ----- Media queries ------------ */
-@media (max-width: 880px) {}
-
-/* ----- Ending media queries ----- */
-
 /* ----- Variabler ------------ */
 :root {
     /* --background: #121212; */
@@ -358,7 +400,7 @@ footer {
     --card-header: #7f16ff;
 
 
-    --fs-big-title: 3.5rem;
+    --fs-big-title: 3.5vw;
     --fs-primary: 1rem;
 }
 
