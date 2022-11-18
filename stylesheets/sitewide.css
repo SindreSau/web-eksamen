@@ -1,3 +1,13 @@
+/* ----- Variabler ------------ */
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --darkest-grey: #121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
+}
+
+/* ----- Ending variabler ----- */
 /* ----- General ------------ */
 
 body {
@@ -462,18 +472,6 @@ footer .instagram {
 }
 
 /* ----- Ending footer ----- */
-
-/* ----- Utility variabler ------------ */
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --darkest-grey: #121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
-
-
-/* ----- Ending utility variabler ----- */
 
 /* ----- booking popup box ----- */
 * {
