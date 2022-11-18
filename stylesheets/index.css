@@ -1,3 +1,7 @@
+html {
+    scroll-padding-top: 120px;
+}
+
 /* ---------- start bilde-slideshow ----------  */
 .hero-section {
     margin-top: 83px;
@@ -13,7 +17,6 @@
 .slideshow {
     position: relative;
     display: contents;
-
 }
 
 .slideshow img {
