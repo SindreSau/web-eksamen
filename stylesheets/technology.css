@@ -1,7 +1,16 @@
 /* ----- General ------------ */
 html {
     scroll-snap-type: y mandatory;
+
     scroll-behavior: smooth;
+}
+
+@-moz-document url-prefix() {
+    html {
+        scroll-snap-type: none;
+
+        scroll-behavior: smooth;
+    }
 }
 
 body {
