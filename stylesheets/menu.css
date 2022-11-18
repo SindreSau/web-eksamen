@@ -10,7 +10,8 @@ h2 {
 
 ul {
     list-style: none;
-    color: var(--yellow)
+    color: var(--yellow);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 i {
