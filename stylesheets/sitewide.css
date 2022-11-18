@@ -1,3 +1,14 @@
+/* ----- Utility variabler ------------ */
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --darkest-grey: #121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
+}
+
+/* ----- Ending utility variabler ----- */
+
 /* ----- General ------------ */
 
 body {
@@ -27,7 +38,7 @@ a {
     font-family: 'Ubuntu', sans-serif;
 }
 
-p{
+p {
     line-height: 1.5;
 }
 
@@ -267,7 +278,8 @@ h2 {
     #hamburgerCheckbox:checked+#navKnapper a {
         display: block;
     }
-    #hamburgerCheckbox:checked+#labelForHamburger{
+
+    #hamburgerCheckbox:checked+#labelForHamburger {
         transform: rotate(90deg);
         background-color: #eee;
     }
@@ -463,17 +475,7 @@ footer .instagram {
 
 /* ----- Ending footer ----- */
 
-/* ----- Utility variabler ------------ */
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --darkest-grey: #121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
 
-
-/* ----- Ending utility variabler ----- */
 
 /* ----- booking popup box ----- */
 * {
@@ -526,15 +528,18 @@ footer .instagram {
     margin: 0 auto;
 }
 
-.form-row input::placeholder{
+.form-row input::placeholder {
     color: gray;
 }
-.form-row input:focus::placeholder{
+
+.form-row input:focus::placeholder {
     color: black;
 }
-.form-row input:focus{
+
+.form-row input:focus {
     color: black;
 }
+
 form select,
 form input {
     display: block;
@@ -584,11 +589,12 @@ form input[type=submit]:hover {
     padding-bottom: 3%;
 }
 
-#kilder p a{
+#kilder p a {
     color: var(--orange);
 }
 
 #kilderLink {
     text-decoration: underline;
 }
+
 /*---Slutt kilder ---*/
