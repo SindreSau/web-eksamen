@@ -584,6 +584,10 @@ form input[type=submit]:hover {
     padding-bottom: 3%;
 }
 
+#kilder p a{
+    color: var(--orange);
+}
+
 #kilderLink {
     text-decoration: underline;
 }
