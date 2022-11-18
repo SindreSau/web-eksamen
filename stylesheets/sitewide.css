@@ -1,13 +1,3 @@
-/* ----- Variabler ------------ */
-:root {
-    --orange: #DE855E;
-    --yellow: #F3CFB4;
-    --darkest-grey: #121212;
-    --dark-grey: #1E1E1E;
-    --grey: #222222;
-}
-
-/* ----- Ending variabler ----- */
 /* ----- General ------------ */
 
 body {
@@ -471,11 +461,19 @@ footer .instagram {
     }
 }
 
-#kilderLink{
-    text-decoration: underline;
+/* ----- Ending footer ----- */
+
+/* ----- Utility variabler ------------ */
+:root {
+    --orange: #DE855E;
+    --yellow: #F3CFB4;
+    --darkest-grey: #121212;
+    --dark-grey: #1E1E1E;
+    --grey: #222222;
 }
 
-/* ----- Ending footer ----- */
+
+/* ----- Ending utility variabler ----- */
 
 /* ----- booking popup box ----- */
 * {
@@ -494,7 +492,7 @@ footer .instagram {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: var(--orange);
     padding-bottom: 20px;
 }
 
@@ -526,13 +524,16 @@ footer .instagram {
     display: flex;
     width: 90%;
     margin: 0 auto;
-    color: black;
 }
+
 .form-row input::placeholder{
+    color: gray;
+}
+.form-row input:focus::placeholder{
     color: black;
 }
 .form-row input:focus{
-    color: #000;
+    color: black;
 }
 form select,
 form input {
@@ -548,9 +549,13 @@ form input {
     border-bottom: 1px solid #eee;
     font-weight: 300;
 }
+
+form input[type=text],
+form input[type=tel],
+form input[type=number],
 form input::placeholder,
 select {
-    color: black;
+    color: gray;
 }
 
 form input[type=submit] {
@@ -562,13 +567,13 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
-    color: white;
-    background-color: #DE855E;
+    color: black;
+    background-color: #F3CFB4;
     opacity: 0.8;
 }
 
 .labelForCheckBooking h1 {
-    color: #F3CFB4;
+    color: black;
 }
 
 /* ----- Ending booking popup box ----- */
