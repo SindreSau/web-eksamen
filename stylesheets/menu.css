@@ -12,11 +12,14 @@ ul {
     list-style: none;
     color: var(--yellow);
     font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
 }
 
 i {
     color: var(--yellow)
 }
+
+
 /*--------Generelt for siden meny end--------*/
 
 
