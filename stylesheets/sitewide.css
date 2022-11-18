@@ -580,7 +580,11 @@ form input[type=submit]:hover {
 
 /*--- Kilder ---*/
 
-#kilder p{
+#kilder p {
     padding-bottom: 3%;
+}
+
+#kilderLink {
+    text-decoration: underline;
 }
 /*---Slutt kilder ---*/
