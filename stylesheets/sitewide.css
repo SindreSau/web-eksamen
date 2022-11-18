@@ -245,6 +245,10 @@ h2 {
     #hamburgerCheckbox:checked+#navKnapper a {
         display: block;
     }
+    #hamburgerCheckbox:checked+#labelForHamburger{
+        transform: rotate(90deg);
+        background-color: #eee;
+    }
 }
 
 
