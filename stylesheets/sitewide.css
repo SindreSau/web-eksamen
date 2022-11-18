@@ -461,6 +461,10 @@ footer .instagram {
     }
 }
 
+#kilderLink{
+    text-decoration: underline;
+}
+
 /* ----- Ending footer ----- */
 
 /* ----- Utility variabler ------------ */
