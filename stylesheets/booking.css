@@ -55,7 +55,7 @@ form select, form input{
     font-weight: 300;
 }
 form input[type = text], form input[type = number], form input::placeholder, select{
-    color: #DE855E;
+    color: black;
 }
 form input[type = submit]{
     color: white;
