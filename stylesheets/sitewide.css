@@ -507,7 +507,7 @@ footer .instagram {
 }
 
 .popup-content {
-    background: #DE855E;
+    background: var(--orange);
     height: 330px;
     z-index: 0;
 }
