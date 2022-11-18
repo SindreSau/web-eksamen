@@ -268,43 +268,11 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2vw 4vw;
+    padding: 15vh 8vw;
+    max-width: 1400px;
     gap: 3vw;
 
     scroll-snap-align: start;
-}
-
-.text-card {
-    padding: 3vw;
-    border-radius: 25px;
-    z-index: 1;
-    background-color: var(--card-background);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.276);
-    transition: .3s;
-}
-
-.text-card:hover {
-    scale: 115%;
-    z-index: 2;
-    background-color: var(--card-background-hover);
-    backdrop-filter: blur(5px);
-}
-
-.card-1:hover {
-    transform: translateX(10vw);
-    box-shadow: -50px 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.card-2:hover {
-    transform: translateX(-10vw);
-    box-shadow: 50px 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.text-card h2 {
-    color: var(--card-header);
-    font-size: 1.5vw;
 }
 
 .text-background-image {
