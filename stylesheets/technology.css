@@ -263,26 +263,42 @@ p {
 /* ----- Ending hero ----- */
 
 /* ----- Main text ------------ */
-.text-section-wrapper {
+#main-text-section {
     height: 100vh;
+}
+
+.text-section-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
     padding: 15vh 8vw;
     max-width: 1400px;
-    gap: 3vw;
+    gap: 4vw;
 
     scroll-snap-align: start;
 }
 
-.text-background-image {
-    position: absolute;
-    width: 100vw;
-    max-height: 100vh;
-    opacity: .6;
-    filter: blur(3px);
-    left: 0;
-    z-index: -1;
+.main-text {
+    border: 1px solid var(--accent);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    flex: 1;
+}
+
+.read-more-button {
+    color: var(--title);
+    background-color: var(--accent);
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.read-more-button:hover {
+    background-color: var(--accent-hover);
+    scale: 105%;
 }
 
 /* ----- Ending main text ----- */
