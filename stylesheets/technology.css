@@ -1,392 +1,7 @@
-/* ----- General ------------ */
-html {
-    scroll-snap-type: y mandatory;
-
-    scroll-behavior: smooth;
-}
-
-@media (max-width: 1100px) {
-    html {
-        scroll-snap-type: none;
-    }
-}
-
-@-moz-document url-prefix() {
-    html {
-        scroll-snap-type: none;
-
-        scroll-behavior: smooth;
-    }
-}
-
-body {
-    background: linear-gradient(rgba(209, 230, 255, 0.2), rgba(67, 44, 178, 0.4));
-    background-attachment: fixed;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-header {
-    position: fixed;
-    width: 100vw;
-    z-index: 999;
-}
-
-h2 {
-    color: var(--accent);
-}
-
-p {
-    color: var(--primary);
-    font-size: var(--fs-primary);
-}
-
-/* Logo font */
-@font-face {
-    font-family: Despairs;
-    src: url(/Fonts/Despairs-X3Wxo.ttf);
-}
-
-/* Title font */
-@font-face {
-    font-family: OriginTech;
-    src: url(/Fonts/OriginTech_personal_use.ttf);
-}
-
-@font-face {
-    font-family: Ghostlike;
-    src: url(/Fonts/GhostlikeDemoOutline.ttf);
-}
-
-
-
-/* ----- Header ------------ */
-.nav-wrapper {
-    display: flex;
-    margin: 0 4vw;
-    color: var(--primary);
-    scroll-snap-align: start;
-}
-
-.tech-logo {
-    width: 50%;
-    font-size: 1.8rem;
-    font-family: Despairs;
-    align-self: center;
-    color: var(--accent);
-}
-
-.tech-nav {
-    font-size: 1.2rem;
-    font-family: 'Courier New', Courier, monospace;
-    list-style: none;
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: space-between;
-    letter-spacing: 3px;
-    gap: 2vw;
-    text-transform: uppercase;
-    z-index: 2;
-}
-
-.tech-nav li {
-    transition: .3s;
-}
-
-.tech-nav :nth-child(5) {
-    background-color: var(--accent);
-    padding: 8px 2vw;
-    border-radius: 20px;
-    color: white;
-}
-
-.tech-nav :not(:last-child):hover {
-    color: var(--accent);
-    scale: 105%;
-}
-
-.tech-nav :nth-child(5):hover {
-    scale: 105%;
-    background-color: var(--accent-hover);
-}
-
-@media (max-width: 1100px) {
-    /* hamburger */
-}
-
-/* ----- Ending header ----- */
-
-
-/* ----- Hero ------------ */
-.hero-section {
-    position: relative;
-    top: 0;
-    height: 100vh;
-}
-
-.hero-image-wrapper {
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-image-wrapper img {
-    height: 85vh;
-    opacity: .8;
-    overflow: hidden;
-    opacity: 0;
-
-    /* Redigert kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
-    animation: fadeInAnimation ease 2.5s;
-    animation-delay: .1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-.hero-text-container {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-text {
-    text-transform: uppercase;
-    font-family: OriginTech;
-    font-size: 6vw;
-    letter-spacing: 10px;
-    text-align: center;
-    color: var(--title);
-    line-height: 8px;
-
-    padding: 3vw 8vw;
-
-    background-color: var(--hero-card);
-    box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    opacity: 0;
-
-    transition: .3s;
-
-    /* Redigert kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
-    animation: fadeInAnimation ease 2s;
-    animation-delay: 1.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-/* kode fra https: //www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.hero-text:hover {
-    background-color: var(--hero-card-hover);
-    scale: 110%;
-    color: var(--title-hover);
-    text-shadow: 0 0 10px rgba(159, 140, 255, 0.4);
-    box-shadow: 10px 20px 60px rgb(0, 0, 0, .4);
-}
-
-.top-smaller-text {
-    font-size: calc(var(--fs-big-title)/1.8);
-}
-
-.bottom-larger-text {
-    font-size: var(--fs-big-title);
-}
-
-.svg-scrolldown {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    top: 90%;
-    opacity: 0;
-
-    animation: fadeInAnimation 2s ease 3s 1 forwards;
-}
-
-.svg-scrolldown-left {
-    left: 2%;
-}
-
-.svg-scrolldown-right {
-    right: 2%;
-}
-
-.scrolldown-top {
-    animation: move-down 3.5s ease-in-out 3.0s infinite;
-}
-
-.scrolldown-bottom {
-    animation: move-down 3.5s ease-in-out 3.6s infinite;
-}
-
-@keyframes move-down {
-    0% {
-        opacity: .8;
-    }
-
-    40% {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-
-    80% {
-        transform: translateY(-40px);
-        opacity: 0;
-    }
-
-    90% {
-        opacity: .3;
-    }
-
-    100% {
-        opacity: .8;
-    }
-}
-
-@media (max-width: 965px) {
-    .hero-image-wrapper img {
-        height: 50vh;
-    }
-
-    .hero-text-container {
-        align-items: flex-start;
-        padding-top: 30%;
-    }
-
-    .hero-text {
-        letter-spacing: 1vw;
-    }
-
-}
-
-/* ----- Ending hero ----- */
-
-/* ----- Main text ------------ */
-#main-text-section {
-    height: 100vh;
-}
-
-.text-section-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 12vh 8vw;
-    max-width: 1400px;
-    gap: 4vw;
-
-    scroll-snap-align: start;
-}
-
-.main-text {
-    border: 1px solid var(--accent);
-    padding: 3vh 5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    flex: 1;
-}
-
-.main-text h2 {
-    margin: 2% 0;
-}
-
-.read-more-button {
-    color: var(--title);
-    background-color: var(--accent);
-    border-radius: 25px;
-    padding: 10px 20px;
-    transition: .3s;
-}
-
-.read-more-button:hover {
-    background-color: var(--accent-hover);
-    scale: 105%;
-}
-
-@media (max-width: 1300px) {
-    .text-section-wrapper {
-        padding: 12vh 2vw;
-        gap: 2vw;
-    }
-}
-
-@media (max-width: 900px) {
-    .text-section-wrapper {
-        flex-direction: column;
-    }
-
-}
-
-/* ----- Ending main text ----- */
-
-/* ----- Link cards ----------- */
-
-/* Add links (if there are none). This text should have multiple links to external sites with 
-relevant information. We shall not grade you on how relevant the information you link to is, 
-but we expect several links, and we expect it to be easy to understand before clicking what 
-information you lead us to.  */
-
-.links-section-wrapper {
-    height: 100vh;
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.text-background-image-2 {
-    position: absolute;
-    width: 100vw;
-    max-height: 100vh;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    opacity: .5;
-}
-
-/* ----- Ending link cards ----- */
-
-
-/* ----- Footer ------------ */
-footer {
-    height: 0;
-    background-color: rgba(255, 85, 113, 0.1);
-    scroll-snap-align: end;
-}
-
-/* ----- Ending footer ----- */
-
 /* ----- Variabler ------------ */
 :root {
-    /* --background: #121212; */
+    --bg-gradient-primary: rgba(219, 245, 255, .5);
+    --bg-gradient-secondary: rgba(182, 129, 255, .5);
     --primary: #000000;
     --accent: #aa65ff;
     --accent-hover: #7c13fc;
@@ -405,3 +20,40 @@ footer {
 }
 
 /* ----- Ending variabler ----- */
+
+/* ----- General ------------ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 200%;
+    background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) no-repeat fixed;
+}
+
+body, ul {
+    margin: 0;
+}
+
+/* ----- Ending navbar ----- */
+
+
+
+/* ----- Header ------------ */
+
+/* ----- Ending header ----- */
+
+
+
+/* ----- Main ------------ */
+
+/* ----- Ending main ----- */
+
+
+
+/* ----- Footer ------------ */
+
+/* ----- Ending footer ----- */
+
+
+/* ----- Variabler ------------ */
