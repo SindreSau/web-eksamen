@@ -75,7 +75,7 @@ p {
 /* Logo font */
 @font-face {
     font-family: Despairs;
-    src: url(/Fonts/Despairs-X3Wxo.ttf);
+    src: url("../Fonts/Despairs-X3Wxo.ttf");
 }
 
 /* Title font */
@@ -83,11 +83,6 @@ p {
     font-family: OriginTech;
     font-weight: normal;
     src: url("../Fonts/OriginTech_personal_use.ttf") format(truetype);
-}
-
-@font-face {
-    font-family: Ghostlike;
-    src: url(/Fonts/GhostlikeDemoOutline.ttf);
 }
 
 @media (min-width:601px) {
