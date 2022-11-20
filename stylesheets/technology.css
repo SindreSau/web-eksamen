@@ -4,15 +4,16 @@
     --bg-gradient-secondary: rgba(182, 129, 255, .5);
     --primary: #000000;
     --accent: #aa65ff;
-    --accent-hover: #7c13fc;
+    --accent-hover: #7c13fcb4;
     --title: #c6cdff;
     --title-hover: #c7ceff;
-    --hero-card: #22222273;
-    --hero-card-hover: #22222290;
+    --hero-card: #2b005f4d;
+    --hero-card-hover: #2b005f67;
     --scrolldown-stroke: rgba(73, 5, 103, 0.365);
     --card-background: #ffffff53;
     --card-background-hover: #ffffffcb;
     --card-header: #7f16ff;
+    --shadow: rgba(0, 0, 0, 0.6);
 
 
     --fs-big-title: 3.5vw;
@@ -29,23 +30,292 @@
 html {
     min-height: 200%;
     background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) no-repeat fixed;
+    scroll-behavior: smooth;
 }
 
-body, ul {
+body {
+    overflow-x: hidden;
+}
+
+body,
+ul,
+h1,
+h2,
+h3 {
+    padding: 0;
     margin: 0;
 }
 
-/* ----- Ending navbar ----- */
+section {
+    /* trekke fra høyden på navbar */
+    padding-top: 70px;
 
+    margin: 0 6vw;
+    border: 1px solid rgba(0, 128, 0, 0.3);
+    height: 100vh;
+    overflow: hidden;
+
+    scroll-snap-align: start;
+}
+
+li,
+a {
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Logo font */
+@font-face {
+    font-family: Despairs;
+    src: url(/Fonts/Despairs-X3Wxo.ttf);
+}
+
+/* Title font */
+@font-face {
+    font-family: OriginTech;
+    src: url(/Fonts/OriginTech_personal_use.ttf);
+}
+
+@font-face {
+    font-family: Ghostlike;
+    src: url(/Fonts/GhostlikeDemoOutline.ttf);
+}
+
+/* Scroll snap på større skjermer */
+@media (min-width: 600px) {
+    @supports (scroll-snap-align: start) {
+        html {
+            scroll-snap-type: y mandatory;
+        }
+    }
+}
+
+/* ----- Ending general ----- */
 
 
 /* ----- Header ------------ */
+.nav-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 5;
+}
 
+.header-logo {
+    font-family: Despairs;
+    font-size: 2rem;
+    min-width: fit-content;
+    color: var(--accent);
+}
+
+.navbar {
+    flex: 1;
+}
+
+.navbar ul {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2vh 0;
+    flex: 1 1 auto;
+}
+
+.navbar a {
+    justify-content: center;
+}
+
+/* ----- Hamburger ------------ */
+.hamburger-menu-container,
+.hamburger-toggle {
+    display: none;
+}
+
+@media (max-width: 1079px) {
+    .navbar {
+        display: none;
+    }
+
+    .hamburger-toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 5vw;
+        width: 65px;
+        height: 70px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 99;
+    }
+
+    .hamburger-button-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 0;
+        top: 0;
+        right: 5vw;
+        height: 70px;
+        width: 65px;
+        z-index: 98;
+    }
+
+    .hamburger-line {
+        width: 100%;
+        height: 8px;
+        background-color: var(--accent-hover);
+        border-radius: 25px;
+        transition: .3s;
+    }
+
+    .hamburger-menu-container {
+        position: absolute;
+        top: 0;
+        right: -65vw;
+        display: flex;
+        height: 100vh;
+        width: 65vw;
+        padding-top: 90px;
+        background: linear-gradient(rgba(109, 25, 255, 0.5), rgba(181, 61, 255, 0.5));
+        backdrop-filter: blur(10px);
+        transition: .3s;
+    }
+
+    .hamburger-nav ul {
+        font-family: 'Courier New', Courier, monospace;
+        text-transform: uppercase;
+        font-size: 3.5vw;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 50vh;
+        width: 65vw;
+        color: white;
+    }
+
+    .hamburger-nav li {
+        transition: .3s;
+    }
+
+    .hamburger-nav li:hover {
+        text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25);
+        scale: 103%;
+    }
+
+    .hamburger-toggle:checked~* .line2 {
+        opacity: 0;
+    }
+
+    .hamburger-toggle:checked~* .line1 {
+        transform: rotate(-45deg) translateY(20px);
+    }
+
+    .hamburger-toggle:checked~* .line3 {
+        transform: rotate(45deg) translateY(-20px);
+    }
+
+    .hamburger-toggle:checked~.hamburger-menu-container {
+        transform: translateX(-65vw);
+        box-shadow: 0 0 15vw var(--shadow);
+    }
+}
+
+/* ----- Ending hamburger ----- */
 /* ----- Ending header ----- */
 
 
-
 /* ----- Main ------------ */
+/* ----- Section 1 ------------ */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-box {
+    background-color: var(--hero-card);
+    backdrop-filter: blur(10px);
+    padding: 3vw 4vw;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+}
+
+.title-box:hover {
+    background-color: var(--hero-card-hover);
+    scale: 103%;
+}
+
+.title-box h1 {
+    font-family: OriginTech;
+    color: var(--title);
+}
+
+.small-title {
+    font-size: clamp(16px, 3vw, 60px);
+}
+
+.large-title {
+    font-size: clamp(20px, 4.8vw, 75px);
+}
+
+.title-emphasize {
+    color: rgb(211, 164, 255);
+}
+
+.hero-section img {
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .hero-section img {
+        height: 50vh;
+    }
+
+    .title-box {
+        transform: translateY(-25vh);
+        padding: 5%;
+    }
+}
+
+/* ----- Ending section 1 ----- */
+
+
+
+/* ----- Section 2 ------------ */
+
+
+/* ----- Ending section 2 ----- */
+
+
+
+/* ----- Section 3 ------------ */
+
+/* ----- Ending section 3 ----- */
 
 /* ----- Ending main ----- */
 
@@ -56,4 +326,27 @@ body, ul {
 /* ----- Ending footer ----- */
 
 
-/* ----- Variabler ------------ */
+/* ----- Utility ------------ */
+.button {
+    background-color: var(--accent);
+    color: var(--card-background-hover);
+    padding: 1vh 2vw;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+    scale: 103%;
+}
+
+.hover-link {
+    transition: .3s;
+}
+
+.hover-link:hover {
+    color: var(--accent);
+    scale: 103%;
+}
+
+/* ----- Ending utility ----- */
