@@ -14,10 +14,6 @@
     --card-background-hover: #ffffffcb;
     --card-header: #7f16ff;
     --shadow: rgba(0, 0, 0, 0.6);
-
-
-    --fs-big-title: 3.5vw;
-    --fs-primary: 1rem;
 }
 
 /* ----- Ending variabler ----- */
@@ -28,7 +24,7 @@
 }
 
 html {
-    min-height: 100%;
+    min-height: 100vh;
     background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) no-repeat fixed;
     scroll-behavior: smooth;
 }
@@ -71,6 +67,7 @@ h3 {
 }
 
 p {
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
 }
@@ -113,9 +110,12 @@ p {
         min-height: 100vh;
     }
 
-    .title-box {
-        background-color: none;
-        backdrop-filter: none;
+    main {
+        position: relative;
+    }
+
+    .hero-section img, .svg-scrolldown {
+        top: 50vh;
     }
 }
 
@@ -299,23 +299,27 @@ p {
 }
 
 .title-box {
-    background-color: var(--hero-card);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 3vw 4vw;
-    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: .3s;
-
     opacity: 0;
     animation: fadeInAnimation ease 2s 1.5s 1 forwards;
 }
 
-.title-box:hover {
-    background-color: var(--hero-card-hover);
-    scale: 103%;
+@media (min-width: 601px) {
+    .title-box {
+        background-color: var(--hero-card);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 3vw 4vw;
+        border-radius: 25px;
+        transition: .3s;
+    }
+
+    .title-box:hover {
+        background-color: var(--hero-card-hover);
+        scale: 103%;
+    }
 }
 
 .title-box h1 {
@@ -477,7 +481,7 @@ p {
 
 .links-background-image {
     position: absolute;
-    bottom: -200vh;
+    bottom: 0;
     width: 100vw;
     max-height: 120vh;
     left: 50%;
