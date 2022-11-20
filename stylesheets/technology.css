@@ -112,6 +112,11 @@ p {
         flex-direction: column;
         min-height: 100vh;
     }
+
+    .title-box {
+        background-color: none;
+        backdrop-filter: none;
+    }
 }
 
 /* ----- Ending general ----- */
@@ -182,7 +187,9 @@ p {
 
 @media (max-width: 1079px) {
     .nav-wrapper {
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255, .6);
+        backdrop-filter: blur(4px);
+        padding-block: 10px;
     }
 
     .navbar {
