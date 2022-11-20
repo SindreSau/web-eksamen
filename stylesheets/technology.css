@@ -28,7 +28,7 @@
 }
 
 html {
-    min-height: 200%;
+    min-height: 100%;
     background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) no-repeat fixed;
     scroll-behavior: smooth;
 }
@@ -51,10 +51,7 @@ section {
     padding-top: 100px;
     margin-inline: 6vw;
     border: 1px solid rgba(0, 128, 0, 0.3);
-    height: 100vh;
     overflow: hidden;
-
-    scroll-snap-align: start;
 }
 
 li,
@@ -67,7 +64,11 @@ a {
 h2 {
     font-size: clamp(16px, 2vw, 40px);
     color: var(--accent);
-    text-align: center;
+}
+
+h3 {
+    color: var(--accent-hover);
+    font-size: clamp(20px, 2vw, 40px);
 }
 
 p {
@@ -92,13 +93,24 @@ p {
     font-family: Ghostlike;
     src: url(/Fonts/GhostlikeDemoOutline.ttf);
 }
-
-/* Scroll snap på større skjermer */
-@media (min-width: 600px) {
+@media (min-width:601px) {
     @supports (scroll-snap-align: start) {
         html {
             scroll-snap-type: y mandatory;
         }
+
+        section {
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 }
 
@@ -197,10 +209,10 @@ p {
     .hamburger-menu-container {
         position: absolute;
         top: 0;
-        right: -65vw;
+        right: -75vw;
         display: flex;
         height: 100vh;
-        width: 65vw;
+        width: 75vw;
         padding-top: 90px;
         background: linear-gradient(rgba(109, 25, 255, 0.5), rgba(181, 61, 255, 0.5));
         backdrop-filter: blur(10px);
@@ -218,7 +230,7 @@ p {
         align-items: center;
         justify-content: space-around;
         height: 50vh;
-        width: 65vw;
+        width: 75vw;
         color: white;
     }
 
@@ -244,7 +256,7 @@ p {
     }
 
     .hamburger-toggle:checked~.hamburger-menu-container {
-        transform: translateX(-65vw);
+        transform: translateX(-75vw);
         box-shadow: 0 0 15vw var(--shadow);
     }
 }
@@ -394,65 +406,91 @@ p {
 
 
 /* ----- Section 2 ------------ */
+.main-text-section {
+    padding-block: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
 
+.text-box {
+    background-color: var(--card-background);
+    border-radius: 25px;
+    padding: 2vw;
+}
 
 /* ----- Ending section 2 ----- */
 
 
 
 /* ----- Section 3 ------------ */
-
-/* ----- Ending section 3 ----- */
 .links-section {
+    padding: 50px;
     position: relative;
-    padding: 15vw 4vw;
     display: grid;
-    gap: 4vw;
-}
-
-@media (min-width:900px) {
-    .links-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    gap: 80px;
+    justify-content: center;
+    align-content: center;
 }
 
 .links-background-image {
     position: absolute;
     bottom: -200vh;
     width: 100vw;
+    max-height: 120vh;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -5;
     opacity: .6;
     filter: blur(4px);
 }
 
+.links-section p {
+    font-style: italic;
+    color: rgb(64, 64, 64);
+}
+
 .link-card {
-    position: relative;
-    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2vw .6vw;
+    height: 100%;
+    width: 100%;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
     box-shadow: .2vw .2vw 1vw var(--shadow);
     transition: .3s;
-    z-index: 5;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
 .link-card:hover {
     scale: 103%;
-    z-index: 5;
 }
 
 .card-image {
-    z-index: -5;
+    height: clamp(60px, 5vw, 90px);
+    width: clamp(60px, 5vw, 90px);
     position: absolute;
-    top: clamp(-35px, -2vw, -50px);
-    opacity: .8;
-    height: clamp(60px, 3vw, 60px);
-    width: clamp(60px, 3vw, 60px);
+    z-index: -5;
+    top: -50px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--accent-hover);
 }
+
+@media (min-width:1000px) {
+    .links-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-image {
+        top: -50px;
+    }
+}
+/* ----- Ending section 3 ----- */
 
 /* ----- Ending main ----- */
 
@@ -467,6 +505,7 @@ p {
 .button {
     background-color: var(--accent);
     color: var(--card-background-hover);
+    max-width: max-content;
     padding: 1vh 2vw;
     border-radius: 25px;
     transition: .3s;
