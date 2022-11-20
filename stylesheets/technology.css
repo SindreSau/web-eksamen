@@ -47,7 +47,7 @@ section {
     padding-top: 100px;
 
     margin-inline: 6vw;
-    overflow: hidden;
+
 }
 
 li,
@@ -76,7 +76,7 @@ p {
 /* Logo font */
 @font-face {
     font-family: Despairs;
-    src: url("../Fonts/Despairs-X3Wxo.ttf<");
+    src: url("../Fonts/Despairs-X3Wxo.ttf");
 }
 
 /* Title font */
@@ -132,7 +132,7 @@ p {
 }
 
 .header-logo:hover {
-    animation: spin .5s ease-in-out 1 forwards;
+    animation: spin .5s ease-in-out .2s 1 forwards;
 }
 
 @keyframes spin {
@@ -458,13 +458,13 @@ p {
 /* ----- Section 3 ------------ */
 .links-section {
     padding: 50px;
-    position: relative;
     display: grid;
     gap: 80px;
     justify-content: center;
     align-content: center;
 }
 
+/* Lagt til for å flytte bilde til bunn av skjerm både på små og store skjermer */
 .background-to-bottom {
     position: relative;
 }
@@ -485,7 +485,11 @@ p {
     font-style: italic;
     color: rgb(64, 64, 64);
 }
-
+.link-card-wrapper {
+    position: relative;
+    border-radius: 25px;
+    transition: .3s;
+}
 .link-card {
     display: flex;
     flex-direction: column;
@@ -499,10 +503,9 @@ p {
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: .3s;
 }
 
-.link-card:hover {
+.link-card-wrapper:hover {
     scale: 105%;
     box-shadow: .2vw .5vw 40px rgba(0, 0, 0, 0.2);
 }
@@ -516,10 +519,9 @@ p {
 }
 
 .card-image {
+    position: absolute;
     height: clamp(60px, 5vw, 90px);
     width: clamp(60px, 5vw, 90px);
-    position: absolute;
-    z-index: -5;
     top: -50px;
     object-fit: cover;
     border-radius: 50%;
@@ -533,6 +535,12 @@ p {
 
     .card-image {
         top: -50px;
+    }
+}
+
+@media (max-width) {
+    .links-section {
+        gap: 10vh;
     }
 }
 
