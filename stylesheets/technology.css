@@ -48,9 +48,8 @@ h3 {
 
 section {
     /* trekke fra høyden på navbar */
-    padding-top: 70px;
-
-    margin: 0 6vw;
+    padding-top: 100px;
+    margin-inline: 6vw;
     border: 1px solid rgba(0, 128, 0, 0.3);
     height: 100vh;
     overflow: hidden;
@@ -65,6 +64,17 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    font-size: clamp(16px, 2vw, 40px);
+    color: var(--accent);
+    text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+
 /* Logo font */
 @font-face {
     font-family: Despairs;
@@ -74,7 +84,8 @@ a {
 /* Title font */
 @font-face {
     font-family: OriginTech;
-    src: url(/Fonts/OriginTech_personal_use.ttf);
+    font-weight: normal;
+    src: url("../Fonts/OriginTech_personal_use.ttf") format(truetype);
 }
 
 @font-face {
@@ -193,6 +204,7 @@ a {
         padding-top: 90px;
         background: linear-gradient(rgba(109, 25, 255, 0.5), rgba(181, 61, 255, 0.5));
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         transition: .3s;
     }
 
@@ -252,6 +264,7 @@ a {
 .title-box {
     background-color: var(--hero-card);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 3vw 4vw;
     border-radius: 25px;
     display: flex;
@@ -270,6 +283,7 @@ a {
 
 .title-box h1 {
     font-family: OriginTech;
+    font-weight: normal;
     color: var(--title);
 }
 
@@ -282,7 +296,14 @@ a {
 }
 
 .title-emphasize {
-    color: rgb(211, 164, 255);
+    display: inline-block;
+    transform: rotate(1deg);
+    color: var(--title-hover);
+    transition: .3s;
+}
+
+.title-emphasize:hover {
+    transform: rotate(-2deg);
 }
 
 .hero-section img {
@@ -382,6 +403,56 @@ a {
 /* ----- Section 3 ------------ */
 
 /* ----- Ending section 3 ----- */
+.links-section {
+    position: relative;
+    padding: 15vw 4vw;
+    display: grid;
+    gap: 4vw;
+}
+
+@media (min-width:900px) {
+    .links-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.links-background-image {
+    position: absolute;
+    bottom: -200vh;
+    width: 100vw;
+    z-index: -5;
+    opacity: .6;
+    filter: blur(4px);
+}
+
+.link-card {
+    position: relative;
+    padding: 1vw;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: .2vw .2vw 1vw var(--shadow);
+    transition: .3s;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.link-card:hover {
+    scale: 103%;
+    z-index: 5;
+}
+
+.card-image {
+    z-index: -5;
+    position: absolute;
+    top: clamp(-35px, -2vw, -50px);
+    opacity: .8;
+    height: clamp(60px, 3vw, 60px);
+    width: clamp(60px, 3vw, 60px);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-hover);
+}
 
 /* ----- Ending main ----- */
 
