@@ -1,5 +1,6 @@
-/* ----- Variabler ------------ */
+/* ----- Variabler og tema ------------ */
 :root {
+    /* light-mode */
     --bg-gradient-primary: rgba(219, 245, 255, .5);
     --bg-gradient-secondary: rgba(182, 129, 255, .5);
     --primary: #000000;
@@ -13,10 +14,103 @@
     --card-background: #ffffff53;
     --card-background-hover: #ffffffcb;
     --card-header: #7f16ff;
-    --shadow: rgba(0, 0, 0, 0.6);
+    --link-card-background: rgba(255, 255, 255, 0.4);
+    --shadow: rgba(0, 0, 0, 0.4);
+    --nav-background: rgba(231, 246, 253, 0.8);
 }
 
-/* ----- Ending variabler ----- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* dark-mode */
+        --bg-gradient-primary: rgb(30, 30, 30);
+        --bg-gradient-secondary: rgb(16, 16, 16);
+        --primary: #ffffff;
+        --accent: #aa65ff;
+        --accent-hover: #c595ffb4;
+        --title: #ffffff;
+        --title-emphasis: #e1c2fd;
+        --hero-card: #bb83ff4d;
+        --hero-card-hover: #dcbfff67;
+        --scrolldown-stroke: rgba(207, 140, 255, 0.365);
+        --card-background: #1010106c;
+        --card-background-hover: #161616cb;
+        --card-header: #7f16ff;
+        --link-card-background: rgba(21, 0, 55, 0.2);
+        --shadow: rgba(0, 0, 0, 0.8);
+        --nav-background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+:root:has(#color-toggle:checked) {
+    /* dark-mode */
+    --bg-gradient-primary: rgb(30, 30, 30);
+    --bg-gradient-secondary: rgb(16, 16, 16);
+    --primary: #ffffff;
+    --accent: #aa65ff;
+    --accent-hover: #813dd3;
+    --title: #ffffff;
+    --title-emphasis: #e1c2fd;
+    --hero-card: #bb83ff4d;
+    --hero-card-hover: #dcbfff67;
+    --scrolldown-stroke: rgba(207, 140, 255, 0.365);
+    --card-background: #1212126c;
+    --card-background-hover: #161616cb;
+    --card-header: #7f16ff;
+    --shadow: rgba(0, 0, 0, 0.6);
+    --nav-background: rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has(#color-toggle:checked) {
+        /* light-mode */
+        --bg-gradient-primary: rgba(219, 245, 255, .5);
+        --bg-gradient-secondary: rgba(182, 129, 255, .5);
+        --primary: #000000;
+        --accent: #aa65ff;
+        --accent-hover: #7c13fcb4;
+        --title: #ffffff;
+        --title-emphasis: #e1c2fd;
+        --hero-card: #2b005f4d;
+        --hero-card-hover: #2b005f67;
+        --scrolldown-stroke: rgba(73, 5, 103, 0.365);
+        --card-background: #ffffff53;
+        --card-background-hover: #ffffffcb;
+        --card-header: #7f16ff;
+        --link-card-background: rgba(233, 199, 255, 0.3);
+        --shadow: rgba(0, 0, 0, 0.4);
+        --nav-background: rgba(231, 246, 253, 0.8);
+    }
+}
+
+@media (prefers-color-sceme: dark) {
+    .hero-background {
+        filter: brightness(50%);
+        opacity: .5;
+    }
+
+    .text-box {
+        box-shadow: 0 0 25px var(shadow);
+    }
+
+    .mode-swap {
+        filter: invert(.5);
+    }
+
+    .mode-swap:has(#color-toggle:checked) img {
+        filter: invert(.5);
+    }
+}
+
+/* .hero-background:has(#color-toggle:checked) {
+    filter: brightness(50%);
+    opacity: .5;
+} */
+
+/* .mode-swap:has(#color-toggle:checked) img {
+    filter: invert(.7);
+} */
+
+/* ----- Ending variabler og tema ----- */
 
 /* ----- General ------------ */
 * {
@@ -71,6 +165,7 @@ p {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
+    color: var(--primary);
 }
 
 /* Logo font */
@@ -86,7 +181,7 @@ p {
     src: url("../Fonts/OriginTech_personal_use.ttf") format(truetype);
 }
 
-@media (min-width:899px) {
+@media (min-width:900px) {
     @supports (scroll-snap-align: start) {
         html {
             scroll-snap-type: y mandatory;
@@ -99,12 +194,30 @@ p {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
     section {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
     }
+}
+
+/* Redigert kode fra: https: //www.freecodecamp.org/news/how-to-add-skip-to-main-content-links-to-a-website/ */
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 2em 4em;
+    background-color: var(--card-header);
+    color: white;
+    opacity: 0;
+}
+
+/* Redigert kode fra: https: //www.freecodecamp.org/news/how-to-add-skip-to-main-content-links-to-a-website/ */
+.skip-to-main-content-link:focus {
+    height: 83px;
+    left: 0%;
+    opacity: 1;
 }
 
 /* ----- Ending general ----- */
@@ -132,16 +245,32 @@ p {
 }
 
 .header-logo:hover {
-    animation: spin .5s ease-in-out .2s 1 forwards;
+    animation: shake .5s ease-in-out .1s 1 forwards;
 }
 
-@keyframes spin {
+@keyframes shake {
     0% {
         transform: rotate(0deg)
     }
 
+    20% {
+        transform: rotate(10deg)
+    }
+
+    40% {
+        transform: rotate(-10deg)
+    }
+
+    60% {
+        transform: rotate(2deg)
+    }
+
+    80% {
+        transform: rotate(-2deg)
+    }
+
     100% {
-        transform: rotate(360deg)
+        transform: rotate(0deg)
     }
 }
 
@@ -167,6 +296,54 @@ p {
 
 .navbar a {
     justify-content: center;
+    color: var(--primary);
+}
+
+/* Switch for dark-mode og light-mode */
+.mode-swap {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-inline: 2vw;
+    transition: .8s;
+}
+
+.mode-swap:hover {
+    transform: rotate(180deg);
+}
+
+.mode-swap input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 60px;
+    width: 60px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.mode-swap img {
+    width: 60px;
+    object-fit: cover;
+}
+
+@media (max-width: 1079px) {
+    .mode-swap {
+        width: 60px;
+        height: 60px;
+        margin-right: 80px;
+    }
+
+    .mode-swap input {
+        height: 60px;
+        width: 60px;
+    }
+
+    .mode-swap img {
+        width: 60px;
+        object-fit: cover;
+    }
 }
 
 /* ----- Hamburger ------------ */
@@ -177,7 +354,7 @@ p {
 
 @media (max-width: 1079px) {
     .nav-wrapper {
-        background-color: rgb(255, 255, 255, .6);
+        background-color: var(--nav-background);
     }
 
     .navbar {
@@ -485,11 +662,13 @@ p {
     font-style: italic;
     color: rgb(64, 64, 64);
 }
+
 .link-card-wrapper {
     position: relative;
     border-radius: 25px;
     transition: .3s;
 }
+
 .link-card {
     display: flex;
     flex-direction: column;
@@ -499,15 +678,15 @@ p {
     height: 100%;
     width: 100%;
     border-radius: 25px;
-    box-shadow: .2vw .2vw 25px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 .5vw 25px var(--shadow);
+    background-color: var(--link-card-background);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .link-card-wrapper:hover {
     scale: 105%;
-    box-shadow: .2vw .5vw 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0vw .8vw 40px var(--shadow);
 }
 
 .button-small {
