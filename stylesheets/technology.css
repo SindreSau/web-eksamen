@@ -291,6 +291,56 @@ a {
     z-index: -1;
 }
 
+.svg-scrolldown {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 90%;
+    opacity: 0;
+
+    animation: fadeInAnimation 2s ease 3s 1 forwards;
+}
+
+.svg-scrolldown-left {
+    left: 2%;
+}
+
+.svg-scrolldown-right {
+    right: 2%;
+}
+
+.scrolldown-top {
+    animation: move-down 3.5s ease-in-out 3.0s infinite;
+}
+
+.scrolldown-bottom {
+    animation: move-down 3.5s ease-in-out 3.6s infinite;
+}
+
+@keyframes move-down {
+    0% {
+        opacity: .8;
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    80% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    90% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: .8;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-section img {
         height: 50vh;
