@@ -24,7 +24,7 @@
 }
 
 html {
-    min-height: 100vh;
+    min-height: 100%;
     background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) no-repeat fixed;
     scroll-behavior: smooth;
 }
@@ -45,6 +45,7 @@ h3 {
 section {
     /* trekke fra høyden på navbar */
     padding-top: 100px;
+
     margin-inline: 6vw;
     overflow: hidden;
 }
@@ -67,7 +68,7 @@ h3 {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 20px;
 }
@@ -75,7 +76,7 @@ p {
 /* Logo font */
 @font-face {
     font-family: Despairs;
-    src: url("../Fonts/Despairs-X3Wxo.ttf");
+    src: url(/Fonts/Despairs-X3Wxo.ttf);
 }
 
 /* Title font */
@@ -85,7 +86,12 @@ p {
     src: url("../Fonts/OriginTech_personal_use.ttf") format(truetype);
 }
 
-@media (min-width:601px) {
+@font-face {
+    font-family: Ghostlike;
+    src: url(/Fonts/GhostlikeDemoOutline.ttf);
+}
+
+@media (min-width:899px) {
     @supports (scroll-snap-align: start) {
         html {
             scroll-snap-type: y mandatory;
@@ -98,19 +104,11 @@ p {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     section {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-    }
-
-    main {
-        position: relative;
-    }
-
-    .hero-section img, .svg-scrolldown {
-        top: 50vh;
     }
 }
 
@@ -120,9 +118,9 @@ p {
 /* ----- Header ------------ */
 .nav-wrapper {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 70px;
-    padding: 0 4vw;
+    padding: 0 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -183,8 +181,6 @@ p {
 @media (max-width: 1079px) {
     .nav-wrapper {
         background-color: rgb(255, 255, 255, .6);
-        backdrop-filter: blur(4px);
-        padding-block: 10px;
     }
 
     .navbar {
@@ -215,6 +211,8 @@ p {
         right: 5vw;
         height: 70px;
         width: 65px;
+        backdrop-filter: 4px;
+        -webkit-backdrop-filter: 4px;
         z-index: 98;
     }
 
@@ -294,27 +292,23 @@ p {
 }
 
 .title-box {
+    background-color: var(--hero-card);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 3vw 4vw;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: .3s;
+
     opacity: 0;
     animation: fadeInAnimation ease 2s 1.5s 1 forwards;
 }
 
-@media (min-width: 601px) {
-    .title-box {
-        background-color: var(--hero-card);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        padding: 3vw 4vw;
-        border-radius: 25px;
-        transition: .3s;
-    }
-
-    .title-box:hover {
-        background-color: var(--hero-card-hover);
-        scale: 103%;
-    }
+.title-box:hover {
+    background-color: var(--hero-card-hover);
+    scale: 103%;
 }
 
 .title-box h1 {
@@ -324,11 +318,11 @@ p {
 }
 
 .small-title {
-    font-size: clamp(16px, 3vw, 60px);
+    font-size: clamp(18px, 3vw, 60px);
 }
 
 .large-title {
-    font-size: clamp(20px, 4.8vw, 75px);
+    font-size: clamp(22px, 4.8vw, 75px);
 }
 
 .title-emphasize {
@@ -426,7 +420,7 @@ p {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .hero-section img {
         height: 50vh;
     }
@@ -443,10 +437,10 @@ p {
 
 /* ----- Section 2 ------------ */
 .main-text-section {
-    padding-block: 8vw;
+    padding-block: min(8vw, 10vh);
     display: flex;
     flex-direction: column;
-    gap: 4vw;
+    gap: min(4vw, 120px);
     align-items: center;
 }
 
@@ -454,7 +448,7 @@ p {
     background-color: var(--card-background);
     border-radius: 25px;
     padding: 2vw;
-    max-width: 800px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -472,6 +466,10 @@ p {
     gap: 80px;
     justify-content: center;
     align-content: center;
+}
+
+.background-to-bottom {
+    position: relative;
 }
 
 .links-background-image {
@@ -496,7 +494,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
-    padding: 2vw .6vw;
+    padding: max(20px, 3vw) min(20px, 5vw);
     height: 100%;
     width: 100%;
     border-radius: 25px;
