@@ -490,16 +490,28 @@ footer .instagram {
     align-items: center;
     color: var(--orange);
     padding-bottom: 20px;
+    position: fixed;
+    z-index: 0;
+    top: 50px;
+    bottom: 575px;
+    left: 0;
+    width: 100%;
+    display: none;
 }
 
-.popup-container {
-    display: flex;
-    grid-template-columns: 420px 420px;
+.banner h1 {
+    text-align: center;
+    cursor: pointer;
 }
 
 .banner h2 {
     padding-bottom: 40px;
     margin-bottom: 20px;
+}
+
+.popup-container {
+    display: flex;
+    grid-template-columns: 420px 420px;
 }
 
 .popup-content {
@@ -522,6 +534,16 @@ footer .instagram {
     margin: 0 auto;
 }
 
+#checkBooking {
+    display: none;
+}
+
+#checkBooking:checked+.banner {
+    display: flex;
+    background: rgb(18, 18, 18, 0.75);
+}
+
+
 .form-row input::placeholder {
     color: gray;
 }
@@ -533,6 +555,7 @@ footer .instagram {
 .form-row input:focus {
     color: black;
 }
+
 
 form select,
 form input {
