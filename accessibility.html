@@ -44,7 +44,7 @@
             <div class="card_text">
                 <h1>Accessibility</h1><br>
                 <p>
-                    Vi kjørte nettsiden vår gjennom Wave <a href="https://wave.webaim.org/">(https://wave.webaim.org/)</a> testverktøyet og fikk opp feil og mangler på siden vår. Feilene våres bestod for det meste av manglende alt tekst på mange av bildene, tomme elementer som inneholdt display: none; elementer som brukes i mobilversjon og varsel om at flere elementer linket til samme siden.
+                    Vi kjørte nettsiden vår gjennom Wave <a href="https://wave.webaim.org/">(https://wave.webaim.org/)</a> testverktøyet og fikk opp feil og mangler på siden vår. Feilene våres bestod for det meste av manglende alt="" tekst på mange av bildene, tomme elementer som inneholdt display: none; elementer som brukes i mobilversjon og varsel om at flere elementer linket til samme siden.
                 </p>
                 <br>
                 <img style="width: 100%;" src="Screenshots/WaveTest.png" alt="Bilde av Wave testen"><br>
@@ -56,16 +56,16 @@
                 </p>
                 <br>
                 <p>
-                    Der det står empty form labels og multiple form labels er fordi vi ikke bruker noe javascript på siden vår og heller bruker checkbokser for å sjekke om noe er trykket. Vi skuler checkboksene og bruker en label en for en for=”checkbox” for å sjekke av checkboksene våres. Dette kan man se når man åpner hamburgermenyen og bookingboksen.
+                    Der det står empty form labels og multiple form labels er fordi vi ikke bruker noe javascript på siden vår og heller bruker checkbokser for å sjekke om noe er trykket. Vi skjuler checkboksene og bruker en label med en for=”checkbox” for å sjekke av checkboksene våres når man trykker på labelen istedenfor sjekkboksen. Dette kan man se når man åpner hamburgermenyen i mobilversjonen og bookingboksen.
                 </p>
                 <br>
                 <p>
-                    Vi fant ut at nettsiden vår hadde en blanding av engelske ord og norske ord, og endret siden vår til å kun bruke norsk. Vi endret derfor også lang=”en” til lang=”nb” , siden nettsiden ikke er på engelsk, men på norsk bokmål.
+                    Vi fant ut at nettsiden vår hadde en blanding av engelske ord og norske ord, og endret siden vår til å nesten kun bruke norsk. Vi endret derfor også lang=”en” til lang=”nb” , siden nettsiden ikke er på engelsk, men på norsk bokmål og vil da være lettere å finne for søkemotorer på norsk.
                 </p>
                 <img style="width: 100%;" src="Screenshots/lang.png" alt="Bilde av tilbakemelding på flere linker">
                 <br>
                 <p>
-                    Vi hadde problemer med logoen som originalt var en svg fil, fordi den ikke ville vises når vi hadde siden på github pages. Vi endret derfor logoen til en png og problemet løste seg. Ulempen med denne løsningen er at logoen ikke scaler like bra som en svg logo ville gjort, men siden logoen er forholdsvis liten på siden, vil det ikke kunne synes med mindre man ser i html filen. 
+                    Vi hadde problemer med logoen som originalt var en svg fil, fordi den ikke ville vises når vi hadde siden på github pages. Vi endret derfor logoen til en png og problemet løste seg. Ulempen med denne løsningen er at logoen ikke skalerer like bra som en svg logo ville gjort, men siden logoen er forholdsvis liten på siden, vil det ikke kunne synes med mindre man ser i html filen. 
                 </p>
                 <br>
                 <p>
@@ -75,7 +75,7 @@
                 <img style="width: 100%;" src="Screenshots/ulikBrowser.png" alt="Bilde av koden for ulike browsere">
                 <br>
                 <p>
-                    For å gjøre navigasjon lettere inne på nettstedet, har også alle de forskjellige sidene lenker og knapper til hovedfunksjonene på siden. For eksempel så kan man booke fra alle sidene og ikke bare bookingsiden og alle sidene har linker til kildene for bildene.
+                    For å gjøre navigasjon lettere inne på nettstedet, har også alle de forskjellige sidene lenker og knapper til hovedfunksjonene på siden. For eksempel så kan man booke fra alle sidene og ikke bare bookingsiden og alle sidene har linker til tripadvisor, instagram, kildene for bildene osv.
                 </p>
                 <br>
                 <img style="width: 100%;" src="Screenshots/LinkerPaaSiden.gif" alt="Gif som viser hvordan linker funker">
@@ -187,7 +187,7 @@
                 <br><label class="labelForCheckBooking"for="checkBooking"><a style="cursor: pointer;"id="reservasjon">Book et event her</a></label>
             </div>
             <div class="footer-contact">
-                <p><strong>Epost:</strong> <a href=""><u>kontakt@javacafe.no</u></a></p>
+                <p><strong>Epost:</strong> <a href="mailto:kontakt@javacafe.no"><u>kontakt@javacafe.no</u></a></p>
                 <p> <strong>Telefon:</strong> <a href=""><u>23 50 23 00 </u></a></p>
                 <p>Løkkegata 8</p>
                 <p>0151 Oslo</p>
