@@ -167,7 +167,7 @@ a {
 }
 
 h2 {
-    font-size: clamp(1em, 2vw, 2.5em);
+    font-size: clamp(1.4em, 2vw, 2.5em);
     color: var(--accent);
 }
 
@@ -248,23 +248,25 @@ p {
 /* ----- Ending general ----- */
 
 
+
+
 /* ----- Header ------------ */
 .nav-wrapper {
     position: fixed;
     width: 100vw;
     height: 70px;
-    padding: 0 5vw;
+    padding: 2vh 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
-    z-index: 5;
+    z-index: 99;
 }
 
 .header-logo {
     font-family: Despairs;
     font-size: 2rem;
-    min-width: fit-content;
+    /* min-width: fit-content; */
     color: var(--accent);
     padding-right: 10vw;
 }
@@ -318,10 +320,6 @@ p {
     flex-grow: 1;
 }
 
-.navbar a {
-    justify-content: center;
-}
-
 /* Switch for dark-mode og light-mode */
 .mode-swap {
     position: relative;
@@ -353,7 +351,21 @@ p {
     object-fit: cover;
 }
 
-/* ----- Smaller screen-sizes ------------ */
+/* Flytter tema-switch under meny på veldig smale skjermer */
+@media (max-width: 350px) {
+    .mode-swap {
+        position: absolute;
+        top: 70px;
+        right: -46px;
+    }
+
+    .mode-swap img {
+        width: 50px;
+    }
+}
+
+
+/* ----- Header smaller screen-sizes ------------ */
 .hamburger-menu-container,
 .hamburger-toggle {
     display: none;
@@ -502,6 +514,8 @@ p {
 
 /* ----- Ending smaller screen-sizes ----- */
 /* ----- Ending header ----- */
+
+
 
 
 /* ----- Main ------------ */
@@ -684,6 +698,21 @@ p {
     }
 }
 
+/* mer plass til tekst på mindre skjermer */
+@media (max-width: 500px) {
+    .main-text-section {
+        margin-inline: 1vw;
+    }
+
+    .text-box {
+        padding: 4vw;
+    }
+
+    .text-box p {
+        font-size: .9em;
+    }
+}
+
 /* ----- Ending section 2 ----- */
 
 
@@ -753,17 +782,6 @@ p {
     padding-bottom: 20px;
 }
 
-.button-small {
-    background-color: var(--accent);
-    width: fit-content;
-    position: absolute;
-    bottom: 1vh;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 2vw;
-    border-radius: 25px;
-}
-
 .card-image {
     position: absolute;
     height: clamp(60px, 5vw, 90px);
@@ -793,6 +811,7 @@ p {
 /* ----- Ending section 3 ----- */
 
 /* ----- Ending main ----- */
+
 
 
 /* ----- Utility ------------ */
