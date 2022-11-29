@@ -1,4 +1,4 @@
-/* ----- Variabler og tema ------------ */
+/* ----- Variabler og tema switch ------------ */
 @media (prefers-color-scheme: light) {
     :root {
         /* light-mode */
@@ -122,7 +122,10 @@
     }
 }
 
-/* ----- Ending variabler og tema ----- */
+/* ----- Ending variabler og tema switch ----- */
+
+
+
 
 /* ----- General ------------ */
 * {
@@ -130,7 +133,7 @@
 }
 
 html {
-    min-height: 100%;
+
     background: linear-gradient(var(--bg-gradient-primary), var(--bg-gradient-secondary)) repeat fixed;
     scroll-behavior: smooth;
 }
@@ -149,7 +152,7 @@ h3 {
 }
 
 section {
-    /* trekke fra høyden på navbar */
+    /* kompenserer for høyden på navbar */
     padding-top: 100px;
 
     display: flex;
@@ -325,7 +328,9 @@ p {
     width: 60px;
     height: 60px;
     margin-inline: 2vw;
-    transition: .8s;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    transition-property: transform;
 }
 
 .mode-swap:hover {
@@ -720,7 +725,8 @@ p {
 .link-card-wrapper {
     position: relative;
     border-radius: 25px;
-    transition: .3s;
+    transition-duration: 250ms;
+    transition-property: scale box-shadow;
 }
 
 .link-card {
@@ -806,7 +812,9 @@ p {
 }
 
 .hover-link {
-    transition: .3s;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-property: color font-size;
     color: var(--primary);
 }
 
