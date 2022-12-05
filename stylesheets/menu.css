@@ -1,4 +1,4 @@
-/*--------Generelt--------*/
+/*--------General--------*/
 h1 {
     color: var(--yellow);
     padding: 30px;
@@ -16,9 +16,12 @@ ul {
 }
 
 i {
-    color: var(--yellow)
+    color: var(--yellow);
+    font-size: 1.1em;
+    padding-top: 15px;
+    display: block;
 }
-/*--------Generelt end--------*/
+/*--------Ending general--------*/
 
 
 /*--------Bilder/Menyvelger topp--------*/
