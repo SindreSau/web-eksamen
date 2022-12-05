@@ -692,6 +692,13 @@ p {
     align-items: center;
 }
 
+.tech-text-source {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 10px 0;
+    color: rgb(128, 128, 128);
+}
+
 @media (max-width: 1179px) {
     .main-text-section {
         flex-direction: column;
